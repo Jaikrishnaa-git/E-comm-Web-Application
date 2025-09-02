@@ -1,4 +1,4 @@
-package TestcaseAutomation;
+package RegistrationPageAutomation;
 
 import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
