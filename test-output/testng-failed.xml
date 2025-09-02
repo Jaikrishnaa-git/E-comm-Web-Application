@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+<suite name="Failed suite [Ecomm Registration Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Chrome Test(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="RegistrationPageAutomation.TC_ECOM_Reg_002">
+      <class name="RegistrationPageAutomation.TC_ECOM_Reg_005">
         <methods>
+          <include name="verifySignup" invocation-numbers="0"/>
           <include name="flushReport"/>
           <include name="setup"/>
           <include name="tearDown"/>
           <include name="setupReport"/>
-          <include name="checkNameField"/>
         </methods>
-      </class> <!-- RegistrationPageAutomation.TC_ECOM_Reg_002 -->
+      </class> <!-- RegistrationPageAutomation.TC_ECOM_Reg_005 -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Chrome Test(failed) -->
+</suite> <!-- Failed suite [Ecomm Registration Suite] -->

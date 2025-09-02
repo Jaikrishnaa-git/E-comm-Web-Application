@@ -8,6 +8,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
@@ -23,13 +24,13 @@ public class BaseTest {
     protected ExtentReports extent;
     protected String reportName = "DefaultReport";
 
+
     protected void setReportName(String reportName) {
         this.reportName = reportName;
     }
     
-    @BeforeSuite
+    @BeforeClass
     public void setupReport() {
-    	
         extent = ExtentManager.getInstance(reportName);
     }
 

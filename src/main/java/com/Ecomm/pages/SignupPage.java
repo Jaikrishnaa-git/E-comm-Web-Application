@@ -19,6 +19,14 @@ public class SignupPage {
 	{
 		return driver.findElement(signupName).isDisplayed();
 	}
+    public boolean emailIsdisplayed()
+	{
+		return driver.findElement(signupEmail).isDisplayed();
+	}
+    public boolean submitIsdisplayed()
+	{
+		return driver.findElement(signupBtn).isDisplayed();
+	}
     
     public void clickSignupLoginLink() {
         driver.findElement(signupLoginLink).click();

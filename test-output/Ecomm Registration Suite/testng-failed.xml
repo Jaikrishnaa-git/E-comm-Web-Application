@@ -4,29 +4,15 @@
   <test thread-count="5" name="Chrome Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="RegistrationPageAutomation.TC_ECOM_Reg_001">
+      <class name="RegistrationPageAutomation.TC_ECOM_Reg_005">
         <methods>
+          <include name="verifySignup" invocation-numbers="0"/>
           <include name="flushReport"/>
           <include name="setup"/>
-          <include name="browserVerify"/>
           <include name="tearDown"/>
           <include name="setupReport"/>
         </methods>
-      </class> <!-- RegistrationPageAutomation.TC_ECOM_Reg_001 -->
+      </class> <!-- RegistrationPageAutomation.TC_ECOM_Reg_005 -->
     </classes>
   </test> <!-- Chrome Test(failed) -->
-  <test thread-count="5" name="Firefox Test(failed)">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="RegistrationPageAutomation.TC_ECOM_Reg_001">
-        <methods>
-          <include name="flushReport"/>
-          <include name="setup"/>
-          <include name="browserVerify"/>
-          <include name="tearDown"/>
-          <include name="setupReport"/>
-        </methods>
-      </class> <!-- RegistrationPageAutomation.TC_ECOM_Reg_001 -->
-    </classes>
-  </test> <!-- Firefox Test(failed) -->
 </suite> <!-- Failed suite [Ecomm Registration Suite] -->

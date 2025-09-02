@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-02T16:10:23 IST" name="Ecomm Registration Suite" finished-at="2025-09-02T16:10:41 IST" duration-ms="17668">
+  <suite started-at="2025-09-02T17:22:10 IST" name="Ecomm Registration Suite" finished-at="2025-09-02T17:22:23 IST" duration-ms="12822">
     <groups>
     </groups>
-    <test started-at="2025-09-02T16:10:23 IST" name="Chrome Test" finished-at="2025-09-02T16:10:41 IST" duration-ms="17668">
-      <class name="RegistrationPageAutomation.TC_ECOM_Reg_002">
-        <test-method is-config="true" signature="setupReport()[pri:0, instance:RegistrationPageAutomation.TC_ECOM_Reg_002@5fbe4146]" started-at="2025-09-02T16:10:23 IST" name="setupReport" finished-at="2025-09-02T16:10:23 IST" duration-ms="218" status="PASS">
+    <test started-at="2025-09-02T17:22:10 IST" name="Chrome Test" finished-at="2025-09-02T17:22:23 IST" duration-ms="12822">
+      <class name="RegistrationPageAutomation.TC_ECOM_Reg_005">
+        <test-method is-config="true" signature="setupReport()[pri:0, instance:RegistrationPageAutomation.TC_ECOM_Reg_005@2e377400]" started-at="2025-09-02T17:22:10 IST" name="setupReport" finished-at="2025-09-02T17:22:10 IST" duration-ms="199" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupReport -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:RegistrationPageAutomation.TC_ECOM_Reg_002@5fbe4146]" started-at="2025-09-02T16:10:23 IST" name="setup" finished-at="2025-09-02T16:10:25 IST" duration-ms="1639" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:RegistrationPageAutomation.TC_ECOM_Reg_005@2e377400]" started-at="2025-09-02T17:22:11 IST" name="setup" finished-at="2025-09-02T17:22:12 IST" duration-ms="1390" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,19 +22,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="checkNameField()[pri:0, instance:RegistrationPageAutomation.TC_ECOM_Reg_002@5fbe4146]" started-at="2025-09-02T16:10:25 IST" name="checkNameField" finished-at="2025-09-02T16:10:41 IST" duration-ms="15764" status="PASS">
+        <test-method signature="verifySignup(java.lang.String,java.lang.String)[pri:0, instance:RegistrationPageAutomation.TC_ECOM_Reg_005@2e377400]" started-at="2025-09-02T17:22:12 IST" name="verifySignup" data-provider="logindata" finished-at="2025-09-02T17:22:22 IST" duration-ms="10241" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[jaikrishnaa]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[jaikrishnaa.git@gamil.com]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkNameField -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:RegistrationPageAutomation.TC_ECOM_Reg_002@5fbe4146]" started-at="2025-09-02T16:10:41 IST" name="tearDown" finished-at="2025-09-02T16:10:41 IST" duration-ms="232" status="PASS">
+        </test-method> <!-- verifySignup -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:RegistrationPageAutomation.TC_ECOM_Reg_005@2e377400]" started-at="2025-09-02T17:22:22 IST" name="tearDown" finished-at="2025-09-02T17:22:23 IST" duration-ms="289" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="flushReport()[pri:0, instance:RegistrationPageAutomation.TC_ECOM_Reg_002@5fbe4146]" started-at="2025-09-02T16:10:41 IST" name="flushReport" finished-at="2025-09-02T16:10:41 IST" duration-ms="234" status="PASS">
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:RegistrationPageAutomation.TC_ECOM_Reg_005@2e377400]" started-at="2025-09-02T17:22:23 IST" name="flushReport" finished-at="2025-09-02T17:22:23 IST" duration-ms="251" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReport -->
-      </class> <!-- RegistrationPageAutomation.TC_ECOM_Reg_002 -->
+      </class> <!-- RegistrationPageAutomation.TC_ECOM_Reg_005 -->
     </test> <!-- Chrome Test -->
   </suite> <!-- Ecomm Registration Suite -->
 </testng-results>

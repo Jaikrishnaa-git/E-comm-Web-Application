@@ -14,10 +14,7 @@ import java.time.Duration;
 
 public class TC_ECOM_Reg_001 extends BaseTest {
 	
-   @BeforeSuite
-   public void setUpReportName() {
-	  setReportName("TC_ECOM_Reg_001_Report");
-	    }
+   
     @Test
     public void browserVerify() throws InterruptedException {
         ExtentTest test = extent.createTest("Checking browser in Registration page");

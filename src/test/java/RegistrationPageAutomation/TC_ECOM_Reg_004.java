@@ -2,7 +2,9 @@ package RegistrationPageAutomation;
 
 import java.io.IOException;
 
+import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import com.Ecomm.base.BaseTest;
 import com.Ecomm.pages.SignupPage;
@@ -11,11 +13,11 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
 
-public class TC_ECOM_Reg_002 extends BaseTest
+public class TC_ECOM_Reg_004 extends BaseTest
 {
 
-	 @Test
-	    public void checkNameField() throws InterruptedException, IOException {
+	 	@Test
+	    public void checkEmailField() throws InterruptedException, IOException {
 		 ExtentTest  test = extent.createTest("Checking name field in Registration page");
 
 	        driver.get("https://automationexercise.com/");
@@ -26,15 +28,15 @@ public class TC_ECOM_Reg_002 extends BaseTest
 	        test.info("Navigated to automationexercise.com");
 
 	        try {
-	            if (signup.nameIsdisplayed()) {
-	                test.pass("The name field is displayed");
+	            if (signup.submitIsdisplayed()) {
+	                test.pass("The  Submit button is displayed");
 	            } else {
-	                test.fail("The name field is not displayed");
-	                ScreenshotUtilities.capturescreen(driver, "TC_ECOM_Reg_002");
+	                test.fail("The Submit button is not displayed");
+	                ScreenshotUtilities.capturescreen(driver, "TC_ECOM_Reg_003");
 	            }
 	        } catch (Exception e) {
-	            test.fail("Name field not found. Exception: " + e.getMessage());
-	            ScreenshotUtilities.capturescreen(driver, "TC_ECOM_Reg_002");
+	            test.fail("Submit buttonnot found. Exception: " + e.getMessage());
+	            ScreenshotUtilities.capturescreen(driver, "TC_ECOM_Reg_003");
 	        }
 	    }
 	}
