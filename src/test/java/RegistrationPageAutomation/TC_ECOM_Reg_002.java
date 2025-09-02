@@ -39,7 +39,7 @@ public class TC_ECOM_Reg_002 {
 	  test = extent.createTest("Checking name feild in Registration page");
 	  driver.get("https://automationexercise.com/");
 	  SignupPage signup  = new SignupPage(driver);
-	  signup.clickSignupLoginLink();
+	  signup.clickSignupButton();
 	  test.info("Navigated to automationexercise.com");
 	  try
 	  {

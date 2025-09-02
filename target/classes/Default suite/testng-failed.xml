@@ -3,19 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestcaseAutomation.TC_ECOM_Reg_001">
+      <class name="RegistrationPageAutomation.TC_ECOM_Reg_026">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="afterTest"/>
-          <include name="beforeClass"/>
-          <include name="beforeTest"/>
-          <include name="afterMethod"/>
-          <include name="afterSuite"/>
-          <include name="f"/>
-          <include name="afterClass"/>
-          <include name="beforeSuite"/>
+          <include name="flushReport"/>
+          <include name="verifyDateWithMonthInSignupPage"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="setupReport"/>
         </methods>
-      </class> <!-- TestcaseAutomation.TC_ECOM_Reg_001 -->
+      </class> <!-- RegistrationPageAutomation.TC_ECOM_Reg_026 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

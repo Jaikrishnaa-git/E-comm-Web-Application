@@ -14,7 +14,7 @@ public class ScreenshotUtilities {
 	public static String capturescreen(WebDriver driver, String TestName) throws IOException
 	{
 		 File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		  String screenpath=projectpath+"\\src\\test\\resources\\screenshots\\"+TestName;
+		  String screenpath=projectpath+"\\src\\test\\resources\\screenshots\\TC_026.png";
 	      File dest=new File(screenpath);
 		  FileUtils.copyFile(src, dest);
 		  return screenpath;
