@@ -1,37 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-04T14:06:48 IST" name="Ecomm Registration Suite" finished-at="2025-09-04T14:07:08 IST" duration-ms="20599">
+  <suite started-at="2025-09-04T17:36:30 IST" name="Default suite" finished-at="2025-09-04T17:37:07 IST" duration-ms="36837">
     <groups>
     </groups>
-    <test started-at="2025-09-04T14:06:48 IST" name="Chrome Test" finished-at="2025-09-04T14:07:08 IST" duration-ms="20599">
-      <class name="Subscription.TC_ECOM_subHome_003">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Subscription.TC_ECOM_subHome_003@687e99d8]" started-at="2025-09-04T14:06:48 IST" name="setUp" finished-at="2025-09-04T14:06:50 IST" duration-ms="1873" status="PASS">
+    <test started-at="2025-09-04T17:36:30 IST" name="Default test" finished-at="2025-09-04T17:37:07 IST" duration-ms="36837">
+      <class name="Corebusiness.TC_regr_core_012">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Corebusiness.TC_regr_core_012@399c4be1]" started-at="2025-09-04T17:36:30 IST" name="setUp" finished-at="2025-09-04T17:36:32 IST" duration-ms="2031" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifySubsscription(java.lang.String,java.lang.String)[pri:0, instance:Subscription.TC_ECOM_subHome_003@687e99d8]" started-at="2025-09-04T14:06:50 IST" name="verifySubsscription" data-provider="homePageData" finished-at="2025-09-04T14:07:08 IST" duration-ms="17522" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dummy value]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[dummy]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="verifyCartItemsCanBeUpdatedOrRemoved()[pri:0, instance:Corebusiness.TC_regr_core_012@399c4be1]" started-at="2025-09-04T17:36:32 IST" name="verifyCartItemsCanBeUpdatedOrRemoved" finished-at="2025-09-04T17:37:06 IST" duration-ms="34232" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Test failed due to exception: element click intercepted: Element <a data-product-id="1" class="btn btn-default add-to-cart">...</a> is not clickable at point (626, 669). Other element would receive the click: <iframe id="aswift_3" name="aswift_3" browsingtopics="true" style="min-height: auto; max-height: none; min-width: auto; max-width: none; width: 728px !important; height: 90px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/html/r20250903/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;adk=1812271801&amp;client=ca-pub-1677597403311019&amp;fa=1&amp;ifi=4&amp;uci=a!4&amp;btvi=2" data-google-container-id="a!4" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CIbNtOuIv48DFY2jZgIdfCcSkA" data-load-complete="true"></iframe>
+  (Session info: chrome=139.0.7258.155)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [18eb30cfc426e0635c8b40386753645d, clickElement {id=f.38A33529963B0181F53B2FA11E912AC8.d.60BB5447127E3EBF2559B7246612D8AE.e.16}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64612}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64612/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (18eb30cfc426e0635c8b40386753645d)] -> xpath: (//a[contains(text(),'Add to cart')])[1]]
+Session ID: 18eb30cfc426e0635c8b40386753645d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Test failed due to exception: element click intercepted: Element <a data-product-id="1" class="btn btn-default add-to-cart">...</a> is not clickable at point (626, 669). Other element would receive the click: <iframe id="aswift_3" name="aswift_3" browsingtopics="true" style="min-height: auto; max-height: none; min-width: auto; max-width: none; width: 728px !important; height: 90px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/html/r20250903/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;adk=1812271801&amp;client=ca-pub-1677597403311019&amp;fa=1&amp;ifi=4&amp;uci=a!4&amp;btvi=2" data-google-container-id="a!4" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CIbNtOuIv48DFY2jZgIdfCcSkA" data-load-complete="true"></iframe>
+  (Session info: chrome=139.0.7258.155)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [18eb30cfc426e0635c8b40386753645d, clickElement {id=f.38A33529963B0181F53B2FA11E912AC8.d.60BB5447127E3EBF2559B7246612D8AE.e.16}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64612}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64612/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (18eb30cfc426e0635c8b40386753645d)] -> xpath: (//a[contains(text(),'Add to cart')])[1]]
+Session ID: 18eb30cfc426e0635c8b40386753645d
+at org.testng.Assert.fail(Assert.java:111)
+at Corebusiness.TC_regr_core_012.verifyCartItemsCanBeUpdatedOrRemoved(TC_regr_core_012.java:66)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySubsscription -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Subscription.TC_ECOM_subHome_003@687e99d8]" started-at="2025-09-04T14:07:08 IST" name="tearDown" finished-at="2025-09-04T14:07:08 IST" duration-ms="517" status="PASS">
+        </test-method> <!-- verifyCartItemsCanBeUpdatedOrRemoved -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Corebusiness.TC_regr_core_012@399c4be1]" started-at="2025-09-04T17:37:06 IST" name="tearDown" finished-at="2025-09-04T17:37:07 IST" duration-ms="527" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Subscription.TC_ECOM_subHome_003 -->
-    </test> <!-- Chrome Test -->
-  </suite> <!-- Ecomm Registration Suite -->
+      </class> <!-- Corebusiness.TC_regr_core_012 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

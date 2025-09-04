@@ -9,7 +9,6 @@ public class CartPage {
     private final WebDriver driver;
     private final WebDriverWait wait;
 
-    // Locators
     private final By cartLink = By.xpath("//a[@href='/view_cart']");
     private final By firstProductRow = By.xpath("//tr[contains(@id,'product')][1]");
     private final By firstProductName = By.xpath("//tr[contains(@id,'product')][1]//td[@class='cart_description']//a");
@@ -22,28 +21,24 @@ public class CartPage {
         this.wait   = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
 
-    /** Open Cart Page */
     public void openCart() {
         driver.findElement(cartLink).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(firstProductRow));
     }
 
-    /** Get product name */
     public String getFirstProductName() {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(firstProductName)).getText();
     }
 
-    /** Get product quantity */
     public String getFirstProductQuantity() {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(firstProductQuantity)).getText();
     }
 
-    /** Remove product */
     public void removeFirstProduct() {
         wait.until(ExpectedConditions.elementToBeClickable(removeFirstProductBtn)).click();
     }
 
-    /** Check if cart is empty */
+    
     public boolean isCartEmpty() {
         try {
             return wait.until(ExpectedConditions.visibilityOfElementLocated(emptyCartMsg)).isDisplayed();

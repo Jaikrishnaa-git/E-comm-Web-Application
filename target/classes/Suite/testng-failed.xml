@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="Chrome Test(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="Subscription.TC_ECOM_subHome_001">
+      <class name="Corebusiness.TC_regr_core_002">
         <methods>
-          <include name="verifySubsscription"/>
+          <include name="f" invocation-numbers="0"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- Subscription.TC_ECOM_subHome_001 -->
+      </class> <!-- Corebusiness.TC_regr_core_002 -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Chrome Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
