@@ -3,6 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="RegistrationPageAutomation.TC_ECOM_Reg_001">
         <methods>
           <include name="flushReport"/>
@@ -12,6 +13,15 @@
           <include name="setupReport"/>
         </methods>
       </class> <!-- RegistrationPageAutomation.TC_ECOM_Reg_001 -->
+=======
+      <class name="TestCases.TC_ECOM_TestCase_54">
+        <methods>
+          <include name="setUp"/>
+          <include name="verifyCopyFeedbackEmail"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- TestCases.TC_ECOM_TestCase_54 -->
+>>>>>>> 24d0dd6aa7864b13b05dd3b9ae5605ee3168eca1
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

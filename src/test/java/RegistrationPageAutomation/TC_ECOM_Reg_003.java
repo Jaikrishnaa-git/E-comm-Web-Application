@@ -31,12 +31,10 @@ public class TC_ECOM_Reg_003 extends BaseTest
 	            if (signup.emailIsdisplayed()) {
 	                test.pass("The email field is displayed");
 	            } else {
-	                test.fail("The email field is not displayed");
-	                ScreenshotUtilities.capturescreen(driver, "TC_ECOM_Reg_003");
+	                test.fail("The email field is not displayed").addScreenCaptureFromPath(ScreenshotUtilities.capturescreen(driver, "TC_ECOM_Reg_003"));
 	            }
 	        } catch (Exception e) {
-	            test.fail("Name field not found. Exception: " + e.getMessage());
-	            ScreenshotUtilities.capturescreen(driver, "TC_ECOM_Reg_003");
+	            test.fail("Name field not found. Exception: " + e.getMessage()).addScreenCaptureFromPath(ScreenshotUtilities.capturescreen(driver, "TC_ECOM_Reg_003"));
 	        }
 	    }
 	}

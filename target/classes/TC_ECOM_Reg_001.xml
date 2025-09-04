@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Ecomm Registration Suite">
+<suite name="Ecomm Registration Suite" thread-count="5" parallel = "tests">
 
     <!-- Chrome Test -->
     <test name="Chrome Test">
@@ -8,5 +8,5 @@
             <class name="RegistrationPageAutomation.TC_ECOM_Reg_001" />
         </classes>
     </test>
-    
+   
 </suite>

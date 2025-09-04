@@ -29,12 +29,11 @@ public class TC_ECOM_Reg_002 extends BaseTest
 	            if (signup.nameIsdisplayed()) {
 	                test.pass("The name field is displayed");
 	            } else {
-	                test.fail("The name field is not displayed");
-	                ScreenshotUtilities.capturescreen(driver, "TC_ECOM_Reg_002");
+	                test.fail("The name field is not displayed").addScreenCaptureFromPath(ScreenshotUtilities.capturescreen(driver, "TC_ECOM_Reg_002"));
+	               
 	            }
 	        } catch (Exception e) {
-	            test.fail("Name field not found. Exception: " + e.getMessage());
-	            ScreenshotUtilities.capturescreen(driver, "TC_ECOM_Reg_002");
+	            test.fail("Name field not found. Exception: " + e.getMessage()).addScreenCaptureFromPath(ScreenshotUtilities.capturescreen(driver, "TC_ECOM_Reg_002"));
 	        }
 	    }
 	}

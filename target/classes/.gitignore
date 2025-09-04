@@ -1,15 +1,12 @@
-/com/
 /META-INF/
-/Suite/
-/junitreports/
-/Default suite/
-/testng.xml
+/com/
 /Ecomm Registration Suite/
-/TC_ECOM_Reg_001.xml
-/TC_ECOMM_Reg_002/
-/TC_ECOMM_Reg_002.xml
-/TC_ECOMM_Reg_003 .xml
-/TC_ECOM_Reg_004.xml
-/TC_ECOM_Reg_002.xml
-/TC_ECOM_Reg_003 .xml
-/TC_ECOM_Reg_005.xml
+/junitreports/
+/TC_ECOM_Reg_006.xml
+/TC_ECOM_Reg_007.xml
+/TC_ECOM_Reg_008.xml
+/TC_ECOM_Reg_009/
+/TC_ECOM_Reg_009.xml
+/TC_ECOM_Reg_010.xml
+/TC_ECOM_Reg_011.xml
+/TC_ECOM_Reg_012.xml

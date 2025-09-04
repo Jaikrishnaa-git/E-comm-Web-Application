@@ -2,24 +2,36 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-04T10:25:13 IST" name="Ecomm Registration Suite" finished-at="2025-09-04T10:25:34 IST" duration-ms="20869">
+  <suite started-at="2025-09-04T12:58:17 IST" name="Ecomm Registration Suite" finished-at="2025-09-04T12:58:45 IST" duration-ms="27630">
     <groups>
     </groups>
-    <test started-at="2025-09-04T10:25:13 IST" name="Chrome Test" finished-at="2025-09-04T10:25:34 IST" duration-ms="20869">
-      <class name="RegistrationPageAutomation.TC_ECOM_Reg_003">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:RegistrationPageAutomation.TC_ECOM_Reg_003@2de23121]" started-at="2025-09-04T10:25:13 IST" name="setUp" finished-at="2025-09-04T10:25:15 IST" duration-ms="2363" status="PASS">
+    <test started-at="2025-09-04T12:58:17 IST" name="Chrome Test" finished-at="2025-09-04T12:58:45 IST" duration-ms="27630">
+      <class name="RegistrationPageAutomation.TC_ECOM_Reg_007">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:RegistrationPageAutomation.TC_ECOM_Reg_007@687e99d8]" started-at="2025-09-04T12:58:17 IST" name="setUp" finished-at="2025-09-04T12:58:19 IST" duration-ms="1799" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="checkEmailField()[pri:0, instance:RegistrationPageAutomation.TC_ECOM_Reg_003@2de23121]" started-at="2025-09-04T10:25:15 IST" name="checkEmailField" finished-at="2025-09-04T10:25:33 IST" duration-ms="17775" status="PASS">
+        <test-method signature="verifySignup(java.lang.String,java.lang.String)[pri:0, instance:RegistrationPageAutomation.TC_ECOM_Reg_007@687e99d8]" started-at="2025-09-04T12:58:20 IST" name="verifySignup" data-provider="logindata" finished-at="2025-09-04T12:58:44 IST" duration-ms="24457" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Jaikrishnaa]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[jiak@p]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkEmailField -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:RegistrationPageAutomation.TC_ECOM_Reg_003@2de23121]" started-at="2025-09-04T10:25:33 IST" name="tearDown" finished-at="2025-09-04T10:25:34 IST" duration-ms="687" status="PASS">
+        </test-method> <!-- verifySignup -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:RegistrationPageAutomation.TC_ECOM_Reg_007@687e99d8]" started-at="2025-09-04T12:58:44 IST" name="tearDown" finished-at="2025-09-04T12:58:45 IST" duration-ms="577" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- RegistrationPageAutomation.TC_ECOM_Reg_003 -->
+      </class> <!-- RegistrationPageAutomation.TC_ECOM_Reg_007 -->
     </test> <!-- Chrome Test -->
   </suite> <!-- Ecomm Registration Suite -->
 </testng-results>

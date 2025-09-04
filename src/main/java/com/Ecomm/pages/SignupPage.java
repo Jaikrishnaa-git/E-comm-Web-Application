@@ -1,27 +1,63 @@
 package com.Ecomm.pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import java.time.Duration;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SignupPage {
 
-    WebDriver driver;
-    By signupLoginLink = By.linkText("Signup / Login");
-    By signupName = By.name("name");
-    By signupEmail = By.xpath("//input[@data-qa='signup-email']");
-    By signupBtn = By.xpath("//button[@data-qa='signup-button']");
+    private final WebDriver driver;
+    private final WebDriverWait wait;
+
+    // Top nav
+    private final By signupLoginLink = By.linkText("Signup / Login");
+
+    // New User Signup section
+    private final By newUserName  = By.xpath("//input[@data-qa='signup-name']");
+    private final By newUserEmail = By.xpath("//input[@data-qa='signup-email']");
+    private final By signupBtn    = By.xpath("//button[@data-qa='signup-button']");
+
+    // Account Information page
+    private final By titleMr   = By.id("id_gender1");  // Mr radio
+    private final By titleMrs  = By.id("id_gender2");  // Mrs radio
+    private final By firstName = By.id("first_name");
+    private final By lastName  = By.id("last_name");
+    private final By password  = By.id("password");
+
+    private final By days   = By.id("days");
+    private final By months = By.id("months");
+    private final By years  = By.id("years");
+
+    private final By newsletterChk = By.id("newsletter");
+    private final By offersChk     = By.id("optin");
+
+    private final By company  = By.id("company");
+    private final By address1 = By.id("address1");
+    private final By address2 = By.id("address2");
+    private final By country  = By.id("country");
+    private final By state    = By.id("state");
+    private final By city     = By.id("city");
+    private final By zipcode  = By.id("zipcode");
+    private final By mobile   = By.id("mobile_number");
+
+    private final By createAccountBtn = By.xpath("//button[@data-qa='create-account']");
+
+    // Success message after account creation
+    private final By accountCreatedMsg = By.xpath("//h2[@data-qa='account-created']");
 
     public SignupPage(WebDriver driver) {
         this.driver = driver;
-    }
-    
+        this.wait   = new WebDriverWait(driver, Duration.ofSeconds(20));
+    } 
     public boolean nameIsdisplayed()
 	{
-		return driver.findElement(signupName).isDisplayed();
+		return driver.findElement(newUserName).isDisplayed();
 	}
     public boolean emailIsdisplayed()
 	{
-		return driver.findElement(signupEmail).isDisplayed();
+		return driver.findElement(newUserEmail).isDisplayed();
 	}
     public boolean submitIsdisplayed()
 	{
@@ -31,10 +67,113 @@ public class SignupPage {
     public void clickSignupLoginLink() {
         driver.findElement(signupLoginLink).click();
     }
-   
+
+    public void openHome() {
+        driver.get("https://www.automationexercise.com/");
+
+    }
+
+    public void goToSignupLogin() {
+        wait.until(ExpectedConditions.elementToBeClickable(signupLoginLink)).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(newUserName));
+    }
+
+    public void startSignup(String name, String email) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(newUserName)).clear();
+        driver.findElement(newUserName).sendKeys(name);
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(newUserEmail)).clear();
+        driver.findElement(newUserEmail).sendKeys(email);
+
+        driver.findElement(signupBtn).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(password));
+    }
+
+    /**
+     * ✅ Fill ALL fields in the Account form including:
+     * Title, First/Last Name, DOB, Newsletter, Offers
+     */
+    public void fillFullAccountForm(String title, String fName, String lName,
+                                    String pwd, String day, String month, String year,
+                                    boolean newsletter, boolean offers,
+                                    String companyVal, String addr1, String addr2Val,
+                                    String countryText, String stateVal, String cityVal,
+                                    String zip, String mobileVal) {
+
+        // Title
+        if (title.equalsIgnoreCase("Mr")) {
+            driver.findElement(titleMr).click();
+        } else {
+            driver.findElement(titleMrs).click();
+        }
+
+        // First & Last Name
+        driver.findElement(firstName).clear();
+        driver.findElement(firstName).sendKeys(fName);
+
+        driver.findElement(lastName).clear();
+        driver.findElement(lastName).sendKeys(lName);
+
+        // Password
+        driver.findElement(password).sendKeys(pwd);
+
+        // Date of Birth
+        new Select(driver.findElement(days)).selectByVisibleText(day);
+        new Select(driver.findElement(months)).selectByVisibleText(month);
+        new Select(driver.findElement(years)).selectByVisibleText(year);
+
+        // Newsletter & offers
+        if (newsletter) driver.findElement(newsletterChk).click();
+        if (offers) driver.findElement(offersChk).click();
+
+        // Address details
+        driver.findElement(company).sendKeys(companyVal);
+        driver.findElement(address1).sendKeys(addr1);
+        driver.findElement(address2).sendKeys(addr2Val);
+
+        new Select(driver.findElement(country)).selectByVisibleText(countryText);
+        driver.findElement(state).sendKeys(stateVal);
+        driver.findElement(city).sendKeys(cityVal);
+        driver.findElement(zipcode).sendKeys(zip);
+        driver.findElement(mobile).sendKeys(mobileVal);
+    }
+
+    /**
+     * ✅ Remove Ads that block clicks
+     */
+    private void removeAds() {
+        try {
+            ((JavascriptExecutor) driver).executeScript(
+                "var ads = document.querySelectorAll('iframe[id^=\"aswift_\"]'); " +
+                "ads.forEach(ad => ad.remove());"
+            );
+            System.out.println("✅ Ads removed successfully");
+        } catch (Exception e) {
+            System.out.println("⚠️ No ads found to remove");
+        }
+    }
+
+    /**
+     * ✅ Submit Create Account (safe click)
+     */
+    public void submitCreateAccount() {
+        removeAds(); // clean ads first
+        WebElement button = wait.until(ExpectedConditions.elementToBeClickable(createAccountBtn));
+        button.click();
+    }
+
+    // ✅ Check if "ACCOUNT CREATED!" message appears
+    public boolean isAccountCreated() {
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(accountCreatedMsg));
+            return true;
+        } catch (TimeoutException e) {
+            return false;
+        }
+    }
     public void enterSignupDetails(String name, String email) {
-        driver.findElement(signupName).sendKeys(name);
-        driver.findElement(signupEmail).sendKeys(email);
+        driver.findElement(newUserName).sendKeys(name);
+        driver.findElement(newUserEmail).sendKeys(email);
         driver.findElement(signupBtn).click();
     }
 }

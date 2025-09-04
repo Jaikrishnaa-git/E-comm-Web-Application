@@ -31,12 +31,10 @@ public class TC_ECOM_Reg_004 extends BaseTest
 	            if (signup.submitIsdisplayed()) {
 	                test.pass("The  Submit button is displayed");
 	            } else {
-	                test.fail("The Submit button is not displayed");
-	                ScreenshotUtilities.capturescreen(driver, "TC_ECOM_Reg_003");
+	                test.fail("The Submit button is not displayed").addScreenCaptureFromPath(ScreenshotUtilities.capturescreen(driver, "TC_ECOM_Reg_004"));
 	            }
 	        } catch (Exception e) {
-	            test.fail("Submit buttonnot found. Exception: " + e.getMessage());
-	            ScreenshotUtilities.capturescreen(driver, "TC_ECOM_Reg_003");
+	            test.fail("Submit buttonnot found. Exception: " + e.getMessage()).addScreenCaptureFromPath(ScreenshotUtilities.capturescreen(driver, "TC_ECOM_Reg_004"));
 	        }
 	    }
 	}
