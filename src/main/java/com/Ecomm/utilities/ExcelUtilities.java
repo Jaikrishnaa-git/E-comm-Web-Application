@@ -16,8 +16,9 @@ public class ExcelUtilities {
 		  XSSFWorkbook workbook=new XSSFWorkbook(fs);
 		  XSSFSheet worksheet=workbook.getSheet(sheetname);
 		  int rowcount=worksheet.getPhysicalNumberOfRows();
+		  int colCount = worksheet.getRow(0).getPhysicalNumberOfCells();
 		  System.out.println("rows:"+rowcount);
-		  String[][] data=new String[rowcount][2];
+		  String[][] data=new String[rowcount][colCount];
 		  
 		  for(int i=0;i<rowcount;i++)
 		  {

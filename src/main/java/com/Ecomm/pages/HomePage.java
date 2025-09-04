@@ -18,9 +18,11 @@ public class HomePage {
     private final By apiTestingLink  = By.linkText("API Testing");
     private final By productsLink    = By.xpath("//a[@href='/products']");  // ✅ Fixed locator
     private final By contactUsLink   = By.linkText("Contact us");
-
+    private final By subscriptionBox = By.xpath("//input[@id='susbscribe_email']");
+    private final By submitButton    = By.xpath("//button[@id='subscribe']");
     // Banner to confirm homepage is loaded
     private final By homeBanner = By.id("slider-carousel");
+    private final By sucessMessageOnSub = By.xpath("//div[@class='alert-success alert']");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -59,11 +61,32 @@ public class HomePage {
         wait.until(ExpectedConditions.elementToBeClickable(apiTestingLink)).click();
     }
 
-    public void clickProducts() {   // ✅ Fixed method
+    public void clickProducts() {  
         wait.until(ExpectedConditions.elementToBeClickable(productsLink)).click();
     }
 
     public void clickContactUs() {
         wait.until(ExpectedConditions.elementToBeClickable(contactUsLink)).click();
     }
+    
+    public boolean isSubScriptionVisible()
+    {
+    		return driver.findElement(subscriptionBox).isDisplayed();
+    }
+    public boolean isSubmitVisble()
+    {
+    	    return driver.findElement(submitButton).isDisplayed();
+    }
+
+	public void enterSubsciptionMail(String email) throws InterruptedException {
+		
+		driver.findElement(subscriptionBox).sendKeys(email);
+		Thread.sleep(2000);
+		driver.findElement(submitButton).click();	
+	}
+
+	public boolean isSubSubmittedDisplayed() {
+		 return driver.findElement(sucessMessageOnSub).isDisplayed();
+	}
+	
 }

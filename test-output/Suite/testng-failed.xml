@@ -3,15 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="RegistrationPageAutomation.TC_ECOM_Reg_002">
+      <class name="Subscription.TC_ECOM_subHome_001">
         <methods>
-          <include name="flushReport"/>
-          <include name="setup"/>
+          <include name="verifySubsscription"/>
+          <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="setupReport"/>
-          <include name="checkNameField"/>
         </methods>
-      </class> <!-- RegistrationPageAutomation.TC_ECOM_Reg_002 -->
+      </class> <!-- Subscription.TC_ECOM_subHome_001 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
