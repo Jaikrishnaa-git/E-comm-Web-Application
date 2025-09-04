@@ -7,11 +7,12 @@ public class ExtentManager {
 
     static String projectPath = System.getProperty("user.dir");
 
-    public static ExtentReports getInstance(String name) {
+    public static ExtentReports createInstance(String name) {
      	name = name+".html";
         ExtentReports extent = new ExtentReports();
         ExtentSparkReporter spark = new ExtentSparkReporter(projectPath + "\\src\\test\\resources\\Reports\\"+name);
         extent.attachReporter(spark);
         return extent;
     }
+
 }
