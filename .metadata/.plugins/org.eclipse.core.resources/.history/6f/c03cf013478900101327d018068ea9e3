@@ -1,0 +1,108 @@
+package com.ecomm.tests;
+
+import org.testng.Assert;
+
+import java.io.IOException;
+import org.testng.annotations.BeforeClass;   
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import com.Ecomm.base.BaseTest;
+import com.Ecomm.utilities.ExcelUtilities;
+import com.Ecomm.utilities.ScreenshotUtilities;
+import com.Ecomm.utilities.ExtentManager;
+import com.aventstack.extentreports.ExtentTest;
+
+public class LoginPageAutomation extends BaseTest {
+
+	private ExtentTest test;
+
+    @BeforeClass
+    public void initReport() {
+        setReportName("LoginPageReport");
+        extent = ExtentManager.getInstance(reportName);
+    }
+
+    @Test(dataProvider = "loginData")
+    public void loginTests(int rowNum, String email, String password) {
+        String tcId = "TC_ECOM_Login_" + String.format("%03d", rowNum + 1); // auto-generate TCID
+        test = extent.createTest(tcId + " | Email: " + email + " | Password: " + password);
+        System.out.println("Executing: " + tcId + " with data -> " + email + " | " + password);
+
+        driver.get("https://www.automationexercise.com/login");
+
+        try {
+            // Enter Email if provided
+            if (email != null && !email.trim().isEmpty() && !email.toLowerCase().contains("click signup")) {
+                driver.findElement(By.name("email")).clear();
+                driver.findElement(By.name("email")).sendKeys(email);
+                test.info("Entered email: " + email);
+            }
+
+            // Enter Password if provided
+            if (password != null && !password.trim().isEmpty()) {
+                driver.findElement(By.name("password")).clear();
+                driver.findElement(By.name("password")).sendKeys(password);
+                test.info("Entered password: " + password);
+            }
+
+            // Special case for TC_ECOM_Login_003 (Click signup button instead of login)
+            if (email != null && email.toLowerCase().contains("click signup")) {
+                driver.findElement(By.xpath("//a[text()='Signup']")).click();
+                test.info("Clicked Signup button.");
+            } else {
+                driver.findElement(By.xpath("//button[text()='Login']")).sendKeys(Keys.ENTER);
+                test.info("Clicked Login button.");
+            }
+
+            // Validation
+            String pageSource = driver.getPageSource();
+            boolean passed = false;
+
+            if (tcId.equals("TC_ECOM_Login_004")) {
+                // Valid login case
+                passed = driver.getCurrentUrl().contains("account");
+            } else {
+                // Invalid or edge cases -> error message expected
+                passed = pageSource.contains("Your email or password is incorrect!")
+                        || driver.getCurrentUrl().contains("login");
+            }
+
+            Assert.assertTrue(passed, "Test failed for " + tcId + " | Email: " + email + " | Password: " + password);
+            test.pass("Passed for " + tcId);
+
+        } catch (Exception e) {
+            test.fail("Exception in test: " + e.getMessage());
+            Assert.fail("Exception: " + e.getMessage());
+        }
+    }
+
+    @AfterMethod
+    public void captureFailure(ITestResult result) throws IOException {
+        if (ITestResult.FAILURE == result.getStatus()) {
+            String path = ScreenshotUtilities.capturescreen(driver, result.getName());
+            test.fail("Screenshot captured: " + path);
+        }
+    }
+
+    @DataProvider(name = "loginData")
+    public Object[][] getLoginData() throws IOException {
+        // Excel Format: Email | Password
+        Object[][] rawData = ExcelUtilities.getdata(
+                System.getProperty("user.dir") + "\\src\\test\\resources\\Testdata\\data.xlsx", 
+                "Sheet1"
+        );
+
+        // add row index (for TCID generation)
+        Object[][] finalData = new Object[rawData.length][3];
+        for (int i = 0; i < rawData.length; i++) {
+            finalData[i][0] = i;           // row number
+            finalData[i][1] = rawData[i][0]; // email
+            finalData[i][2] = rawData[i][1]; // password
+        }
+        return finalData;
+    }
+}

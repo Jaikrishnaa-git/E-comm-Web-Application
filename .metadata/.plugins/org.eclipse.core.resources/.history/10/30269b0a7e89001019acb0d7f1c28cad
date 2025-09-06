@@ -1,0 +1,217 @@
+package Func_LoginPage;
+import java.io.IOException;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import com.Ecomm.base.BaseTest;
+
+import com.Ecomm.utilities.ExtentManager;
+import com.Ecomm.utilities.ScreenshotUtilities;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
+	public class LoginTestCases extends BaseTest {
+
+	    private WebDriverWait wait;
+	    private static final String EXCEL_PATH = System.getProperty("user.dir") + "/src/test/resources/Testdata/data.xlsx";
+	    private static final String SHEET_NAME = "Sheet1";
+	    private static final String LOGIN_URL = "https://www.automationexercise.com/login";
+
+	    // Valid credentials
+	    private static final String VALID_EMAIL = "jaikrishnaa@gmail.com";
+	    private static final String VALID_PASSWORD = "Team@A8";
+
+	    // Extent Reports
+	    private static ExtentReports extent;
+	    private ExtentTest test;
+
+	    // Page Elements
+	    private By emailTextBox = By.xpath("//input[@data-qa='login-email']");
+	    private By passwordTextBox = By.xpath("//input[@data-qa='login-password']");
+	    private By loginButton = By.xpath("//button[@data-qa='login-button']");
+	    private By loggedInUser = By.xpath("//a[contains(text(),'Logged in as')]");
+
+	    @BeforeClass
+	    public void setUpClass() {
+	        super.setUp();
+	        extent = ExtentManager.createInstance("LoginTestCases");
+	    }
+
+	    @BeforeMethod
+	    public void navigateToLoginPage() {
+	        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+	        driver.get(LOGIN_URL);
+	        wait.until(ExpectedConditions.presenceOfElementLocated(emailTextBox));
+	    }
+
+	    // ----------------------- DATA PROVIDERS ------------------------
+	    @DataProvider(name = "validLogin")
+	    public Object[][] validLogin() {
+	        return new Object[][] { { VALID_EMAIL, VALID_PASSWORD } };
+	    }
+
+	    @DataProvider(name = "validEmailEmptyPassword")
+	    public Object[][] validEmailEmptyPassword() {
+	        return new Object[][] { { VALID_EMAIL, "" } };
+	    }
+
+	    @DataProvider(name = "emptyEmailValidPassword")
+	    public Object[][] emptyEmailValidPassword() {
+	        return new Object[][] { { "", VALID_PASSWORD } };
+	    }
+
+	    @DataProvider(name = "emptyEmailEmptyPassword")
+	    public Object[][] emptyEmailEmptyPassword() {
+	        return new Object[][] { { "", "" } };
+	    }
+
+	    @DataProvider(name = "validEmailInvalidPassword")
+	    public Object[][] validEmailInvalidPassword() {
+	        return new Object[][] { { VALID_EMAIL, "wrongpass" } };
+	    }
+
+	    @DataProvider(name = "invalidEmailValidPassword")
+	    public Object[][] invalidEmailValidPassword() {
+	        return new Object[][] { { "invalid@email.com", VALID_PASSWORD } };
+	    }
+
+	    @DataProvider(name = "invalidEmailInvalidPassword")
+	    public Object[][] invalidEmailInvalidPassword() {
+	        return new Object[][] { { "invalid@email.com", "wrongpass" } };
+	    }
+
+	    // ----------------------- TEST CASES ----------------------------
+
+	    @Test(priority = 1, dataProvider = "validLogin")
+	    public void TC_ECOM_Login_001(String email, String password) {
+	        runLoginTest("Valid email + valid password (PASS)", email, password, true);
+	    }
+
+	    @Test(priority = 2, dataProvider = "validEmailEmptyPassword")
+	    public void TC_ECOM_Login_002(String email, String password) {
+	        runLoginTest("Valid email + empty password (PASS)", email, password, true);
+	    }
+
+	    @Test(priority = 3, dataProvider = "emptyEmailValidPassword")
+	    public void TC_ECOM_Login_003(String email, String password) {
+	        runLoginTest("Empty email + valid password (PASS)", email, password, true);
+	    }
+
+	    @Test(priority = 4, dataProvider = "emptyEmailEmptyPassword")
+	    public void TC_ECOM_Login_004(String email, String password) {
+	        runLoginTest("Empty email + empty password (PASS)", email, password, true);
+	    }
+
+	    @Test(priority = 5, dataProvider = "validEmailInvalidPassword")
+	    public void TC_ECOM_Login_005(String email, String password) {
+	        runLoginTest("Valid email + invalid password (FAIL)", email, password, false);
+	    }
+
+	    @Test(priority = 6, dataProvider = "invalidEmailValidPassword")
+	    public void TC_ECOM_Login_006(String email, String password) {
+	        runLoginTest("Invalid email + valid password (FAIL)", email, password, false);
+	    }
+
+	    @Test(priority = 7, dataProvider = "invalidEmailInvalidPassword")
+	    public void TC_ECOM_Login_007(String email, String password) {
+	        runLoginTest("Invalid email + invalid password (FAIL)", email, password, false);
+	    }
+
+	    // ----------------------- HELPER METHODS ------------------------
+
+	    private void runLoginTest(String description, String email, String password, boolean shouldPass) {
+	        test = extent.createTest(description);
+	        test.log(Status.INFO, "Executing: " + description + " | Email: " + email + " | Password: " + password);
+
+	        try {
+	            performLogin(email, password);
+
+	            boolean loginSucceeded = isLoginSuccessful();
+
+	            if (shouldPass) {
+	                Assert.assertTrue(loginSucceeded, "Expected login to PASS but it FAILED");
+	                test.log(Status.PASS, "Login succeeded as expected");
+	            } else {
+	                Assert.assertFalse(loginSucceeded, "Expected login to FAIL but it PASSED");
+	                test.log(Status.PASS, "Login failed as expected");
+	            }
+
+	        } catch (AssertionError ae) {
+	            test.log(Status.FAIL, "Assertion failed: " + ae.getMessage());
+	            throw ae;
+	        } catch (Exception e) {
+	            test.log(Status.FAIL, "Unexpected error: " + e.getMessage());
+	            Assert.fail("Test failed due to exception: " + e.getMessage());
+	        }
+	    }
+
+	    private void performLogin(String email, String password) {
+	        try {
+	            WebElement emailField = wait.until(ExpectedConditions.elementToBeClickable(emailTextBox));
+	            WebElement passwordField = wait.until(ExpectedConditions.elementToBeClickable(passwordTextBox));
+	            WebElement loginBtn = wait.until(ExpectedConditions.elementToBeClickable(loginButton));
+
+	            emailField.clear();
+	            if (email != null && !email.trim().isEmpty()) {
+	                emailField.sendKeys(email);
+	            }
+
+	            passwordField.clear();
+	            if (password != null && !password.trim().isEmpty()) {
+	                passwordField.sendKeys(password);
+	            }
+
+	            loginBtn.click();
+	            Thread.sleep(3000); // wait for login action
+
+	        } catch (Exception e) {
+	            throw new RuntimeException("Failed to perform login: " + e.getMessage());
+	        }
+	    }
+
+	    private boolean isLoginSuccessful() {
+	        try {
+	            WebElement loggedUser = driver.findElement(loggedInUser);
+	            return loggedUser.isDisplayed();
+	        } catch (Exception e) {
+	            return false;
+	        }
+	    }
+
+	    @AfterMethod
+	    public void handleTestResult(ITestResult result) {
+	        try {
+	            if (result.getStatus() == ITestResult.FAILURE) {
+	                String screenshotPath = ScreenshotUtilities.capturescreen(driver, result.getMethod().getMethodName());
+	                test.addScreenCaptureFromPath(screenshotPath, "Failure Screenshot");
+	                test.log(Status.FAIL, "Failed: " + result.getThrowable().getMessage());
+	            } else if (result.getStatus() == ITestResult.SUCCESS) {
+	                test.log(Status.PASS, "Test Passed");
+	            }
+	            if (extent != null) extent.flush();
+	        } catch (IOException e) {
+	            test.log(Status.WARNING, "Screenshot capture failed: " + e.getMessage());
+	        }
+	    }
+
+	    @AfterClass
+	    public void tearDownClass() {
+	        if (extent != null) {
+	            ExtentManager.flushReports();
+	        }
+	        super.tearDown();
+	    }
+	}                 

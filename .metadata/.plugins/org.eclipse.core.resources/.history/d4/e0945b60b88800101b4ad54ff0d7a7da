@@ -1,0 +1,86 @@
+package com.ecomm.tests;
+
+	import org.testng.Assert;
+	import org.testng.annotations.*;
+
+	import com.Ecomm.base.BaseTest;
+	import com.Ecomm.pages.loginpage;
+	import com.Ecomm.utilities.ExcelUtilities;
+	import com.Ecomm.utilities.ScreenshotUtilities;
+	import com.Ecomm.utilities.ExtentManager;
+	import com.aventstack.extentreports.*;
+
+	import java.io.IOException;
+
+	public class LoginPageAutomation extends BaseTest {
+
+	    loginpage login;
+	    ExtentReports extent;
+	    ExtentTest test;
+
+	    // Path to your Excel file
+	    String excelPath = System.getProperty("user.dir") + "\\src\\test\\resources\\Testdata\\data.xlsx";
+	    String sheetName = "LoginTests";   // ✅ make sure the sheet is renamed
+
+	    @BeforeTest
+	    public void startReport() {
+	        extent = ExtentManager.getInstance("LoginTestReport");
+	    }
+
+	    @BeforeMethod
+	    public void setUpTest() {
+	        initialization();   // from BaseTest (opens browser, navigates to URL)
+	        login = new loginpage(driver);
+	    }
+
+	    @Test(dataProvider = "LoginData")
+	    public void verifyLogin(String email, String password, String expectedResult) throws IOException {
+	        String testName = "LoginTest_" + (email.isEmpty() ? "EmptyEmail" : email);
+
+	        test = extent.createTest(testName);
+
+	        // Perform login actions from Page Object
+	        login.enterEmail(email);
+	        login.enterPassword(password);
+	        login.clickLogin();
+
+	        String actualResult = login.getLoginResultMessage();
+
+	        try {
+	            Assert.assertEquals(actualResult, expectedResult);
+	            test.log(Status.PASS, "PASS | Email: " + email + " | Password: " + password);
+	        } catch (AssertionError e) {
+	            String screenshotPath = ScreenshotUtilities.captureScreen(driver, testName);
+	            test.log(Status.FAIL, "FAIL | Email: " + email + " | Password: " + password +
+	                    " | Expected: " + expectedResult + " | Got: " + actualResult)
+	                .addScreenCaptureFromPath(screenshotPath);
+	            throw e;  // rethrow to mark test failed in TestNG
+	        }
+	    }
+
+	    @DataProvider(name = "LoginData")
+	    public Object[][] getData() throws IOException {
+	        Object[][] rawData = ExcelUtilities.getdata(excelPath, sheetName);
+	        Object[][] finalData = new Object[rawData.length][3];
+
+	        // ✅ Skip first column (TestCaseID), use Email, Password, ExpectedResult
+	        for (int i = 0; i < rawData.length; i++) {
+	            finalData[i][0] = rawData[i][1]; // Email
+	            finalData[i][1] = rawData[i][2]; // Password
+	            finalData[i][2] = rawData[i][3]; // ExpectedResult
+	        }
+	        return finalData;
+	    }
+
+	    @AfterMethod
+	    public void tearDown() {
+	        driver.quit();
+	    }
+
+	    @AfterTest
+	    public void endReport() {
+	        extent.flush();
+	    }
+	}
+
+}

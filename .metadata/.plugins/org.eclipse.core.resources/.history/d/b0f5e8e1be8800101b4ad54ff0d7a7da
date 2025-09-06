@@ -1,0 +1,36 @@
+package com.Ecomm.utilities;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelUtilities {
+
+    public static Object[][] getdata(String excelpath, String sheetname) throws IOException {
+        
+        File file1 = new File(excelpath);
+        FileInputStream fs = new FileInputStream(file1);
+        XSSFWorkbook workbook = new XSSFWorkbook(fs);
+        XSSFSheet worksheet = workbook.getSheet(sheetname);
+        
+        int rowcount = worksheet.getPhysicalNumberOfRows();
+        int colcount = worksheet.getRow(0).getLastCellNum(); // detect total columns dynamically
+        
+        System.out.println("Rows: " + rowcount + " | Columns: " + colcount);
+        
+        String[][] data = new String[rowcount - 1][colcount]; // skip header row
+        
+        for (int i = 1; i < rowcount; i++) {  // start from row 1 (skip header)
+            for (int j = 0; j < colcount; j++) {
+                data[i - 1][j] = worksheet.getRow(i).getCell(j).getStringCellValue();
+            }
+        }
+        
+        workbook.close();
+        fs.close();
+        return data;
+    }
+}

@@ -1,0 +1,37 @@
+package com.Ecomm.utilities;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelUtilities {
+
+	public static Object[][] getdata(String relativePath, String sheetname) throws IOException {
+
+	    // Build full path dynamically from project root + relative path
+	    String excelPath = System.getProperty("user.dir") + "/src/test/resources/" + relativePath;
+
+	    FileInputStream fis = new FileInputStream(excelPath);
+	    XSSFWorkbook workbook = new XSSFWorkbook(fis);
+	    XSSFSheet worksheet = workbook.getSheet(sheetname);
+
+	    int rowcount = worksheet.getPhysicalNumberOfRows();
+	    int colcount = worksheet.getRow(0).getLastCellNum();
+
+	    System.out.println("Rows: " + rowcount + " | Columns: " + colcount);
+
+	    String[][] data = new String[rowcount - 1][colcount]; // skip header row
+
+	    for (int i = 1; i < rowcount; i++) {  // start from row 1 (skip header)
+	        for (int j = 0; j < colcount; j++) {
+	            data[i - 1][j] = worksheet.getRow(i).getCell(j).toString();
+	        }
+	    }
+
+	    workbook.close();
+	    fis.close();
+	    return data;
+	}
+}

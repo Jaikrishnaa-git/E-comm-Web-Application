@@ -1,0 +1,80 @@
+package com.ecomm.tests;
+
+import org.testng.Assert;
+import java.io.IOException;
+import org.testng.annotations.BeforeClass;   
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import com.Ecomm.base.BaseTest;
+import com.Ecomm.utilities.ExcelUtilities;
+import com.Ecomm.utilities.ScreenshotUtilities;
+import com.Ecomm.utilities.ExtentManager;
+import com.aventstack.extentreports.ExtentTest;
+
+public class LoginPageAutomation extends BaseTest {
+
+	private ExtentTest test;
+
+	@BeforeClass
+	public void initReport() {
+		setReportName("LoginPageReport");
+		extent = ExtentManager.getInstance(reportName);
+	}
+
+	@Test(dataProvider = "loginData")
+	public void loginTests(String email, String password) {
+		System.out.println("Testing login with: " + email + " | " + password);
+
+
+		driver.get("https://www.automationexercise.com/login");
+	
+
+		try {
+			// Enter Email if valid
+			if (email != null && !email.trim().isEmpty() && !email.toLowerCase().contains("click signup")) {
+				driver.findElement(By.name("email")).sendKeys(email);
+			}
+
+			// Enter Password if valid
+			if (password != null && !password.trim().isEmpty()) {
+				driver.findElement(By.name("password")).sendKeys(password);
+			}
+
+			// Click login button
+			driver.findElement(By.xpath("//button[text()='Login']")).sendKeys(Keys.ENTER);
+
+			// Simple validation (check if account page appears or login error message)
+			String pageSource = driver.getPageSource();
+			boolean passed = pageSource.contains("Your email or password is incorrect!")
+					|| driver.getCurrentUrl().contains("account");
+
+			Assert.assertTrue(passed, "Login test failed for email: " + email);
+
+			test.pass("Passed for: " + email);
+
+		} catch (Exception e) {
+			test.fail("Exception in test: " + e.getMessage());
+			Assert.fail("Exception: " + e.getMessage());
+		}
+		}
+	
+
+	@AfterMethod
+	public void captureFailure(ITestResult result) throws IOException {
+		if (ITestResult.FAILURE == result.getStatus()) {
+			String path = ScreenshotUtilities.capturescreen(driver, result.getName());
+			test.fail("Screenshot captured: " + path);
+		}
+	}
+
+	@DataProvider(name = "loginData")
+	public Object[][] getLoginData() throws IOException {
+		  Object[][] data = ExcelUtilities.getdata("Sheet1");
+		    System.out.println("DataProvider loaded rows: " + data.length);
+		    return data;
+		}
+}

@@ -1,0 +1,79 @@
+package com.ecomm.tests;
+
+	import org.testng.Assert;
+	import java.io.IOException;
+	import org.openqa.selenium.By;
+	import org.openqa.selenium.Keys;
+	import org.testng.ITestResult;
+	import org.testng.annotations.*;
+
+import com.Ecomm.base.BaseTest;
+import com.Ecomm.utilities.ExcelUtilities;
+	import com.Ecomm.utilities.ScreenshotUtilities;
+	import com.Ecomm.utilities.ExtentManager;
+	import com.aventstack.extentreports.ExtentTest;
+
+	public class LoginPageAutomation extends BaseTest {
+
+	    private ExtentTest test;
+
+	    @BeforeClass
+	    public void initReport() {
+	        setReportName("LoginPageReport");
+	        extent = ExtentManager.getInstance(reportName);
+	    }
+
+	    @Test(dataProvider = "loginData")
+	    public void loginTests(String testcaseID, String email, String password, String expectedResult) {
+	        test = extent.createTest(testcaseID);
+
+	        driver.get("https://www.automationexercise.com/login");
+
+	        try {
+	            
+	            if (!email.isEmpty() && !email.startsWith("http")) {
+	                driver.findElement(By.name("email")).sendKeys(email);
+	            }
+
+	           
+	            if (!password.isEmpty() && !password.equalsIgnoreCase("N/A")) {
+	                driver.findElement(By.name("password")).sendKeys(password);
+	            }
+
+	    
+	            if (email.toLowerCase().contains("click signup")) {
+	                driver.findElement(By.xpath("//button[text()='Login']")).click();
+	            } else {
+	                driver.findElement(By.xpath("//button[text()='Login']")).sendKeys(Keys.ENTER);
+	            }
+
+	            String pageSource = driver.getPageSource();
+	            boolean passed = pageSource.contains(expectedResult) || driver.getCurrentUrl().contains("account");
+
+	            Assert.assertTrue(passed, "Expected: " + expectedResult);
+	            test.pass(" Passed: " + testcaseID);
+
+	        } catch (Exception e) {
+	            test.fail(" Exception in test: " + e.getMessage());
+	            Assert.fail("Exception: " + e.getMessage());
+	        }
+	    }
+
+	    @AfterMethod
+	    public void captureFailure(ITestResult result) throws IOException {
+	        if (ITestResult.FAILURE == result.getStatus()) {
+	            String path = ScreenshotUtilities.capturescreen(driver, result.getName());
+	            test.fail("Screenshot captured: " + path);
+	        }
+	    }
+
+	    @DataProvider(name = "loginData")
+	    public Object[][] getLoginData() throws IOException {
+	        return ExcelUtilities.getdata(
+	            System.getProperty("user.dir") + "\\src\\test\\resources\\data.xlsx",
+	            "LoginTests"
+	        );
+	    }
+	}
+
+
