@@ -4,15 +4,13 @@
   <test thread-count="5" name="Chrome Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="RegistrationPageAutomation.TC_ECOM_Reg_026">
+      <class name="Business_Specific_needs.TC_ECOM_Busi_needs_08">
         <methods>
-          <include name="verifyDateWithMonthInSignupPage"/>
-          <include name="flushReport"/>
-          <include name="setup"/>
+          <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="setupReport"/>
+          <include name="verifySiteBehaviour"/>
         </methods>
-      </class> <!-- RegistrationPageAutomation.TC_ECOM_Reg_026 -->
+      </class> <!-- Business_Specific_needs.TC_ECOM_Busi_needs_08 -->
     </classes>
   </test> <!-- Chrome Test(failed) -->
 </suite> <!-- Failed suite [Ecomm Registration Suite] -->

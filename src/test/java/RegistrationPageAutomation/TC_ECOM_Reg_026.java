@@ -17,10 +17,12 @@ public class TC_ECOM_Reg_026 extends BaseTest {
 
         SignupPage signup = new SignupPage(driver);
 
-        signup.enterName("TestUser");
+        // Step 1: Enter name and email, then click Signup
+        signup.newUserName("TestUser");
         signup.enterEmail("testuser" + System.currentTimeMillis() + "@gmail.com");
         signup.clickSignupButton();
 
+        // Step 2: Verify day and month dropdowns are displayed
         if (signup.isDayDropdownDisplayed() && signup.isMonthDropdownDisplayed()) {
             test.pass("Day and Month dropdowns are displayed");
         } else {
@@ -29,14 +31,15 @@ public class TC_ECOM_Reg_026 extends BaseTest {
             Assert.fail("Day or Month dropdown not displayed");
         }
 
+        // Step 3: Select an invalid combination -> 31 February
         signup.selectDay("31");
         signup.selectMonth("February");
 
         String selectedDay = signup.getSelectedDay();
         String selectedMonth = signup.getSelectedMonth();
 
+        // Step 4: Validate the restriction
         if (selectedDay.equals("31") && selectedMonth.equals("February")) {
-            
             test.fail("Invalid date-month combination allowed: " + selectedDay + " " + selectedMonth)
                 .addScreenCaptureFromPath(ScreenshotUtilities.capturescreen(driver, "InvalidDateMonth"));
             Assert.fail("Application allowed invalid date-month combination");

@@ -1,75 +1,56 @@
 package com.Ecomm.base;
 
 import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Parameters;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 
-import com.Ecomm.utilities.ExtentManager;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.Ecomm.utilities.ExtentManager;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 
     protected WebDriver driver;
-    protected ExtentReports extent;
+    protected static ExtentReports extent;
     protected ExtentTest test;
-    protected String reportName = "TC_ECOM_Reg_026";
 
-    protected void setReportName(String reportName) {
-        this.reportName = reportName;
-    }
-    
-    @BeforeSuite
-    public void setupReport() {
-    	
-        extent = ExtentManager.getInstance(reportName);
-    }
+    @BeforeClass
+    public void setUp() {
+        System.out.println("Launching Chrome...");
 
-    @Parameters("browser")
-    @BeforeMethod
-    public void setup(String browser) {
-        switch (browser.toLowerCase()) {
-            case "chrome":
-                WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
-                break;
-            case "firefox":
-                WebDriverManager.firefoxdriver().setup();
-                driver = new FirefoxDriver();
-                break;
-            case "edge":
-                WebDriverManager.edgedriver().setup();
-                driver = new EdgeDriver();
-                break;
-            default:
-                throw new IllegalArgumentException("Unsupported browser: " + browser);
-        }
+        // Setup WebDriver using WebDriverManager
+        WebDriverManager.chromedriver().setup();
 
-        driver.manage().window().maximize();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        options.addArguments("--disable-popup-blocking");
+        options.addArguments("--start-maximized");
+
+        driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        // Initialize Extent Report
+        String testClassName = this.getClass().getSimpleName();
+        extent = ExtentManager.createInstance(testClassName);
+
+        System.out.println("Chrome launched successfully.");
     }
 
-    @AfterMethod
+    @AfterClass
     public void tearDown() {
         if (driver != null) {
             driver.quit();
+            System.out.println("Browser closed after all tests in this class.");
         }
-    }
 
-    @AfterSuite
-    public void flushReport() {
         if (extent != null) {
             extent.flush();
+            System.out.println("Extent Report flushed.");
         }
     }
 }

@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Ecomm_Registration_Suite" class="navigator-link ">
-                    <span>C:\Users\Windows\git\E-comm-Web-Application\XmlFiles\testng_TC026.xml</span>
+                    <span>C:\Users\Windows\git\E-comm-Web-Application\testng_Busi_needs_8.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Ecomm_Registration_Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Ecomm_Registration_Suite" title="RegistrationPageAutomation.TC_ECOM_Reg_026" class="method navigator-link" hash-for-method="verifyDateWithMonthInSignupPage">verifyDateWithMonthInSignupPage</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Ecomm_Registration_Suite" title="Business_Specific_needs.TC_ECOM_Busi_needs_08" class="method navigator-link" hash-for-method="verifySiteBehaviour">verifySiteBehaviour</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Ecomm_Registration_Suite -->
@@ -121,18 +121,38 @@
           <div class="suite-Ecomm_Registration_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">RegistrationPageAutomation.TC_ECOM_Reg_026</span>
+              <span class="class-name">Business_Specific_needs.TC_ECOM_Busi_needs_08</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyDateWithMonthInSignupPage">
-                  </a> <!-- verifyDateWithMonthInSignupPage -->
-                  <span class="method-name">verifyDateWithMonthInSignupPage</span>
-                  <div class="stack-trace">java.lang.AssertionError: Application allowed invalid date-month combination
-	at RegistrationPageAutomation.TC_ECOM_Reg_026.verifyDateWithMonthInSignupPage(TC_ECOM_Reg_026.java:42)
+                  <a name="verifySiteBehaviour">
+                  </a> <!-- verifySiteBehaviour -->
+                  <span class="method-name">verifySiteBehaviour</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1745cbe630053890a75262db7da5eb30, get {url=https://www.automationexercise.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Windows\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64475}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64475/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1745cbe630053890a75262db7da5eb30
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:427)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
+	at Business_Specific_needs.TC_ECOM_Busi_needs_08.verifySiteBehaviour(TC_ECOM_Busi_needs_08.java:20)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 26 stack frames
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture$Timeout.run(CompletableFuture.java:2920)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 25 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -141,7 +161,7 @@
         </div> <!-- panel Ecomm_Registration_Suite -->
         <div panel-name="test-xml-Ecomm_Registration_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Windows\git\E-comm-Web-Application\XmlFiles\testng_TC026.xml</span>
+            <span class="header-content">C:\Users\Windows\git\E-comm-Web-Application\testng_Busi_needs_8.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -151,7 +171,7 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;Chrome Test&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;RegistrationPageAutomation.TC_ECOM_Reg_026&quot;/&gt;
+      &lt;class name=&quot;Business_Specific_needs.TC_ECOM_Busi_needs_08&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Chrome Test --&gt;
 &lt;/suite&gt; &lt;!-- Ecomm Registration Suite --&gt;
@@ -193,14 +213,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyDateWithMonthInSignupPage')
-data.setCell(0, 2, 'RegistrationPageAutomation.TC_ECOM_Reg_026')
-data.setCell(0, 3, 8434);
+data.setCell(0, 1, 'verifySiteBehaviour')
+data.setCell(0, 2, 'Business_Specific_needs.TC_ECOM_Busi_needs_08')
+data.setCell(0, 3, 180049);
 window.suiteTableData['Ecomm_Registration_Suite']= { tableData: data, tableDiv: 'times-div-Ecomm_Registration_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Ecomm_Registration_Suite">
               </div> <!-- times-div-Ecomm_Registration_Suite -->
             </div> <!-- times-div -->
@@ -226,29 +246,21 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">RegistrationPageAutomation.TC_ECOM_Reg_026</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
-                <span class="method-name">setupReport</span>
+              <div class="chronological-class-name">Business_Specific_needs.TC_ECOM_Busi_needs_08</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">281 ms</span>
-              </div> <!-- configuration-method before -->
+              </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">verifyDateWithMonthInSignupPage</span>
-                <span class="method-start">2865 ms</span>
+                <span class="method-name">verifySiteBehaviour</span>
+                <span class="method-start">4058 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
+              <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">11307 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-suite after">
-                <span class="method-name">flushReport</span>
-                <span class="method-start">11667 ms</span>
-              </div> <!-- configuration-suite after -->
+                <span class="method-start">184118 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
