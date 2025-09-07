@@ -3,7 +3,7 @@ package SmokeTesting;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.Ecomm.base.BaseTest;
-import com.Ecomm.pages.loginpage;
+import com.Ecomm.pages.LoginPage;
 
 public class TC_Ecom_Sanity_005 extends BaseTest {
 
@@ -17,7 +17,7 @@ public class TC_Ecom_Sanity_005 extends BaseTest {
             test.info("Step 1: Opened the URL in browser");
 
             // Step 2: Click on Signup/Login
-            loginpage loginPage = new loginpage(driver);
+            LoginPage loginPage = new LoginPage(driver);
             loginPage.openLoginPage();
             test.info("Step 2: Clicked on Signup/Login");
 

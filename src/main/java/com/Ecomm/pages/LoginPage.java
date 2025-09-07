@@ -5,7 +5,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
-public class loginpage {
+public class LoginPage {
     private final WebDriver driver;
     private final WebDriverWait wait;
 
@@ -14,7 +14,7 @@ public class loginpage {
     private final By loginForm  = By.xpath("//form[@action='/login']");
     private final By signupForm = By.xpath("//form[@action='/signup']");
 
-    public loginpage(WebDriver driver) {
+    public LoginPage(WebDriver driver) {
         this.driver = driver;
         this.wait   = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
