@@ -12,12 +12,13 @@ public class HomePage {
     private final WebDriverWait wait;
 
     // Locators for navigation links
-    private final By cartLink        = By.linkText("Cart");
-    private final By signupLoginLink = By.linkText("Signup / Login");
-    private final By testCasesLink   = By.linkText("Test Cases");
-    private final By apiTestingLink  = By.linkText("API Testing");
-    private final By productsLink    = By.xpath("//a[@href='/products']");  // ✅ Fixed locator
-    private final By contactUsLink   = By.linkText("Contact us");
+    private final By cartLink          = By.linkText("Cart");
+    private final By signupLoginLink   = By.linkText("Signup / Login");
+    private final By testCasesLink     = By.linkText("Test Cases");
+    private final By apiTestingLink    = By.linkText("API Testing");
+    private final By productsLink      = By.xpath("//a[@href='/products']");  
+    private final By contactUsLink     = By.linkText("Contact us");
+    private final By videoTutorialsLink = By.linkText("Video Tutorials");  // ✅ Added locator
 
     // Banner to confirm homepage is loaded
     private final By homeBanner = By.id("slider-carousel");
@@ -59,11 +60,15 @@ public class HomePage {
         wait.until(ExpectedConditions.elementToBeClickable(apiTestingLink)).click();
     }
 
-    public void clickProducts() {   // ✅ Fixed method
+    public void clickProducts() {
         wait.until(ExpectedConditions.elementToBeClickable(productsLink)).click();
     }
 
     public void clickContactUs() {
         wait.until(ExpectedConditions.elementToBeClickable(contactUsLink)).click();
+    }
+
+    public void clickVideoTutorials() {   // ✅ Added method (no effect on other TCs)
+        wait.until(ExpectedConditions.elementToBeClickable(videoTutorialsLink)).click();
     }
 }

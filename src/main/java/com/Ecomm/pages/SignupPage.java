@@ -154,4 +154,19 @@ public class SignupPage {
             return false;
         }
     }
+ // ✅ Get browser validation message for City field
+    public String getCityValidationMessage() {
+        WebElement cityElement = driver.findElement(city);
+        return cityElement.getAttribute("validationMessage");
+    }
+    
+ // Get browser validation message for Zipcode field
+    public String getZipcodeValidationMessage() {
+        WebElement zipcodeElement = driver.findElement(zipcode);
+        return zipcodeElement.getAttribute("validationMessage");
+    }
+    public By getMobileLocator() {
+        return mobile;
+    }
+
 }
