@@ -1,1 +1,19 @@
+<<<<<<< HEAD
 /META-INF/
+=======
+/com/
+/META-INF/
+/Suite/
+/junitreports/
+/Default suite/
+/testng.xml
+/Ecomm Registration Suite/
+/TC_ECOM_Reg_001.xml
+/TC_ECOMM_Reg_002/
+/TC_ECOMM_Reg_002.xml
+/TC_ECOMM_Reg_003 .xml
+/TC_ECOM_Reg_004.xml
+/TC_ECOM_Reg_002.xml
+/TC_ECOM_Reg_003 .xml
+/TC_ECOM_Reg_005.xml
+>>>>>>> 24870ee8e8224f74c390e973713a72d71389f2ea
