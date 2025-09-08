@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+<<<<<<< HEAD
+      <class name="UiApiPage.TC_Ecommerce_Web_Application_API_Testing_1to5">
+        <methods>
+          <include name="verifyAPI2Dropdown"/>
+          <include name="verifyAPI1Dropdown"/>
+=======
+      <class name="Corebusiness.TC_regr_core_012">
+        <methods>
+          <include name="verifyCartItemsCanBeUpdatedOrRemoved"/>
+>>>>>>> 99d012f3937723974ce14c11e57b6141c7735b06
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyAPI5Dropdown"/>
+          <include name="verifyAPI3Dropdown"/>
+          <include name="verifyAPI4Dropdown"/>
+        </methods>
+<<<<<<< HEAD
+      </class> <!-- UiApiPage.TC_Ecommerce_Web_Application_API_Testing_1to5 -->
+=======
+      </class> <!-- Corebusiness.TC_regr_core_012 -->
+>>>>>>> 99d012f3937723974ce14c11e57b6141c7735b06
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
