@@ -9,23 +9,31 @@ public class LoginPage {
     private final WebDriver driver;
     private final WebDriverWait wait;
 
-    // Locators
+ 
     private final By signupLoginLink = By.linkText("Signup / Login");
     private final By loginForm  = By.xpath("//form[@action='/login']");
     private final By signupForm = By.xpath("//form[@action='/signup']");
+<<<<<<< HEAD
 
+=======
+    private final By loginEmail = By.xpath("//input[@data-qa='login-email']");
+    private final By loginPassword = By.xpath("//input[@data-qa='login-password']");
+    private final By loginButton = By.xpath("//button[@data-qa='login-button']");
+    private final By logoutLink = By.linkText("Logout");
+    
+>>>>>>> 99d012f3937723974ce14c11e57b6141c7735b06
     public LoginPage(WebDriver driver) {
         this.driver = driver;
         this.wait   = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
 
-    /** Step 2: Click on Signup/Login */
+  
     public void openLoginPage() {
         driver.findElement(signupLoginLink).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(loginForm));
+       // wait.until(ExpectedConditions.visibilityOfElementLocated(loginForm));
     }
 
-    /** Step 3: Verify login form */
+   
     public boolean isLoginFormVisible() {
         try {
             return wait.until(ExpectedConditions.visibilityOfElementLocated(loginForm)).isDisplayed();
@@ -34,12 +42,31 @@ public class LoginPage {
         }
     }
 
-    /** Step 3: Verify signup form */
+ 
     public boolean isSignupFormVisible() {
         try {
             return wait.until(ExpectedConditions.visibilityOfElementLocated(signupForm)).isDisplayed();
         } catch (TimeoutException e) {
             return false;
         }
+    }
+    
+    public void loginCredentials(String email,String password)
+    {
+    		driver.findElement(loginEmail).sendKeys(email);
+    		driver.findElement(loginPassword).sendKeys(password);
+    		driver.findElement(loginButton).click();
+    }
+    public boolean logoutDisplayed()
+    {
+    	  return driver.findElement(logoutLink).isDisplayed();
+    }
+
+	public void logout() {
+		driver.findElement(logoutLink).click();
+	}
+    public boolean isSignupVisible()
+    {
+    	 return driver.findElement(signupLoginLink).isDisplayed();
     }
 }

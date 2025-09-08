@@ -1,5 +1,28 @@
 /META-INF/
 /com/
-/Default suite/
+/Ecomm Registration Suite/
 /junitreports/
+<<<<<<< HEAD
 /Suite/
+=======
+/TC_ECOM_Reg_006.xml
+/TC_ECOM_Reg_007.xml
+/TC_ECOM_Reg_008.xml
+/TC_ECOM_Reg_009/
+/TC_ECOM_Reg_009.xml
+/TC_ECOM_Reg_010.xml
+/TC_ECOM_Reg_011.xml
+/TC_ECOM_Reg_012.xml
+/TC_ECOM_subHome_001.xml
+/TC_ECOM_subHome_005.xml
+/TC_ECOM_subHome_006.xml
+/TC_ECOM_subHome_004.xml
+/TC_ECOM_subHome_005xml
+/Suite/
+/TC_ECOM_subHome_002.xml
+/Default suite/
+/TC_ECOM_subHome_003.xml
+/TC_regr_core_002 .xml
+/TC_regr_core_001.xml
+/TC_regr_core_003.xml
+>>>>>>> 99d012f3937723974ce14c11e57b6141c7735b06

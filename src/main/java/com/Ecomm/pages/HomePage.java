@@ -12,6 +12,7 @@ public class HomePage {
     private final WebDriverWait wait;
 
     // Locators for navigation links
+<<<<<<< HEAD
     private final By cartLink          = By.linkText("Cart");
     private final By signupLoginLink   = By.linkText("Signup / Login");
     private final By testCasesLink     = By.linkText("Test Cases");
@@ -20,8 +21,19 @@ public class HomePage {
     private final By contactUsLink     = By.linkText("Contact us");
     private final By videoTutorialsLink = By.linkText("Video Tutorials");  // ✅ Added locator
 
+=======
+    private final By cartLink        = By.linkText("Cart");
+    private final By signupLoginLink = By.linkText("Signup / Login");
+    private final By testCasesLink   = By.linkText("Test Cases");
+    private final By apiTestingLink  = By.linkText("API Testing");
+    private final By productsLink    = By.xpath("//a[@href='/products']");  // ✅ Fixed locator
+    private final By contactUsLink   = By.linkText("Contact us");
+    private final By subscriptionBox = By.xpath("//input[@id='susbscribe_email']");
+    private final By submitButton    = By.xpath("//button[@id='subscribe']");
+>>>>>>> 99d012f3937723974ce14c11e57b6141c7735b06
     // Banner to confirm homepage is loaded
     private final By homeBanner = By.id("slider-carousel");
+    private final By sucessMessageOnSub = By.xpath("//div[@class='alert-success alert']");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -60,15 +72,43 @@ public class HomePage {
         wait.until(ExpectedConditions.elementToBeClickable(apiTestingLink)).click();
     }
 
+<<<<<<< HEAD
     public void clickProducts() {
+=======
+    public void clickProducts() {  
+>>>>>>> 99d012f3937723974ce14c11e57b6141c7735b06
         wait.until(ExpectedConditions.elementToBeClickable(productsLink)).click();
     }
 
     public void clickContactUs() {
         wait.until(ExpectedConditions.elementToBeClickable(contactUsLink)).click();
     }
+<<<<<<< HEAD
 
     public void clickVideoTutorials() {   // ✅ Added method (no effect on other TCs)
         wait.until(ExpectedConditions.elementToBeClickable(videoTutorialsLink)).click();
     }
+=======
+    
+    public boolean isSubScriptionVisible()
+    {
+    		return driver.findElement(subscriptionBox).isDisplayed();
+    }
+    public boolean isSubmitVisble()
+    {
+    	    return driver.findElement(submitButton).isDisplayed();
+    }
+
+	public void enterSubsciptionMail(String email) throws InterruptedException {
+		
+		driver.findElement(subscriptionBox).sendKeys(email);
+		Thread.sleep(2000);
+		driver.findElement(submitButton).click();	
+	}
+
+	public boolean isSubSubmittedDisplayed() {
+		 return driver.findElement(sucessMessageOnSub).isDisplayed();
+	}
+	
+>>>>>>> 99d012f3937723974ce14c11e57b6141c7735b06
 }

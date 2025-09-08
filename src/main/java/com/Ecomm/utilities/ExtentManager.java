@@ -10,6 +10,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ExtentManager {
 
+    static String projectPath = System.getProperty("user.dir");
     private static ExtentReports extent;
 
     public static ExtentReports createInstance(String testClassName) {

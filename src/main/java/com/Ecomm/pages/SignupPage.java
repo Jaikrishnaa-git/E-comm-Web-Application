@@ -50,10 +50,27 @@ public class SignupPage {
     public SignupPage(WebDriver driver) {
         this.driver = driver;
         this.wait   = new WebDriverWait(driver, Duration.ofSeconds(20));
+    } 
+    public boolean nameIsdisplayed()
+	{
+		return driver.findElement(newUserName).isDisplayed();
+	}
+    public boolean emailIsdisplayed()
+	{
+		return driver.findElement(newUserEmail).isDisplayed();
+	}
+    public boolean submitIsdisplayed()
+	{
+		return driver.findElement(signupBtn).isDisplayed();
+	}
+    
+    public void clickSignupLoginLink() {
+        driver.findElement(signupLoginLink).click();
     }
 
     public void openHome() {
         driver.get("https://www.automationexercise.com/");
+
     }
 
     public void goToSignupLogin() {
@@ -154,6 +171,7 @@ public class SignupPage {
             return false;
         }
     }
+<<<<<<< HEAD
  // ✅ Get browser validation message for City field
     public String getCityValidationMessage() {
         WebElement cityElement = driver.findElement(city);
@@ -169,4 +187,11 @@ public class SignupPage {
         return mobile;
     }
 
+=======
+    public void enterSignupDetails(String name, String email) {
+        driver.findElement(newUserName).sendKeys(name);
+        driver.findElement(newUserEmail).sendKeys(email);
+        driver.findElement(signupBtn).click();
+    }
+>>>>>>> 99d012f3937723974ce14c11e57b6141c7735b06
 }
