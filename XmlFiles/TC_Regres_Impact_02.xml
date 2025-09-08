@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Impact Regression Test Suite">
+    <test name="TC_Regres_Impact_02">
+        <classes>
+            <class name="Impact_Regression_TestSuite.TC_Regres_Impact_02" />
+        </classes>
+    </test>
+</suite>

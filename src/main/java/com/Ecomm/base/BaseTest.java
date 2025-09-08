@@ -21,7 +21,11 @@ public class BaseTest {
 
     @BeforeClass
     public void setUp() {
+<<<<<<< HEAD
         System.out.println("🚀 Launching Chrome...");
+=======
+        System.out.println("Launching Chrome...");
+>>>>>>> 77bb121 (2025sep8 project)
 
         // Setup WebDriver using WebDriverManager
         WebDriverManager.chromedriver().setup();
@@ -38,19 +42,31 @@ public class BaseTest {
         String testClassName = this.getClass().getSimpleName();
         extent = ExtentManager.createInstance(testClassName);
 
+<<<<<<< HEAD
         System.out.println("✅ Chrome launched successfully.");
+=======
+        System.out.println("Chrome launched successfully.");
+>>>>>>> 77bb121 (2025sep8 project)
     }
 
     @AfterClass
     public void tearDown() {
         if (driver != null) {
             driver.quit();
+<<<<<<< HEAD
             System.out.println("🛑 Browser closed after all tests in this class.");
+=======
+            System.out.println("Browser closed after all tests in this class.");
+>>>>>>> 77bb121 (2025sep8 project)
         }
 
         if (extent != null) {
             extent.flush();
+<<<<<<< HEAD
             System.out.println("📊 Extent Report flushed.");
+=======
+            System.out.println("Extent Report flushed.");
+>>>>>>> 77bb121 (2025sep8 project)
         }
     }
 }

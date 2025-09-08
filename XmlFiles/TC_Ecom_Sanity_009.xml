@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="E-Comm Test Suite">
+    <parameter name="browser" value="chrome" />
+
+    <test name="Smoke Tests">
+        <classes>
+            <class name="SmokeTesting.TC_Ecom_Sanity_009" />
+        </classes>
+    </test>
+</suite>

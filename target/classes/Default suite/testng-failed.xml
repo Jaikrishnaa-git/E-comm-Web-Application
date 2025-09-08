@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="RegistrationPageAutomation.TC_ECOM_Reg_001">
+      <class name="ProductPage.TC_ECOM_TestCase_3">
         <methods>
-          <include name="flushReport"/>
-          <include name="setup"/>
-          <include name="browserVerify"/>
+          <include name="verifyMenDropdownInProductPage"/>
+          <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="setupReport"/>
         </methods>
-      </class> <!-- RegistrationPageAutomation.TC_ECOM_Reg_001 -->
+      </class> <!-- ProductPage.TC_ECOM_TestCase_3 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

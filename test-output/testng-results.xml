@@ -2,6 +2,7 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2025-09-04T10:25:13 IST" name="Ecomm Registration Suite" finished-at="2025-09-04T10:25:34 IST" duration-ms="20869">
     <groups>
     </groups>
@@ -22,4 +23,26 @@
       </class> <!-- RegistrationPageAutomation.TC_ECOM_Reg_003 -->
     </test> <!-- Chrome Test -->
   </suite> <!-- Ecomm Registration Suite -->
+=======
+  <suite started-at="2025-09-08T11:41:22 IST" name="Default suite" finished-at="2025-09-08T11:41:28 IST" duration-ms="6442">
+    <groups>
+    </groups>
+    <test started-at="2025-09-08T11:41:22 IST" name="Default test" finished-at="2025-09-08T11:41:28 IST" duration-ms="6442">
+      <class name="ProductPage_UI.TC_Ecommerce_Web_Application_product_01">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ProductPage_UI.TC_Ecommerce_Web_Application_product_01@7188af83]" started-at="2025-09-08T11:41:22 IST" name="setUp" finished-at="2025-09-08T11:41:23 IST" duration-ms="1639" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyHomeButtonInProductPage()[pri:0, instance:ProductPage_UI.TC_Ecommerce_Web_Application_product_01@7188af83]" started-at="2025-09-08T11:41:23 IST" name="verifyHomeButtonInProductPage" finished-at="2025-09-08T11:41:28 IST" duration-ms="4342" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomeButtonInProductPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ProductPage_UI.TC_Ecommerce_Web_Application_product_01@7188af83]" started-at="2025-09-08T11:41:28 IST" name="tearDown" finished-at="2025-09-08T11:41:28 IST" duration-ms="426" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- ProductPage_UI.TC_Ecommerce_Web_Application_product_01 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+>>>>>>> 77bb121 (2025sep8 project)
 </testng-results>
