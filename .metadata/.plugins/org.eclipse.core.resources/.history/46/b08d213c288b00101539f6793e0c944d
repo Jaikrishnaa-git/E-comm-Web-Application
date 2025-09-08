@@ -1,0 +1,91 @@
+package com.Ecomm.pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import java.time.Duration;
+
+public class loginpage {
+	private WebDriver driver;
+    private WebDriverWait wait;
+    
+    // Web elements using Page Factory
+    @FindBy(id = "email")
+    private WebElement emailField;
+    
+    @FindBy(id = "password")
+    private WebElement passwordField;
+    
+    @FindBy(xpath = "//button[@type='submit' or contains(text(),'Login') or contains(text(),'Sign In')]")
+    private WebElement loginButton;
+    
+    @FindBy(xpath = "//div[contains(@class,'error') or contains(@class,'alert-danger') or contains(@class,'invalid-feedback')]")
+    private WebElement errorMessage;
+    
+    @FindBy(xpath = "//span[contains(text(),'Invalid') or contains(text(),'Wrong') or contains(text(),'Error')]")
+    private WebElement errorText;
+    
+    // Constructor
+    public loginpage(WebDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        PageFactory.initElements(driver, this);
+    }
+    
+    // Methods
+    public void enterEmail(String email) {
+        wait.until(ExpectedConditions.elementToBeClickable(emailField));
+        emailField.clear();
+        emailField.sendKeys(email);
+    }
+    
+    public void enterPassword(String password) {
+        wait.until(ExpectedConditions.elementToBeClickable(passwordField));
+        passwordField.clear();
+        passwordField.sendKeys(password);
+    }
+    
+    public void clickLoginButton() {
+        wait.until(ExpectedConditions.elementToBeClickable(loginButton));
+        loginButton.click();
+    }
+    
+    public void login(String email, String password) {
+        enterEmail(email);
+        enterPassword(password);
+        clickLoginButton();
+    }
+    
+    public WebElement getPasswordField() {
+        return passwordField;
+    }
+    
+    public boolean isErrorMessageDisplayed() {
+        try {
+            wait.until(ExpectedConditions.visibilityOf(errorMessage));
+            return errorMessage.isDisplayed();
+        } catch (Exception e) {
+            try {
+                return errorText.isDisplayed();
+            } catch (Exception ex) {
+                return false;
+            }
+        }
+    }
+    
+    public String getErrorMessage() {
+        try {
+            if (errorMessage.isDisplayed()) {
+                return errorMessage.getText();
+            } else if (errorText.isDisplayed()) {
+                return errorText.getText();
+            }
+            return "";
+        } catch (Exception e) {
+            return "";
+        }
+    }
+}

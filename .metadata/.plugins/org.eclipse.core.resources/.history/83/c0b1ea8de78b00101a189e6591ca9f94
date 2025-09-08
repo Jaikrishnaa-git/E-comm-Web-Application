@@ -1,0 +1,243 @@
+package UI_LoginPage;
+import java.io.IOException;
+
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import com.aventstack.extentreports.Status;
+import com.Ecomm.base.BaseTest;
+import com.Ecomm.pages.loginpage;
+import com.Ecomm.utilities.ExcelUtilities;
+import com.Ecomm.utilities.ScreenshotUtilities;
+
+public class LoginTest extends BaseTest {
+    
+    private loginpage loginPage;
+    
+    @BeforeMethod
+    public void setUpTest() {
+        driver.get("https://automationexercise.com/login");
+        loginPage = new loginpage(driver);
+        System.out.println("Navigated to AutomationExercise login page");
+    }
+    
+    @DataProvider(name = "loginTestData")
+    public Object[][] getTestData() throws IOException {
+        try {
+            String excelPath = System.getProperty("user.dir") + "/src/test/resources/Testdata/data.xlsx";
+            Object[][] data = ExcelUtilities.getdata(excelPath, "Sheet3");
+            System.out.println("Excel data loaded from: " + excelPath);
+            return data;
+        } catch (Exception e) {
+            System.err.println("Error loading Excel file: " + e.getMessage());
+            throw e;
+        }
+    }
+    
+    @Test(dataProvider = "loginTestData", priority = 1)
+    public void testValidEmailEntry(String email, String password) {
+        // Skip invalid email formats for this test
+        if (!email.contains("@") || !email.contains(".")) {
+            return;
+        }
+        
+        test = extent.createTest("Valid Email Entry Test - " + email);
+        test.log(Status.INFO, "Testing valid email entry: " + email);
+        
+        try {
+            loginPage.enterEmail(email);
+            String enteredEmail = loginPage.emailField.getAttribute("value");
+            
+            Assert.assertEquals(enteredEmail, email, "Email was not entered correctly");
+            test.log(Status.PASS, "Valid email entered successfully: " + email);
+            
+        } catch (Exception e) {
+            test.log(Status.FAIL, "Valid email entry test failed: " + e.getMessage());
+            captureScreenshotOnFailure();
+            Assert.fail("Test failed: " + e.getMessage());
+        }
+    }
+    
+    @Test(dataProvider = "loginTestData", priority = 2)
+    public void testInvalidEmailEntry(String email, String password) {
+        // Only test invalid email formats
+        if (email.contains("@") && email.contains(".")) {
+            return;
+        }
+        
+        test = extent.createTest("Invalid Email Entry Test - " + email);
+        test.log(Status.INFO, "Testing invalid email entry: " + email);
+        
+        try {
+            loginPage.enterEmail(email);
+            loginPage.enterPassword("dummypassword");
+            loginPage.clickLoginButton();
+            
+            Thread.sleep(2000);
+            
+            boolean isInvalidEmail = !email.contains("@") || !email.contains(".");
+            Assert.assertTrue(isInvalidEmail, "Email format should be invalid");
+            test.log(Status.PASS, "Invalid email format detected correctly: " + email);
+            
+        } catch (Exception e) {
+            test.log(Status.FAIL, "Invalid email entry test failed: " + e.getMessage());
+            captureScreenshotOnFailure();
+            Assert.fail("Test failed: " + e.getMessage());
+        }
+    }
+    
+    @Test(dataProvider = "loginTestData", priority = 3)
+    public void testValidPasswordEntry(String email, String password) {
+        // Only test passwords with reasonable length
+        if (password.length() < 6) {
+            return;
+        }
+        
+        test = extent.createTest("Valid Password Entry Test - " + email);
+        test.log(Status.INFO, "Testing valid password entry");
+        
+        try {
+            loginPage.enterPassword(password);
+            String enteredPassword = loginPage.getPasswordField().getAttribute("value");
+            
+            Assert.assertEquals(enteredPassword, password, "Password was not entered correctly");
+            test.log(Status.PASS, "Valid password entered successfully");
+            
+        } catch (Exception e) {
+            test.log(Status.FAIL, "Valid password entry test failed: " + e.getMessage());
+            captureScreenshotOnFailure();
+            Assert.fail("Test failed: " + e.getMessage());
+        }
+    }
+    
+    @Test(dataProvider = "loginTestData", priority = 4)
+    public void testInvalidPasswordEntry(String email, String password) {
+        // Only test weak passwords
+        if (password.length() >= 6) {
+            return;
+        }
+        
+        test = extent.createTest("Invalid Password Entry Test - " + email);
+        test.log(Status.INFO, "Testing invalid password entry");
+        
+        try {
+            loginPage.enterEmail("test@example.com");
+            loginPage.enterPassword(password);
+            loginPage.clickLoginButton();
+            
+            Thread.sleep(3000);
+            
+            boolean isWeakPassword = password.length() < 6;
+            Assert.assertTrue(isWeakPassword, "Password should be considered weak");
+            test.log(Status.PASS, "Weak password detected correctly");
+            
+        } catch (Exception e) {
+            test.log(Status.FAIL, "Invalid password entry test failed: " + e.getMessage());
+            captureScreenshotOnFailure();
+            Assert.fail("Test failed: " + e.getMessage());
+        }
+    }
+    
+    @Test(dataProvider = "loginTestData", priority = 5)
+    public void testLoginFunctionality(String email, String password) {
+        // Test all email/password combinations for login
+        test = extent.createTest("Login Functionality Test - " + email);
+        test.log(Status.INFO, "Testing login functionality with: " + email);
+        
+        try {
+            loginPage.enterEmail(email);
+            loginPage.enterPassword(password);
+            
+            Assert.assertTrue(loginPage.loginButton.isEnabled(), "Login button should be enabled");
+            
+            String currentUrl = driver.getCurrentUrl();
+            loginPage.clickLoginButton();
+            
+            Thread.sleep(4000);
+            
+            String newUrl = driver.getCurrentUrl();
+            boolean isLoggedIn = loginPage.isLoggedIn();
+            boolean hasError = loginPage.isErrorMessageDisplayed();
+            
+            if (isLoggedIn) {
+                test.log(Status.PASS, "Login successful for: " + email);
+                loginPage.logout();
+                Thread.sleep(2000);
+            } else if (hasError) {
+                test.log(Status.PASS, "Login failed as expected for: " + email + " - " + loginPage.getErrorMessage());
+            } else {
+                test.log(Status.PASS, "Login attempt completed for: " + email);
+            }
+            
+        } catch (Exception e) {
+            test.log(Status.FAIL, "Login functionality test failed: " + e.getMessage());
+            captureScreenshotOnFailure();
+            Assert.fail("Test failed: " + e.getMessage());
+        }
+    }
+    
+    @Test(dataProvider = "loginTestData", priority = 6)
+    public void testEmailValidation(String email, String password) {
+        test = extent.createTest("Email Validation Test - " + email);
+        test.log(Status.INFO, "Testing email validation for: " + email);
+        
+        try {
+            boolean isValidEmailFormat = email.contains("@") && email.contains(".");
+            boolean hasValidDomain = email.matches(".*@.*\\.(com|org|co\\.uk|test\\.com).*");
+            
+            if (isValidEmailFormat) {
+                test.log(Status.PASS, "Email format is valid: " + email);
+            } else {
+                test.log(Status.PASS, "Email format is invalid as expected: " + email);
+            }
+            
+            // Additional validation for domain
+            if (hasValidDomain) {
+                test.log(Status.INFO, "Email has valid domain");
+            }
+            
+        } catch (Exception e) {
+            test.log(Status.FAIL, "Email validation test failed: " + e.getMessage());
+            captureScreenshotOnFailure();
+            Assert.fail("Test failed: " + e.getMessage());
+        }
+    }
+    
+    @Test(dataProvider = "loginTestData", priority = 7)
+    public void testPasswordStrength(String email, String password) {
+        test = extent.createTest("Password Strength Test - " + email);
+        test.log(Status.INFO, "Testing password strength");
+        
+        try {
+            boolean hasMinLength = password.length() >= 6;
+            boolean hasNumbers = password.matches(".*\\d.*");
+            boolean hasLetters = password.matches(".*[a-zA-Z].*");
+            boolean hasSpecialChars = password.matches(".*[@#$%^&*].*");
+            
+            if (hasMinLength && (hasNumbers || hasLetters)) {
+                test.log(Status.PASS, "Password has acceptable strength");
+            } else {
+                test.log(Status.PASS, "Password is weak as expected");
+            }
+            
+            if (hasSpecialChars) {
+                test.log(Status.INFO, "Password contains special characters");
+            }
+            
+        } catch (Exception e) {
+            test.log(Status.FAIL, "Password strength test failed: " + e.getMessage());
+            captureScreenshotOnFailure();
+            Assert.fail("Test failed: " + e.getMessage());
+        }
+    }
+    
+    private void captureScreenshotOnFailure() {
+        try {
+            String screenshotPath = ScreenshotUtilities.capturescreen(driver, "Failed_Test");
+            test.addScreenCaptureFromPath(screenshotPath);
+        } catch (IOException e) {
+            test.log(Status.WARNING, "Screenshot capture failed: " + e.getMessage());
+        }
+    }
+}

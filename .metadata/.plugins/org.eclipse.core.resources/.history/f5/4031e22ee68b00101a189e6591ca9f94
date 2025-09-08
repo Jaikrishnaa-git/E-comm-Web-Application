@@ -1,0 +1,131 @@
+package com.Ecomm.utilities;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelUtilities {
+    public static Object[][] getdata(String excelpath, String sheetname) throws IOException {
+        File file1 = new File(excelpath);
+        
+        if (!file1.exists()) {
+            System.err.println("Excel file not found at: " + excelpath);
+            throw new IOException("Excel file not found at: " + excelpath);
+        }
+        
+        FileInputStream fs = null;
+        XSSFWorkbook workbook = null;
+        
+        try {
+            fs = new FileInputStream(file1);
+            workbook = new XSSFWorkbook(fs);
+            XSSFSheet worksheet = workbook.getSheet(sheetname);
+            
+            if (worksheet == null) {
+                System.err.println("Sheet not found: " + sheetname);
+                throw new IOException("Sheet not found: " + sheetname);
+            }
+
+            int rowcount = worksheet.getPhysicalNumberOfRows();
+            if (rowcount <= 1) {
+                System.err.println("No data rows found in sheet: " + sheetname);
+                throw new IOException("No data rows found in sheet: " + sheetname);
+            }
+            
+            Row firstRow = worksheet.getRow(0);
+            if (firstRow == null) {
+                throw new IOException("Header row is null in sheet: " + sheetname);
+            }
+            
+            int colcount = firstRow.getLastCellNum();
+            
+            System.out.println("Loading data from Excel:");
+            System.out.println("File: " + excelpath);
+            System.out.println("Sheet: " + sheetname);
+            System.out.println("Total Rows (including header): " + rowcount);
+            System.out.println("Data Rows: " + (rowcount - 1));
+            System.out.println("Columns: " + colcount);
+
+            // Skip header row, so data array size is (rowcount - 1)
+            String[][] data = new String[rowcount - 1][colcount];
+
+            // Start from row 1 (skip header row 0)
+            for (int i = 1; i < rowcount; i++) {
+                Row row = worksheet.getRow(i);
+                for (int j = 0; j < colcount; j++) {
+                    if (row != null && row.getCell(j) != null) {
+                        Cell cell = row.getCell(j);
+                        data[i - 1][j] = getCellValueAsString(cell);
+                    } else {
+                        data[i - 1][j] = "";
+                    }
+                }
+            }
+            
+            // Print sample data for debugging (first 5 rows)
+            System.out.println("Sample data from Excel (Email | Password):");
+            for (int i = 0; i < Math.min(5, data.length); i++) {
+                System.out.println("Row " + (i + 1) + ": " + data[i][0] + " | " + data[i][1]);
+            }
+            
+            return data;
+            
+        } finally {
+            if (workbook != null) {
+                try {
+                    workbook.close();
+                } catch (IOException e) {
+                    System.err.println("Error closing workbook: " + e.getMessage());
+                }
+            }
+            if (fs != null) {
+                try {
+                    fs.close();
+                } catch (IOException e) {
+                    System.err.println("Error closing file stream: " + e.getMessage());
+                }
+            }
+        }
+    }
+    
+    private static String getCellValueAsString(Cell cell) {
+        if (cell == null) {
+            return "";
+        }
+        
+        CellType cellType = cell.getCellType();
+        switch (cellType) {
+            case STRING:
+                return cell.getStringCellValue();
+            case NUMERIC:
+                if (org.apache.poi.ss.usermodel.DateUtil.isCellDateFormatted(cell)) {
+                    return cell.getDateCellValue().toString();
+                } else {
+                    double numericValue = cell.getNumericCellValue();
+                    if (numericValue == (int) numericValue) {
+                        return String.valueOf((int) numericValue);
+                    } else {
+                        return String.valueOf(numericValue);
+                    }
+                }
+            case BOOLEAN:
+                return String.valueOf(cell.getBooleanCellValue());
+            case FORMULA:
+                try {
+                    return String.valueOf(cell.getNumericCellValue());
+                } catch (Exception e) {
+                    return cell.getStringCellValue();
+                }
+            case BLANK:
+                return "";
+            default:
+                return "";
+        }
+    }
+}
+}
