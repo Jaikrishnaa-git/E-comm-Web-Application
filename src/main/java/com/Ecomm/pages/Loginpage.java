@@ -1,5 +1,5 @@
 package com.Ecomm.pages;
 
-public class loginpage {
+public class Loginpage {
 
 }
