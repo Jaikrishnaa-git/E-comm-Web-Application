@@ -1,0 +1,20 @@
+# Eclipse/IDE files
+.metadata/
+.project
+.classpath
+.settings/
+
+# Build outputs
+/bin/
+/target/
+/out/
+
+# Test output
+/test-output/
+
+# Logs
+*.log
+
+# IntelliJ IDEA
+.idea/
+*.iml
