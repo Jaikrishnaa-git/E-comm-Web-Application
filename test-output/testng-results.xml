@@ -1,40 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-09T11:04:32 IST" name="Default suite" finished-at="2025-09-09T11:04:55 IST" duration-ms="23185">
+  <suite started-at="2025-09-09T17:20:57 IST" name="Default suite" finished-at="2025-09-09T17:22:30 IST" duration-ms="92873">
     <groups>
     </groups>
-    <test started-at="2025-09-09T11:04:32 IST" name="Default test" finished-at="2025-09-09T11:04:55 IST" duration-ms="23185">
-      <class name="UiHomePage.TC_Home_030__verify_HomePage_firefox">
-        <test-method is-config="true" signature="setupReport()[pri:0, instance:UiHomePage.TC_Home_030__verify_HomePage_firefox@192c3f1e]" started-at="2025-09-09T11:04:32 IST" name="setupReport" finished-at="2025-09-09T11:04:33 IST" duration-ms="192" status="PASS">
+    <test started-at="2025-09-09T17:20:57 IST" name="Default test" finished-at="2025-09-09T17:22:30 IST" duration-ms="92873">
+      <class name="Func_LogoutPage.LogoutTestCase">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Func_LogoutPage.LogoutTestCase@76ed1b7c]" started-at="2025-09-09T17:20:57 IST" name="setUp" finished-at="2025-09-09T17:21:00 IST" duration-ms="3017" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setupReport -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:UiHomePage.TC_Home_030__verify_HomePage_firefox@192c3f1e]" started-at="2025-09-09T11:04:33 IST" name="setUp" finished-at="2025-09-09T11:04:36 IST" duration-ms="3322" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Func_LogoutPage.LogoutTestCase@76ed1b7c]" started-at="2025-09-09T17:21:00 IST" name="setUpClass" finished-at="2025-09-09T17:21:01 IST" duration-ms="832" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:Func_LogoutPage.LogoutTestCase@76ed1b7c]" started-at="2025-09-09T17:21:01 IST" name="setUpMethod" finished-at="2025-09-09T17:21:01 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="TC_ECOM_Logout_001()[pri:1, instance:Func_LogoutPage.LogoutTestCase@76ed1b7c]" started-at="2025-09-09T17:21:01 IST" name="TC_ECOM_Logout_001" description="To verify and validate the functionality of logout button" finished-at="2025-09-09T17:21:42 IST" duration-ms="41078" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Test failed: Login failed: Login failed: Expected condition failed: waiting for presence of element located by: By.xpath: //a[contains(text(),'Logged in as')] (tried for 15 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Test failed: Login failed: Login failed: Expected condition failed: waiting for presence of element located by: By.xpath: //a[contains(text(),'Logged in as')] (tried for 15 second(s) with 500 milliseconds interval)
+at org.testng.Assert.fail(Assert.java:111)
+at Func_LogoutPage.LogoutTestCase.TC_ECOM_Logout_001(LogoutTestCase.java:179)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_ECOM_Logout_001 -->
+        <test-method is-config="true" signature="handleTestResult(org.testng.ITestResult)[pri:0, instance:Func_LogoutPage.LogoutTestCase@76ed1b7c]" started-at="2025-09-09T17:21:42 IST" name="handleTestResult" finished-at="2025-09-09T17:21:43 IST" duration-ms="805" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[[TestResult name=TC_ECOM_Logout_001 status=FAILURE method=LogoutTestCase.TC_ECOM_Logout_001()[pri:1, instance:Func_LogoutPage.LogoutTestCase@76ed1b7c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyHomePageLoadsOnFirefox()[pri:0, instance:UiHomePage.TC_Home_030__verify_HomePage_firefox@192c3f1e]" started-at="2025-09-09T11:04:36 IST" name="verifyHomePageLoadsOnFirefox" finished-at="2025-09-09T11:04:55 IST" duration-ms="19192" status="PASS">
+        </test-method> <!-- handleTestResult -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:Func_LogoutPage.LogoutTestCase@76ed1b7c]" started-at="2025-09-09T17:21:43 IST" name="setUpMethod" finished-at="2025-09-09T17:21:43 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyHomePageLoadsOnFirefox -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:UiHomePage.TC_Home_030__verify_HomePage_firefox@192c3f1e]" started-at="2025-09-09T11:04:55 IST" name="tearDown" finished-at="2025-09-09T11:04:55 IST" duration-ms="187" status="PASS">
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="TC_ECOM_Logout_002()[pri:2, instance:Func_LogoutPage.LogoutTestCase@76ed1b7c]" started-at="2025-09-09T17:21:43 IST" name="TC_ECOM_Logout_002" description="To verify and validate the functionality of Delete account button" finished-at="2025-09-09T17:22:29 IST" duration-ms="46363" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Test failed: Login failed: Login failed: Expected condition failed: waiting for presence of element located by: By.xpath: //a[contains(text(),'Logged in as')] (tried for 15 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Test failed: Login failed: Login failed: Expected condition failed: waiting for presence of element located by: By.xpath: //a[contains(text(),'Logged in as')] (tried for 15 second(s) with 500 milliseconds interval)
+at org.testng.Assert.fail(Assert.java:111)
+at Func_LogoutPage.LogoutTestCase.TC_ECOM_Logout_002(LogoutTestCase.java:264)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_ECOM_Logout_002 -->
+        <test-method is-config="true" signature="handleTestResult(org.testng.ITestResult)[pri:0, instance:Func_LogoutPage.LogoutTestCase@76ed1b7c]" started-at="2025-09-09T17:22:29 IST" name="handleTestResult" finished-at="2025-09-09T17:22:30 IST" duration-ms="233" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_ECOM_Logout_002 status=FAILURE method=LogoutTestCase.TC_ECOM_Logout_002()[pri:2, instance:Func_LogoutPage.LogoutTestCase@76ed1b7c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- handleTestResult -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Func_LogoutPage.LogoutTestCase@76ed1b7c]" started-at="2025-09-09T17:22:30 IST" name="tearDownClass" finished-at="2025-09-09T17:22:30 IST" duration-ms="445" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Func_LogoutPage.LogoutTestCase@76ed1b7c]" started-at="2025-09-09T17:22:30 IST" name="tearDown" finished-at="2025-09-09T17:22:30 IST" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="flushReport()[pri:0, instance:UiHomePage.TC_Home_030__verify_HomePage_firefox@192c3f1e]" started-at="2025-09-09T11:04:55 IST" name="flushReport" finished-at="2025-09-09T11:04:55 IST" duration-ms="251" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- flushReport -->
-      </class> <!-- UiHomePage.TC_Home_030__verify_HomePage_firefox -->
+      </class> <!-- Func_LogoutPage.LogoutTestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

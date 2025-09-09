@@ -3,13 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="UiHomePage.TC_Home_002_VerifyProductButton">
+      <class name="Func_LogoutPage.LogoutTestCase">
         <methods>
-          <include name="verifyProductButton"/>
+          <include name="TC_ECOM_Logout_002"/>
+          <include name="tearDownClass"/>
           <include name="setUp"/>
+          <include name="handleTestResult"/>
+          <include name="setUpClass"/>
           <include name="tearDown"/>
+          <include name="TC_ECOM_Logout_001"/>
+          <include name="setUpMethod"/>
         </methods>
-      </class> <!-- UiHomePage.TC_Home_002_VerifyProductButton -->
+      </class> <!-- Func_LogoutPage.LogoutTestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
