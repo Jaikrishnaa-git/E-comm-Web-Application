@@ -4,13 +4,13 @@
   <test thread-count="5" name="Chrome Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="Business_Specific_needs.TC_ECOM_Busi_needs_08">
+      <class name="CartPage.TC_ECOM_Cart_17">
         <methods>
           <include name="setUp"/>
+          <include name="verifyRemoveFromCartButton"/>
           <include name="tearDown"/>
-          <include name="verifySiteBehaviour"/>
         </methods>
-      </class> <!-- Business_Specific_needs.TC_ECOM_Busi_needs_08 -->
+      </class> <!-- CartPage.TC_ECOM_Cart_17 -->
     </classes>
   </test> <!-- Chrome Test(failed) -->
 </suite> <!-- Failed suite [Ecomm Registration Suite] -->

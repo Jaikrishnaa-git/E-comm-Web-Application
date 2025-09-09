@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Business_Specific_needs.TC_ECOM_Busi_needs_06">
+      <class name="CartPage.TC_ECOM_Cart_17">
         <methods>
           <include name="setUp"/>
+          <include name="verifyTopArrowButtonInCartPage"/>
           <include name="tearDown"/>
-          <include name="verifyAPIListForPracticeIsVisible"/>
         </methods>
-      </class> <!-- Business_Specific_needs.TC_ECOM_Busi_needs_06 -->
+      </class> <!-- CartPage.TC_ECOM_Cart_17 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
