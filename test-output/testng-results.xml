@@ -1,48 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite started-at="2025-09-04T10:25:13 IST" name="Ecomm Registration Suite" finished-at="2025-09-04T10:25:34 IST" duration-ms="20869">
+  <suite started-at="2025-09-09T12:27:09 IST" name="Default suite" finished-at="2025-09-09T12:27:27 IST" duration-ms="18158">
     <groups>
     </groups>
-    <test started-at="2025-09-04T10:25:13 IST" name="Chrome Test" finished-at="2025-09-04T10:25:34 IST" duration-ms="20869">
-      <class name="RegistrationPageAutomation.TC_ECOM_Reg_003">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:RegistrationPageAutomation.TC_ECOM_Reg_003@2de23121]" started-at="2025-09-04T10:25:13 IST" name="setUp" finished-at="2025-09-04T10:25:15 IST" duration-ms="2363" status="PASS">
+    <test started-at="2025-09-09T12:27:09 IST" name="Default test" finished-at="2025-09-09T12:27:27 IST" duration-ms="18158">
+      <class name="APITesting_UI.TC_Ecommerce_Web_Application_API_Testing_31">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:APITesting_UI.TC_Ecommerce_Web_Application_API_Testing_31@6be968ce]" started-at="2025-09-09T12:27:09 IST" name="setUp" finished-at="2025-09-09T12:27:11 IST" duration-ms="2332" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="checkEmailField()[pri:0, instance:RegistrationPageAutomation.TC_ECOM_Reg_003@2de23121]" started-at="2025-09-04T10:25:15 IST" name="checkEmailField" finished-at="2025-09-04T10:25:33 IST" duration-ms="17775" status="PASS">
+        <test-method signature="verifyInvalidEmailInAPIPage()[pri:0, instance:APITesting_UI.TC_Ecommerce_Web_Application_API_Testing_31@6be968ce]" started-at="2025-09-09T12:27:11 IST" name="verifyInvalidEmailInAPIPage" finished-at="2025-09-09T12:27:26 IST" duration-ms="14939" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.id: contact-email (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\VINODK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54878}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54878/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c5c5a7cf87d1167bcfb3031a235f9d1d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: contact-email (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\VINODK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54878}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54878/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c5c5a7cf87d1167bcfb3031a235f9d1d
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at APITesting_UI.TC_Ecommerce_Web_Application_API_Testing_31.verifyInvalidEmailInAPIPage(TC_Ecommerce_Web_Application_API_Testing_31.java:32)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkEmailField -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:RegistrationPageAutomation.TC_ECOM_Reg_003@2de23121]" started-at="2025-09-04T10:25:33 IST" name="tearDown" finished-at="2025-09-04T10:25:34 IST" duration-ms="687" status="PASS">
+        </test-method> <!-- verifyInvalidEmailInAPIPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:APITesting_UI.TC_Ecommerce_Web_Application_API_Testing_31@6be968ce]" started-at="2025-09-09T12:27:26 IST" name="tearDown" finished-at="2025-09-09T12:27:27 IST" duration-ms="827" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- RegistrationPageAutomation.TC_ECOM_Reg_003 -->
-    </test> <!-- Chrome Test -->
-  </suite> <!-- Ecomm Registration Suite -->
-=======
-  <suite started-at="2025-09-08T11:41:22 IST" name="Default suite" finished-at="2025-09-08T11:41:28 IST" duration-ms="6442">
-    <groups>
-    </groups>
-    <test started-at="2025-09-08T11:41:22 IST" name="Default test" finished-at="2025-09-08T11:41:28 IST" duration-ms="6442">
-      <class name="ProductPage_UI.TC_Ecommerce_Web_Application_product_01">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:ProductPage_UI.TC_Ecommerce_Web_Application_product_01@7188af83]" started-at="2025-09-08T11:41:22 IST" name="setUp" finished-at="2025-09-08T11:41:23 IST" duration-ms="1639" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyHomeButtonInProductPage()[pri:0, instance:ProductPage_UI.TC_Ecommerce_Web_Application_product_01@7188af83]" started-at="2025-09-08T11:41:23 IST" name="verifyHomeButtonInProductPage" finished-at="2025-09-08T11:41:28 IST" duration-ms="4342" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyHomeButtonInProductPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ProductPage_UI.TC_Ecommerce_Web_Application_product_01@7188af83]" started-at="2025-09-08T11:41:28 IST" name="tearDown" finished-at="2025-09-08T11:41:28 IST" duration-ms="426" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- ProductPage_UI.TC_Ecommerce_Web_Application_product_01 -->
+      </class> <!-- APITesting_UI.TC_Ecommerce_Web_Application_API_Testing_31 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
->>>>>>> 77bb121 (2025sep8 project)
 </testng-results>

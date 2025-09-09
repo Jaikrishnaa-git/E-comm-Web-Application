@@ -1,12 +1,13 @@
 package com.Ecomm.utilities;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtilities {
-<<<<<<< HEAD
 	public static Object[][] getdata(String excelpath, String sheetname) throws IOException {
 		  
 		  String projectpath=System.getProperty("user.dir")  ;
@@ -28,39 +29,4 @@ public class ExcelUtilities {
 		  
 		 	    }
 
-=======
-
-    public static Object[][] getdata(String excelPath, String sheetName) throws IOException {
-
-        FileInputStream fis = new FileInputStream(excelPath);
-        Workbook workbook = WorkbookFactory.create(fis);
-        Sheet sheet = workbook.getSheet(sheetName);
-
-        int totalRows = sheet.getPhysicalNumberOfRows();
-        int totalCols = sheet.getRow(0).getLastCellNum();
-
-        System.out.println("Total rows: " + totalRows);
-        System.out.println("Total columns: " + totalCols);
-
-        Object[][] data = new Object[totalRows - 1][totalCols];
-
-        for (int i = 1; i < totalRows; i++) {
-            Row row = sheet.getRow(i);
-            for (int j = 0; j < totalCols; j++) {
-                Cell cell = row.getCell(j);
-
-                if (cell == null) {
-                    data[i - 1][j] = "";
-                } else {
-                    cell.setCellType(CellType.STRING);
-                    data[i - 1][j] = cell.getStringCellValue();
-                }
-            }
-        }
-
-        workbook.close();
-        fis.close();
-        return data;
-    }
->>>>>>> 77bb121 (2025sep8 project)
 }
