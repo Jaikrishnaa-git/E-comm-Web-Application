@@ -23,7 +23,7 @@ public class BaseTest {
     public void setUp() {
         System.out.println("🚀 Launching Chrome...");
 
-        // Setup WebDriver using WebDriverManager
+  
         WebDriverManager.chromedriver().setup();
 
         ChromeOptions options = new ChromeOptions();
@@ -34,7 +34,6 @@ public class BaseTest {
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        // Initialize Extent Report
         String testClassName = this.getClass().getSimpleName();
         extent = ExtentManager.createInstance(testClassName);
 
@@ -54,4 +53,3 @@ public class BaseTest {
         }
     }
 }
-

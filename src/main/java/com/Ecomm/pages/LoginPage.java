@@ -13,15 +13,13 @@ public class LoginPage {
     private final By signupLoginLink = By.linkText("Signup / Login");
     private final By loginForm  = By.xpath("//form[@action='/login']");
     private final By signupForm = By.xpath("//form[@action='/signup']");
-<<<<<<< HEAD
 
-=======
     private final By loginEmail = By.xpath("//input[@data-qa='login-email']");
     private final By loginPassword = By.xpath("//input[@data-qa='login-password']");
     private final By loginButton = By.xpath("//button[@data-qa='login-button']");
     private final By logoutLink = By.linkText("Logout");
     
->>>>>>> 99d012f3937723974ce14c11e57b6141c7735b06
+
     public LoginPage(WebDriver driver) {
         this.driver = driver;
         this.wait   = new WebDriverWait(driver, Duration.ofSeconds(15));

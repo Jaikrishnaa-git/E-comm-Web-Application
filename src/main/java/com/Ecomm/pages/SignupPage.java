@@ -10,16 +10,11 @@ public class SignupPage {
 
     private final WebDriver driver;
     private final WebDriverWait wait;
-
-    // Top nav
     private final By signupLoginLink = By.linkText("Signup / Login");
-
-    // New User Signup section
     private final By newUserName  = By.xpath("//input[@data-qa='signup-name']");
     private final By newUserEmail = By.xpath("//input[@data-qa='signup-email']");
     private final By signupBtn    = By.xpath("//button[@data-qa='signup-button']");
 
-    // Account Information page
     private final By titleMr   = By.id("id_gender1");  // Mr radio
     private final By titleMrs  = By.id("id_gender2");  // Mrs radio
     private final By firstName = By.id("first_name");
@@ -89,10 +84,6 @@ public class SignupPage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(password));
     }
 
-    /**
-     * ✅ Fill ALL fields in the Account form including:
-     * Title, First/Last Name, DOB, Newsletter, Offers
-     */
     public void fillFullAccountForm(String title, String fName, String lName,
                                     String pwd, String day, String month, String year,
                                     boolean newsletter, boolean offers,
@@ -100,29 +91,27 @@ public class SignupPage {
                                     String countryText, String stateVal, String cityVal,
                                     String zip, String mobileVal) {
 
-        // Title
+
         if (title.equalsIgnoreCase("Mr")) {
             driver.findElement(titleMr).click();
         } else {
             driver.findElement(titleMrs).click();
         }
 
-        // First & Last Name
+
         driver.findElement(firstName).clear();
         driver.findElement(firstName).sendKeys(fName);
 
         driver.findElement(lastName).clear();
         driver.findElement(lastName).sendKeys(lName);
 
-        // Password
+
         driver.findElement(password).sendKeys(pwd);
 
-        // Date of Birth
         new Select(driver.findElement(days)).selectByVisibleText(day);
         new Select(driver.findElement(months)).selectByVisibleText(month);
         new Select(driver.findElement(years)).selectByVisibleText(year);
 
-        // Newsletter & offers
         if (newsletter) driver.findElement(newsletterChk).click();
         if (offers) driver.findElement(offersChk).click();
 
@@ -138,9 +127,6 @@ public class SignupPage {
         driver.findElement(mobile).sendKeys(mobileVal);
     }
 
-    /**
-     * ✅ Remove Ads that block clicks
-     */
     private void removeAds() {
         try {
             ((JavascriptExecutor) driver).executeScript(
@@ -152,17 +138,11 @@ public class SignupPage {
             System.out.println("⚠️ No ads found to remove");
         }
     }
-
-    /**
-     * ✅ Submit Create Account (safe click)
-     */
     public void submitCreateAccount() {
         removeAds(); // clean ads first
         WebElement button = wait.until(ExpectedConditions.elementToBeClickable(createAccountBtn));
         button.click();
     }
-
-    // ✅ Check if "ACCOUNT CREATED!" message appears
     public boolean isAccountCreated() {
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(accountCreatedMsg));
@@ -171,14 +151,11 @@ public class SignupPage {
             return false;
         }
     }
-<<<<<<< HEAD
- // ✅ Get browser validation message for City field
     public String getCityValidationMessage() {
         WebElement cityElement = driver.findElement(city);
         return cityElement.getAttribute("validationMessage");
     }
     
- // Get browser validation message for Zipcode field
     public String getZipcodeValidationMessage() {
         WebElement zipcodeElement = driver.findElement(zipcode);
         return zipcodeElement.getAttribute("validationMessage");
@@ -186,12 +163,9 @@ public class SignupPage {
     public By getMobileLocator() {
         return mobile;
     }
-
-=======
     public void enterSignupDetails(String name, String email) {
         driver.findElement(newUserName).sendKeys(name);
         driver.findElement(newUserEmail).sendKeys(email);
         driver.findElement(signupBtn).click();
     }
->>>>>>> 99d012f3937723974ce14c11e57b6141c7735b06
 }
