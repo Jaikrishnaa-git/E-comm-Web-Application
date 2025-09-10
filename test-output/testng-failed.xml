@@ -3,18 +3,24 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Func_LogoutPage.LogoutTestCase">
+      <class name="Func_LoginPage.LoginTestCases">
         <methods>
-          <include name="TC_ECOM_Logout_002"/>
+          <include name="TC_ECOM_Login_007" invocation-numbers="0"/>
+          <include name="TC_ECOM_Login_008" invocation-numbers="0"/>
+          <include name="TC_ECOM_Login_005" invocation-numbers="0"/>
           <include name="tearDownClass"/>
-          <include name="setUp"/>
+          <include name="TC_ECOM_Login_006" invocation-numbers="0"/>
+          <include name="TC_ECOM_Login_004" invocation-numbers="0"/>
+          <include name="TC_ECOM_Login_001" invocation-numbers="0"/>
           <include name="handleTestResult"/>
-          <include name="setUpClass"/>
           <include name="tearDown"/>
-          <include name="TC_ECOM_Logout_001"/>
-          <include name="setUpMethod"/>
+          <include name="setUpClass"/>
+          <include name="TC_ECOM_Login_002" invocation-numbers="0"/>
+          <include name="setUp"/>
+          <include name="navigateToLoginPage"/>
+          <include name="TC_ECOM_Login_009" invocation-numbers="0"/>
         </methods>
-      </class> <!-- Func_LogoutPage.LogoutTestCase -->
+      </class> <!-- Func_LoginPage.LoginTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

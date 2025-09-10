@@ -18,8 +18,6 @@ public class ExtentManager {
             String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
             String reportDir = "Reports";
             String reportPath = reportDir + "/" + testClassName + "_" + timestamp + ".html";
-
-            // ✅ Ensure Reports folder exists
             new File(reportDir).mkdirs();
 
             ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
