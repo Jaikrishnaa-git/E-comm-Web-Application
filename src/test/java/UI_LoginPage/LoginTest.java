@@ -8,13 +8,13 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 import com.Ecomm.base.BaseTest;
-import com.Ecomm.pages.loginpage;
+import com.Ecomm.pages.LoginPage;
 import com.Ecomm.utilities.ExcelUtilities;
 import com.Ecomm.utilities.ScreenshotUtilities;
 
 public class LoginTest extends BaseTest {
     
-    private loginpage loginPage;
+    private LoginPage loginPage;
     
     // Valid credentials for comparison
     private static final String VALID_EMAIL = "Jaikrishnaa@gmail.com";
@@ -23,7 +23,7 @@ public class LoginTest extends BaseTest {
     @BeforeMethod
     public void setUpTest() {
         driver.get("https://automationexercise.com/login");
-        loginPage = new loginpage(driver);
+        loginPage = new LoginPage(driver);
         System.out.println("Navigated to AutomationExercise login page");
     }
     
