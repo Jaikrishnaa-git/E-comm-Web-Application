@@ -1,17 +1,267 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="12" passed="6" failed="6" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-10T17:25:33 IST" name="CrossBrowser Suite" finished-at="2025-09-10T17:25:52 IST" duration-ms="19234">
+  <suite started-at="2025-09-12T15:22:02 IST" name="CrossBrowser Suite" finished-at="2025-09-12T15:36:26 IST" duration-ms="864100">
     <groups>
+      <group name="regression">
+        <method signature="TC_regr_core_001.f(java.lang.String,java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_001@7c1e2a9e]" name="f" class="Corebusiness.TC_regr_core_001"/>
+        <method signature="TC_regr_core_002.f(java.lang.String,java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_002@fd07cbb]" name="f" class="Corebusiness.TC_regr_core_002"/>
+        <method signature="TC_regr_core_003.logout(java.lang.String,java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_003@3571b748]" name="logout" class="Corebusiness.TC_regr_core_003"/>
+        <method signature="TC_regr_core_004.verifyDropDown()[pri:0, instance:Corebusiness.TC_regr_core_004@3e96bacf]" name="verifyDropDown" class="Corebusiness.TC_regr_core_004"/>
+        <method signature="TC_regr_core_005.verifyBrands()[pri:0, instance:Corebusiness.TC_regr_core_005@484970b0]" name="verifyBrands" class="Corebusiness.TC_regr_core_005"/>
+        <method signature="TC_regr_core_006.verifyProduct()[pri:0, instance:Corebusiness.TC_regr_core_006@4470f8a6]" name="verifyProduct" class="Corebusiness.TC_regr_core_006"/>
+        <method signature="TC_regr_core_007.verifyProduct()[pri:0, instance:Corebusiness.TC_regr_core_007@7c83dc97]" name="verifyProduct" class="Corebusiness.TC_regr_core_007"/>
+        <method signature="TC_regr_core_008.verifyProduct()[pri:0, instance:Corebusiness.TC_regr_core_008@7748410a]" name="verifyProduct" class="Corebusiness.TC_regr_core_008"/>
+      </group> <!-- regression -->
+      <group name="login">
+        <method signature="TC_regr_core_001.f(java.lang.String,java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_001@7c1e2a9e]" name="f" class="Corebusiness.TC_regr_core_001"/>
+        <method signature="TC_regr_core_002.f(java.lang.String,java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_002@fd07cbb]" name="f" class="Corebusiness.TC_regr_core_002"/>
+        <method signature="TC_regr_core_003.logout(java.lang.String,java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_003@3571b748]" name="logout" class="Corebusiness.TC_regr_core_003"/>
+      </group> <!-- login -->
     </groups>
-    <test started-at="2025-09-10T17:25:33 IST" name="Chrome Test" finished-at="2025-09-10T17:25:52 IST" duration-ms="19234">
-      <class name="Corebusiness.TC_regr_core_001">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Corebusiness.TC_regr_core_001@687e99d8]" started-at="2025-09-10T17:25:33 IST" name="setUp" finished-at="2025-09-10T17:25:34 IST" duration-ms="1664" status="PASS">
+    <test started-at="2025-09-12T15:22:02 IST" name="Chrome Test" finished-at="2025-09-12T15:36:26 IST" duration-ms="864100">
+      <class name="Corebusiness.TC_regr_core_002">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_002@fd07cbb]" started-at="2025-09-12T15:23:09 IST" name="setUp" finished-at="2025-09-12T15:23:11 IST" duration-ms="1343" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="f(java.lang.String,java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_001@687e99d8]" started-at="2025-09-10T17:25:35 IST" name="f" data-provider="logindata" finished-at="2025-09-10T17:25:50 IST" duration-ms="14986" status="PASS">
+        <test-method signature="f(java.lang.String,java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_002@fd07cbb]" started-at="2025-09-12T15:23:11 IST" name="f" data-provider="logindata" finished-at="2025-09-12T15:23:26 IST" duration-ms="15330" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[jaikrishnagit@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Team@A23]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"link text","selector":"Logout"}
+  (Session info: chrome=139.0.7258.157)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9e020725d31ed0fa7597aebe96c1c8a3, findElement {value=Logout, using=link text}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49730}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49730/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9e020725d31ed0fa7597aebe96c1c8a3]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Logout"}
+  (Session info: chrome=139.0.7258.157)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9e020725d31ed0fa7597aebe96c1c8a3, findElement {value=Logout, using=link text}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49730}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49730/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9e020725d31ed0fa7597aebe96c1c8a3
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at com.Ecomm.pages.LoginPage.logoutDisplayed(LoginPage.java:112)
+at Corebusiness.TC_regr_core_002.f(TC_regr_core_002.java:24)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Corebusiness.TC_regr_core_002@fd07cbb]" started-at="2025-09-12T15:23:26 IST" name="tearDown" finished-at="2025-09-12T15:23:26 IST" duration-ms="319" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Corebusiness.TC_regr_core_002 -->
+      <class name="Corebusiness.TC_regr_core_003">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_003@3571b748]" started-at="2025-09-12T15:23:26 IST" name="setUp" finished-at="2025-09-12T15:23:27 IST" duration-ms="799" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="logout(java.lang.String,java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_003@3571b748]" started-at="2025-09-12T15:23:27 IST" name="logout" data-provider="logindata" finished-at="2025-09-12T15:24:04 IST" duration-ms="36902" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[jaikrishnagit@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Team@A8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Corebusiness.TC_regr_core_003@3571b748]" started-at="2025-09-12T15:24:04 IST" name="tearDown" finished-at="2025-09-12T15:24:05 IST" duration-ms="390" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Corebusiness.TC_regr_core_003 -->
+      <class name="Corebusiness.TC_regr_core_011">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_011@55740540]" started-at="2025-09-12T15:33:56 IST" name="setUp" finished-at="2025-09-12T15:33:57 IST" duration-ms="673" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyCartItemsQuantityAndPrice()[pri:0, instance:Corebusiness.TC_regr_core_011@55740540]" started-at="2025-09-12T15:33:57 IST" name="verifyCartItemsQuantityAndPrice" finished-at="2025-09-12T15:35:11 IST" duration-ms="73912" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Test failed due to exception: element click intercepted: Element <a data-product-id="1" class="btn btn-default add-to-cart">...</a> is not clickable at point (626, 669). Other element would receive the click: <iframe id="aswift_3" name="aswift_3" browsingtopics="true" style="min-height: auto; max-height: none; min-width: auto; max-width: none; width: 728px !important; height: 90px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/html/r20250910/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;adk=1812271801&amp;client=ca-pub-1677597403311019&amp;fa=1&amp;ifi=4&amp;uci=a!4&amp;btvi=2" data-google-container-id="a!4" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CITS3K780o8DFWUGgwMdJ7okNg" data-load-complete="true"></iframe>
+  (Session info: chrome=139.0.7258.157)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e2bef4717075c20ac764ce466508af93, clickElement {id=f.25E7C673A2F391A5C489F47D27F88941.d.0BED01BDE3655DCC72B24B0CC5CA9C79.e.50}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50320}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50320/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (e2bef4717075c20ac764ce466508af93)] -> xpath: (//a[contains(text(),'Add to cart')])[1]]
+Session ID: e2bef4717075c20ac764ce466508af93]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Test failed due to exception: element click intercepted: Element <a data-product-id="1" class="btn btn-default add-to-cart">...</a> is not clickable at point (626, 669). Other element would receive the click: <iframe id="aswift_3" name="aswift_3" browsingtopics="true" style="min-height: auto; max-height: none; min-width: auto; max-width: none; width: 728px !important; height: 90px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/html/r20250910/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;adk=1812271801&amp;client=ca-pub-1677597403311019&amp;fa=1&amp;ifi=4&amp;uci=a!4&amp;btvi=2" data-google-container-id="a!4" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CITS3K780o8DFWUGgwMdJ7okNg" data-load-complete="true"></iframe>
+  (Session info: chrome=139.0.7258.157)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e2bef4717075c20ac764ce466508af93, clickElement {id=f.25E7C673A2F391A5C489F47D27F88941.d.0BED01BDE3655DCC72B24B0CC5CA9C79.e.50}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50320}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50320/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (e2bef4717075c20ac764ce466508af93)] -> xpath: (//a[contains(text(),'Add to cart')])[1]]
+Session ID: e2bef4717075c20ac764ce466508af93
+at org.testng.Assert.fail(Assert.java:111)
+at Corebusiness.TC_regr_core_011.verifyCartItemsQuantityAndPrice(TC_regr_core_011.java:58)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCartItemsQuantityAndPrice -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Corebusiness.TC_regr_core_011@55740540]" started-at="2025-09-12T15:35:11 IST" name="tearDown" finished-at="2025-09-12T15:35:11 IST" duration-ms="277" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Corebusiness.TC_regr_core_011 -->
+      <class name="Corebusiness.TC_regr_core_012">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_012@60015ef5]" started-at="2025-09-12T15:35:11 IST" name="setUp" finished-at="2025-09-12T15:35:12 IST" duration-ms="640" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyCartItemsCanBeUpdatedOrRemoved()[pri:0, instance:Corebusiness.TC_regr_core_012@60015ef5]" started-at="2025-09-12T15:35:12 IST" name="verifyCartItemsCanBeUpdatedOrRemoved" finished-at="2025-09-12T15:36:26 IST" duration-ms="74445" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCartItemsCanBeUpdatedOrRemoved -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Corebusiness.TC_regr_core_012@60015ef5]" started-at="2025-09-12T15:36:26 IST" name="tearDown" finished-at="2025-09-12T15:36:26 IST" duration-ms="284" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Corebusiness.TC_regr_core_012 -->
+      <class name="Corebusiness.TC_regr_core_001">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_001@7c1e2a9e]" started-at="2025-09-12T15:22:02 IST" name="setUp" finished-at="2025-09-12T15:22:04 IST" duration-ms="2135" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="f(java.lang.String,java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_001@7c1e2a9e]" started-at="2025-09-12T15:22:05 IST" name="f" data-provider="logindata" finished-at="2025-09-12T15:23:09 IST" duration-ms="63559" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,11 +277,362 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Corebusiness.TC_regr_core_001@687e99d8]" started-at="2025-09-10T17:25:50 IST" name="tearDown" finished-at="2025-09-10T17:25:52 IST" duration-ms="1887" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Corebusiness.TC_regr_core_001@7c1e2a9e]" started-at="2025-09-12T15:23:09 IST" name="tearDown" finished-at="2025-09-12T15:23:09 IST" duration-ms="609" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Corebusiness.TC_regr_core_001 -->
+      <class name="Corebusiness.TC_regr_core_006">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_006@4470f8a6]" started-at="2025-09-12T15:27:52 IST" name="setUp" finished-at="2025-09-12T15:27:53 IST" duration-ms="717" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyProduct()[pri:0, instance:Corebusiness.TC_regr_core_006@4470f8a6]" started-at="2025-09-12T15:27:53 IST" name="verifyProduct" finished-at="2025-09-12T15:28:09 IST" duration-ms="15827" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <a href="/product_details/1" style="color: brown;">...</a> is not clickable at point (626, 667). Other element would receive the click: <iframe id="aswift_5" name="aswift_5" browsingtopics="true" style="min-height: auto; max-height: none; min-width: auto; max-width: none; width: 728px !important; height: 90px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/html/r20250910/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;adk=1812271801&amp;client=ca-pub-1677597403311019&amp;fa=1&amp;ifi=6&amp;uci=a!6&amp;btvi=3" data-google-container-id="a!6" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CNmbpYX70o8DFceKrAId5qEEuA" data-load-complete="true"></iframe>
+  (Session info: chrome=139.0.7258.157)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fd7ef737401188676e483385bcaf5171, clickElement {id=f.26DBAB56A8542C0A87A38DE43B2447CA.d.D07495E15030E8C180094CD34065F546.e.65}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49992}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49992/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fd7ef737401188676e483385bcaf5171)] -> xpath: //a[@href='/product_details/1']]
+Session ID: fd7ef737401188676e483385bcaf5171]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a href="/product_details/1" style="color: brown;">...</a> is not clickable at point (626, 667). Other element would receive the click: <iframe id="aswift_5" name="aswift_5" browsingtopics="true" style="min-height: auto; max-height: none; min-width: auto; max-width: none; width: 728px !important; height: 90px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/html/r20250910/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;adk=1812271801&amp;client=ca-pub-1677597403311019&amp;fa=1&amp;ifi=6&amp;uci=a!6&amp;btvi=3" data-google-container-id="a!6" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CNmbpYX70o8DFceKrAId5qEEuA" data-load-complete="true"></iframe>
+  (Session info: chrome=139.0.7258.157)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fd7ef737401188676e483385bcaf5171, clickElement {id=f.26DBAB56A8542C0A87A38DE43B2447CA.d.D07495E15030E8C180094CD34065F546.e.65}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49992}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49992/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fd7ef737401188676e483385bcaf5171)] -> xpath: //a[@href='/product_details/1']]
+Session ID: fd7ef737401188676e483385bcaf5171
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at com.Ecomm.pages.ProductsPage.clickProduct(ProductsPage.java:90)
+at Corebusiness.TC_regr_core_006.verifyProduct(TC_regr_core_006.java:19)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProduct -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Corebusiness.TC_regr_core_006@4470f8a6]" started-at="2025-09-12T15:28:09 IST" name="tearDown" finished-at="2025-09-12T15:28:09 IST" duration-ms="344" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Corebusiness.TC_regr_core_006 -->
+      <class name="Corebusiness.TC_regr_core_007">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_007@7c83dc97]" started-at="2025-09-12T15:28:09 IST" name="setUp" finished-at="2025-09-12T15:28:10 IST" duration-ms="772" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyProduct()[pri:0, instance:Corebusiness.TC_regr_core_007@7c83dc97]" started-at="2025-09-12T15:28:10 IST" name="verifyProduct" finished-at="2025-09-12T15:31:13 IST" duration-ms="183592" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[java.net.http.HttpTimeoutException: request timed out
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [54cd312f61a04ce8f78fd1b534f7a0e1, clickElement {id=f.1F36B2AA463CBEEE3E6064B880682B0A.d.8673E27AAAA28A067F3079E301EBA642.e.34}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50056}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50056/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (54cd312f61a04ce8f78fd1b534f7a0e1)] -> xpath: //a[@href='/products']]
+Session ID: 54cd312f61a04ce8f78fd1b534f7a0e1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: java.net.http.HttpTimeoutException: request timed out
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [54cd312f61a04ce8f78fd1b534f7a0e1, clickElement {id=f.1F36B2AA463CBEEE3E6064B880682B0A.d.8673E27AAAA28A067F3079E301EBA642.e.34}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50056}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50056/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (54cd312f61a04ce8f78fd1b534f7a0e1)] -> xpath: //a[@href='/products']]
+Session ID: 54cd312f61a04ce8f78fd1b534f7a0e1
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:498)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$2(JdkHttpClient.java:387)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.http.HttpTimeoutException: request timed out
+at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:953)
+at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:459)
+... 8 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProduct -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Corebusiness.TC_regr_core_007@7c83dc97]" started-at="2025-09-12T15:31:13 IST" name="tearDown" finished-at="2025-09-12T15:31:44 IST" duration-ms="31046" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Corebusiness.TC_regr_core_007 -->
+      <class name="Corebusiness.TC_regr_core_004">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_004@3e96bacf]" started-at="2025-09-12T15:24:05 IST" name="setUp" finished-at="2025-09-12T15:24:06 IST" duration-ms="884" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyDropDown()[pri:0, instance:Corebusiness.TC_regr_core_004@3e96bacf]" started-at="2025-09-12T15:24:06 IST" name="verifyDropDown" finished-at="2025-09-12T15:24:12 IST" duration-ms="6626" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDropDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Corebusiness.TC_regr_core_004@3e96bacf]" started-at="2025-09-12T15:24:12 IST" name="tearDown" finished-at="2025-09-12T15:24:12 IST" duration-ms="262" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Corebusiness.TC_regr_core_004 -->
+      <class name="Corebusiness.TC_regr_core_005">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_005@484970b0]" started-at="2025-09-12T15:24:12 IST" name="setUp" finished-at="2025-09-12T15:24:13 IST" duration-ms="659" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyBrands()[pri:0, instance:Corebusiness.TC_regr_core_005@484970b0]" started-at="2025-09-12T15:24:13 IST" name="verifyBrands" finished-at="2025-09-12T15:27:21 IST" duration-ms="187991" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[java.net.http.HttpTimeoutException: request timed out
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d31a22a697a356815ba6bba0af77949c, clickElement {id=f.0FD69E5949BB11FB5FDB9C1E850445A1.d.6BD66568EF65BB179CCA65E2E4196AF5.e.31}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49905}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49905/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (d31a22a697a356815ba6bba0af77949c)] -> xpath: //a[@href='/products']]
+Session ID: d31a22a697a356815ba6bba0af77949c]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: java.net.http.HttpTimeoutException: request timed out
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d31a22a697a356815ba6bba0af77949c, clickElement {id=f.0FD69E5949BB11FB5FDB9C1E850445A1.d.6BD66568EF65BB179CCA65E2E4196AF5.e.31}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49905}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49905/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (d31a22a697a356815ba6bba0af77949c)] -> xpath: //a[@href='/products']]
+Session ID: d31a22a697a356815ba6bba0af77949c
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:498)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$2(JdkHttpClient.java:387)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.http.HttpTimeoutException: request timed out
+at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:953)
+at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:459)
+... 8 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBrands -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Corebusiness.TC_regr_core_005@484970b0]" started-at="2025-09-12T15:27:21 IST" name="tearDown" finished-at="2025-09-12T15:27:52 IST" duration-ms="31051" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Corebusiness.TC_regr_core_005 -->
+      <class name="Corebusiness.TC_regr_core_008">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_008@7748410a]" started-at="2025-09-12T15:31:44 IST" name="setUp" finished-at="2025-09-12T15:31:45 IST" duration-ms="622" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyProduct()[pri:0, instance:Corebusiness.TC_regr_core_008@7748410a]" started-at="2025-09-12T15:31:45 IST" name="verifyProduct" finished-at="2025-09-12T15:32:13 IST" duration-ms="27452" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <a href="/product_details/1" style="color: brown;">...</a> is not clickable at point (626, 667). Other element would receive the click: <iframe id="aswift_3" name="aswift_3" browsingtopics="true" style="min-height: auto; max-height: none; min-width: auto; max-width: none; width: 728px !important; height: 90px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/html/r20250910/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;adk=1812271801&amp;client=ca-pub-1677597403311019&amp;fa=1&amp;ifi=4&amp;uci=a!4&amp;btvi=2" data-google-container-id="a!4" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="COqxr_X70o8DFVNYDwIdZzMjnA" data-load-complete="true"></iframe>
+  (Session info: chrome=139.0.7258.157)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f771d7648835bedff8ebdab63208c5e0, clickElement {id=f.BE26810029027B6C7320D57EB2831583.d.B831D08E3F4A9D54CEDC108CD6E06673.e.80}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50130}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50130/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f771d7648835bedff8ebdab63208c5e0)] -> xpath: //a[@href='/product_details/1']]
+Session ID: f771d7648835bedff8ebdab63208c5e0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a href="/product_details/1" style="color: brown;">...</a> is not clickable at point (626, 667). Other element would receive the click: <iframe id="aswift_3" name="aswift_3" browsingtopics="true" style="min-height: auto; max-height: none; min-width: auto; max-width: none; width: 728px !important; height: 90px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/html/r20250910/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;adk=1812271801&amp;client=ca-pub-1677597403311019&amp;fa=1&amp;ifi=4&amp;uci=a!4&amp;btvi=2" data-google-container-id="a!4" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="COqxr_X70o8DFVNYDwIdZzMjnA" data-load-complete="true"></iframe>
+  (Session info: chrome=139.0.7258.157)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f771d7648835bedff8ebdab63208c5e0, clickElement {id=f.BE26810029027B6C7320D57EB2831583.d.B831D08E3F4A9D54CEDC108CD6E06673.e.80}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50130}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50130/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f771d7648835bedff8ebdab63208c5e0)] -> xpath: //a[@href='/product_details/1']]
+Session ID: f771d7648835bedff8ebdab63208c5e0
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at com.Ecomm.pages.ProductsPage.clickProduct2(ProductsPage.java:94)
+at Corebusiness.TC_regr_core_008.verifyProduct(TC_regr_core_008.java:21)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProduct -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Corebusiness.TC_regr_core_008@7748410a]" started-at="2025-09-12T15:32:13 IST" name="tearDown" finished-at="2025-09-12T15:32:13 IST" duration-ms="249" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Corebusiness.TC_regr_core_008 -->
+      <class name="Corebusiness.TC_regr_core_009">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_009@740773a3]" started-at="2025-09-12T15:32:13 IST" name="setUp" finished-at="2025-09-12T15:32:14 IST" duration-ms="843" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyProductPriceInProductPage()[pri:0, instance:Corebusiness.TC_regr_core_009@740773a3]" started-at="2025-09-12T15:32:14 IST" name="verifyProductPriceInProductPage" finished-at="2025-09-12T15:32:20 IST" duration-ms="5892" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProductPriceInProductPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Corebusiness.TC_regr_core_009@740773a3]" started-at="2025-09-12T15:32:20 IST" name="tearDown" finished-at="2025-09-12T15:32:20 IST" duration-ms="287" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Corebusiness.TC_regr_core_009 -->
+      <class name="Corebusiness.TC_regr_core_010">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_010@37f1104d]" started-at="2025-09-12T15:32:20 IST" name="setUp" finished-at="2025-09-12T15:32:21 IST" duration-ms="841" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyProduct()[pri:0, instance:Corebusiness.TC_regr_core_010@37f1104d]" started-at="2025-09-12T15:32:21 IST" name="verifyProduct" finished-at="2025-09-12T15:33:56 IST" duration-ms="95221" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProduct -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Corebusiness.TC_regr_core_010@37f1104d]" started-at="2025-09-12T15:33:56 IST" name="tearDown" finished-at="2025-09-12T15:33:56 IST" duration-ms="287" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Corebusiness.TC_regr_core_010 -->
     </test> <!-- Chrome Test -->
   </suite> <!-- CrossBrowser Suite -->
 </testng-results>

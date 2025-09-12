@@ -13,7 +13,7 @@ import com.aventstack.extentreports.ExtentTest;
 
 public class TC_regr_core_001 extends BaseTest{
     static String projectPath = System.getProperty("user.dir");
-    @Test(dataProvider = "logindata")
+    @Test(dataProvider = "logindata", groups = {"regression", "login"})
     public void f(String email, String password) throws InterruptedException, IOException
     {
     		

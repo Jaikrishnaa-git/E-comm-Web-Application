@@ -9,7 +9,7 @@ import com.Ecomm.utilities.ScreenshotUtilities;
 
 public class TC_regr_core_004 extends BaseTest{
     static String projectPath = System.getProperty("user.dir");
-    @Test
+    @Test(groups = {"regression"})
     public void verifyDropDown() throws InterruptedException, IOException
     {
     		

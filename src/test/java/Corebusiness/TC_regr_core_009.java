@@ -13,7 +13,7 @@ import com.Ecomm.utilities.ScreenshotUtilities;
 
 public class TC_regr_core_009 extends BaseTest {
 
-    @Test
+	@Test
     public void verifyProductPriceInProductPage() throws IOException {
         test = extent.createTest("TC_regr_core_009 - Verify Product Price in Product Page");
 

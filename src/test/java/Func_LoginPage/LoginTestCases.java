@@ -49,7 +49,7 @@ public class LoginTestCases extends BaseTest {
 
     @BeforeClass
     public void setUpClass() {
-        super.setUp(); // Call parent setup
+        super.setUp("chrome"); // Call parent setup
         extent = ExtentManager.createInstance("LoginTestCases");
         System.out.println("LoginTestCases class setup completed");
     }

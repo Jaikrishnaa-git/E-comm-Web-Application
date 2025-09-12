@@ -10,6 +10,7 @@ import com.Ecomm.utilities.ScreenshotUtilities;
 import com.aventstack.extentreports.ExtentTest;
 
 public class TC_regr_core_010 extends BaseTest {
+	
   @Test
   public void verifyProduct() throws IOException, InterruptedException {
 	  driver.get("https://automationexercise.com/");

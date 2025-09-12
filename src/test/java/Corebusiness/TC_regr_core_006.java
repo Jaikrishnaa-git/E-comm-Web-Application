@@ -10,7 +10,7 @@ import com.Ecomm.utilities.ScreenshotUtilities;
 import com.aventstack.extentreports.ExtentTest;
 
 public class TC_regr_core_006 extends BaseTest {
-  @Test
+  @Test(groups = {"regression"})
   public void verifyProduct() throws IOException {
 	  driver.get("https://automationexercise.com/");
       ExtentTest test = extent.createTest("Dropdown verification");

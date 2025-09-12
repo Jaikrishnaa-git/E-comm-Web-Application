@@ -10,7 +10,7 @@ import com.Ecomm.utilities.ScreenshotUtilities;
 import com.aventstack.extentreports.ExtentTest;
 
 public class TC_regr_core_005 extends BaseTest{
-  @Test
+  @Test(groups = {"regression"})
   public void verifyBrands() throws IOException 
   {
 	  driver.get("https://automationexercise.com/");
