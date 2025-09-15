@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\vinod kumar\AppData\Local\Temp\testng-eclipse--1170967329\testng-customsuite.xml</span>
+                    <span>C:\Users\vinod kumar\AppData\Local\Temp\testng-eclipse--1366203658\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="APITesting_UI.TC_Ecommerce_Web_Application_API_Testing_31" class="method navigator-link" hash-for-method="verifyInvalidEmailInAPIPage">verifyInvalidEmailInAPIPage</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ProductPage.TC_ECOM_TestCase_29" class="method navigator-link" hash-for-method="verifyInvalidEmailInputInProductPage">verifyInvalidEmailInputInProductPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -121,23 +121,19 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">APITesting_UI.TC_Ecommerce_Web_Application_API_Testing_31</span>
+              <span class="class-name">ProductPage.TC_ECOM_TestCase_29</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyInvalidEmailInAPIPage">
-                  </a> <!-- verifyInvalidEmailInAPIPage -->
-                  <span class="method-name">verifyInvalidEmailInAPIPage</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: contact-email (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\VINODK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54878}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54878/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c5c5a7cf87d1167bcfb3031a235f9d1d
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at APITesting_UI.TC_Ecommerce_Web_Application_API_Testing_31.verifyInvalidEmailInAPIPage(TC_Ecommerce_Web_Application_API_Testing_31.java:32)
+                  <a name="verifyInvalidEmailInputInProductPage">
+                  </a> <!-- verifyInvalidEmailInputInProductPage -->
+                  <span class="method-name">verifyInvalidEmailInputInProductPage</span>
+                  <div class="stack-trace">java.lang.AssertionError: Invalid email should not be accepted in Email field, but it was! expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at ProductPage.TC_ECOM_TestCase_29.verifyInvalidEmailInputInProductPage(TC_ECOM_TestCase_29.java:64)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -175,7 +171,7 @@ Session ID: c5c5a7cf87d1167bcfb3031a235f9d1d
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\vinod kumar\AppData\Local\Temp\testng-eclipse--1170967329\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\vinod kumar\AppData\Local\Temp\testng-eclipse--1366203658\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -184,7 +180,7 @@ Session ID: c5c5a7cf87d1167bcfb3031a235f9d1d
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;APITesting_UI.TC_Ecommerce_Web_Application_API_Testing_31&quot;/&gt;
+      &lt;class name=&quot;ProductPage.TC_ECOM_TestCase_29&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -226,14 +222,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyInvalidEmailInAPIPage')
-data.setCell(0, 2, 'APITesting_UI.TC_Ecommerce_Web_Application_API_Testing_31')
-data.setCell(0, 3, 14939);
+data.setCell(0, 1, 'verifyInvalidEmailInputInProductPage')
+data.setCell(0, 2, 'ProductPage.TC_ECOM_TestCase_29')
+data.setCell(0, 3, 9578);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 9 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -259,7 +255,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">APITesting_UI.TC_Ecommerce_Web_Application_API_Testing_31</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">ProductPage.TC_ECOM_TestCase_29</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
@@ -267,12 +263,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">verifyInvalidEmailInAPIPage</span>
-                <span class="method-start">2345 ms</span>
+                <span class="method-name">verifyInvalidEmailInputInProductPage</span>
+                <span class="method-start">2336 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">17294 ms</span>
+                <span class="method-start">11919 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="APITesting_UI.TC_Ecommerce_Web_Application_API_Testing_31">
+      <class name="ProductPage.TC_ECOM_TestCase_29">
         <methods>
-          <include name="verifyInvalidEmailInAPIPage"/>
+          <include name="verifyInvalidEmailInputInProductPage"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- APITesting_UI.TC_Ecommerce_Web_Application_API_Testing_31 -->
+      </class> <!-- ProductPage.TC_ECOM_TestCase_29 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
