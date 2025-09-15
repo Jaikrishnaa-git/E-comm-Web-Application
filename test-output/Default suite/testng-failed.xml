@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Corebusiness.TC_regr_core_001">
+      <class name="CartPage.TC_ECOM_Cart_14">
         <methods>
-          <include name="f" invocation-numbers="0"/>
+          <include name="verifyProceedToCheckoutButtonInCartPage"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- Corebusiness.TC_regr_core_001 -->
+      </class> <!-- CartPage.TC_ECOM_Cart_14 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

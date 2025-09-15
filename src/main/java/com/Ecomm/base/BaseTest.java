@@ -1,6 +1,7 @@
 package com.Ecomm.base;
 
 import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -10,6 +11,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -25,10 +27,11 @@ public class BaseTest {
     protected ExtentTest test;
 
     @BeforeClass
-    @Parameters({"browser"}) // 
-    public void setUp(String browser) {
-        if (browser == null || browser.isEmpty()) {
-            browser = "chrome"; // 
+    @Parameters({"browser"})
+    public void setUp(@Optional("chrome") String browser) {
+        String sysBrowser = System.getProperty("browser");
+        if (sysBrowser != null && !sysBrowser.isEmpty()) {
+            browser = sysBrowser;
         }
 
         System.out.println("🚀 Launching Browser: " + browser);
@@ -65,6 +68,7 @@ public class BaseTest {
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
+        // Create Extent Report instance per test class
         String testClassName = this.getClass().getSimpleName();
         extent = ExtentManager.createInstance(testClassName);
 
