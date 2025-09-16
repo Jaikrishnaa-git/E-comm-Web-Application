@@ -4,24 +4,20 @@
   <test thread-count="5" name="Chrome Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="Func_LoginPage.LoginTestCases">
+      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_07">
         <methods>
-          <include name="TC_ECOM_Login_007" invocation-numbers="0"/>
-          <include name="TC_ECOM_Login_008" invocation-numbers="0"/>
-          <include name="TC_ECOM_Login_005" invocation-numbers="0"/>
-          <include name="TC_ECOM_Login_006" invocation-numbers="0"/>
-          <include name="tearDownClass"/>
-          <include name="TC_ECOM_Login_004" invocation-numbers="0"/>
-          <include name="TC_ECOM_Login_001" invocation-numbers="0"/>
-          <include name="handleTestResult"/>
-          <include name="tearDown"/>
-          <include name="setUpClass"/>
-          <include name="TC_ECOM_Login_002" invocation-numbers="0"/>
+          <include name="verifyLoginButton"/>
           <include name="setUp"/>
-          <include name="navigateToLoginPage"/>
-          <include name="TC_ECOM_Login_009" invocation-numbers="0"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- Func_LoginPage.LoginTestCases -->
+      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_07 -->
+      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_02">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verifyNameTextBox"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_02 -->
     </classes>
   </test> <!-- Chrome Test(failed) -->
 </suite> <!-- Failed suite [CrossBrowser Suite] -->

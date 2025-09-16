@@ -5,7 +5,7 @@
         <parameter name="browser" value="chrome"/>
         <packages>
           
-             <package name="Func_LoginPage"/>
+             <package name="RegeressionFrequentlyUsedFunctionality"/>
         </packages>
     </test>
 

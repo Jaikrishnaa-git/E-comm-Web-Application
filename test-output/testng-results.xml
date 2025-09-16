@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="1" failed="8" skipped="0">
+<testng-results ignored="0" total="9" passed="7" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-16T16:58:08 IST" name="CrossBrowser Suite" finished-at="2025-09-16T16:59:48 IST" duration-ms="100128">
+  <suite started-at="2025-09-16T17:19:52 IST" name="CrossBrowser Suite" finished-at="2025-09-16T17:21:29 IST" duration-ms="97152">
     <groups>
     </groups>
-    <test started-at="2025-09-16T16:58:08 IST" name="Chrome Test" finished-at="2025-09-16T16:59:48 IST" duration-ms="100128">
-      <class name="Func_LoginPage.LoginTestCases">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:58:08 IST" name="setUp" finished-at="2025-09-16T16:58:11 IST" duration-ms="2949" status="PASS">
+    <test started-at="2025-09-16T17:19:52 IST" name="Chrome Test" finished-at="2025-09-16T17:21:29 IST" duration-ms="97152">
+      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_09">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_09@7748410a]" started-at="2025-09-16T17:21:18 IST" name="setUp" finished-at="2025-09-16T17:21:19 IST" duration-ms="633" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,586 +18,267 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:58:11 IST" name="setUpClass" finished-at="2025-09-16T16:58:12 IST" duration-ms="829" status="PASS">
+        <test-method signature="verifyViewProductButton()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_09@7748410a]" started-at="2025-09-16T17:21:19 IST" name="verifyViewProductButton" finished-at="2025-09-16T17:21:29 IST" duration-ms="10203" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="navigateToLoginPage()[pri:0, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:58:13 IST" name="navigateToLoginPage" finished-at="2025-09-16T16:58:16 IST" duration-ms="3114" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToLoginPage -->
-        <test-method signature="TC_ECOM_Login_001(java.lang.String)[pri:1, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:58:16 IST" name="TC_ECOM_Login_001" description="To verify email text box with invalid email - Should FAIL" data-provider="invalidEmailData" finished-at="2025-09-16T16:58:17 IST" duration-ms="242" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[invalid@test.com]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Email should be valid: invalid@test.com expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Email should be valid: invalid@test.com expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at Func_LoginPage.LoginTestCases.TC_ECOM_Login_001(LoginTestCases.java:247)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_ECOM_Login_001 -->
-        <test-method is-config="true" signature="handleTestResult(org.testng.ITestResult)[pri:0, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:58:17 IST" name="handleTestResult" finished-at="2025-09-16T16:58:18 IST" duration-ms="1252" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_ECOM_Login_001 status=FAILURE method=LoginTestCases.TC_ECOM_Login_001(java.lang.String)[pri:1, instance:Func_LoginPage.LoginTestCases@524d6d96] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- handleTestResult -->
-        <test-method is-config="true" signature="navigateToLoginPage()[pri:0, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:58:18 IST" name="navigateToLoginPage" finished-at="2025-09-16T16:58:21 IST" duration-ms="2922" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToLoginPage -->
-        <test-method signature="TC_ECOM_Login_002(java.lang.String)[pri:2, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:58:21 IST" name="TC_ECOM_Login_002" description="To verify password text box with invalid password - Should FAIL" data-provider="invalidPasswordData" finished-at="2025-09-16T16:58:22 IST" duration-ms="1054" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[wrongpassword]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Password should be valid: wrongpassword expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Password should be valid: wrongpassword expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at Func_LoginPage.LoginTestCases.TC_ECOM_Login_002(LoginTestCases.java:278)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_ECOM_Login_002 -->
-        <test-method is-config="true" signature="handleTestResult(org.testng.ITestResult)[pri:0, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:58:22 IST" name="handleTestResult" finished-at="2025-09-16T16:58:23 IST" duration-ms="727" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_ECOM_Login_002 status=FAILURE method=LoginTestCases.TC_ECOM_Login_002(java.lang.String)[pri:2, instance:Func_LoginPage.LoginTestCases@524d6d96] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- handleTestResult -->
-        <test-method is-config="true" signature="navigateToLoginPage()[pri:0, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:58:23 IST" name="navigateToLoginPage" finished-at="2025-09-16T16:58:27 IST" duration-ms="4287" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToLoginPage -->
-        <test-method signature="TC_ECOM_Login_003()[pri:3, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:58:27 IST" name="TC_ECOM_Login_003" description="To verify login button functionality - Should PASS" finished-at="2025-09-16T16:58:27 IST" duration-ms="201" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_ECOM_Login_003 -->
-        <test-method is-config="true" signature="handleTestResult(org.testng.ITestResult)[pri:0, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:58:27 IST" name="handleTestResult" finished-at="2025-09-16T16:58:27 IST" duration-ms="71" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_ECOM_Login_003 status=SUCCESS method=LoginTestCases.TC_ECOM_Login_003()[pri:3, instance:Func_LoginPage.LoginTestCases@524d6d96] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- handleTestResult -->
-        <test-method is-config="true" signature="navigateToLoginPage()[pri:0, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:58:28 IST" name="navigateToLoginPage" finished-at="2025-09-16T16:58:29 IST" duration-ms="1154" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToLoginPage -->
-        <test-method signature="TC_ECOM_Login_004(java.lang.String,java.lang.String)[pri:4, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:58:29 IST" name="TC_ECOM_Login_004" description="To verify login with valid credentials - Should PASS" data-provider="validLoginData" finished-at="2025-09-16T16:58:49 IST" duration-ms="20166" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[jaikrishnaa@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Team@A8]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Login with valid credentials should succeed: Expected condition failed: waiting for presence of element located by: By.xpath: //a[contains(text(),'Logged in as')] (tried for 15 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Login with valid credentials should succeed: Expected condition failed: waiting for presence of element located by: By.xpath: //a[contains(text(),'Logged in as')] (tried for 15 second(s) with 500 milliseconds interval)
-at org.testng.Assert.fail(Assert.java:111)
-at Func_LoginPage.LoginTestCases.TC_ECOM_Login_004(LoginTestCases.java:336)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_ECOM_Login_004 -->
-        <test-method is-config="true" signature="handleTestResult(org.testng.ITestResult)[pri:0, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:58:49 IST" name="handleTestResult" finished-at="2025-09-16T16:58:49 IST" duration-ms="264" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_ECOM_Login_004 status=FAILURE method=LoginTestCases.TC_ECOM_Login_004(java.lang.String,java.lang.String)[pri:4, instance:Func_LoginPage.LoginTestCases@524d6d96] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- handleTestResult -->
-        <test-method is-config="true" signature="navigateToLoginPage()[pri:0, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:58:49 IST" name="navigateToLoginPage" finished-at="2025-09-16T16:58:51 IST" duration-ms="1840" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToLoginPage -->
-        <test-method signature="TC_ECOM_Login_005(java.lang.String,java.lang.String)[pri:5, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:58:51 IST" name="TC_ECOM_Login_005" description="To verify login with empty email and valid password - Should FAIL" data-provider="emptyEmailValidPasswordData" finished-at="2025-09-16T16:58:59 IST" duration-ms="8413" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Team@A8]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Login should succeed with valid credentials expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Login should succeed with valid credentials expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at Func_LoginPage.LoginTestCases.TC_ECOM_Login_005(LoginTestCases.java:352)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_ECOM_Login_005 -->
-        <test-method is-config="true" signature="handleTestResult(org.testng.ITestResult)[pri:0, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:58:59 IST" name="handleTestResult" finished-at="2025-09-16T16:59:00 IST" duration-ms="555" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_ECOM_Login_005 status=FAILURE method=LoginTestCases.TC_ECOM_Login_005(java.lang.String,java.lang.String)[pri:5, instance:Func_LoginPage.LoginTestCases@524d6d96] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- handleTestResult -->
-        <test-method is-config="true" signature="navigateToLoginPage()[pri:0, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:59:00 IST" name="navigateToLoginPage" finished-at="2025-09-16T16:59:02 IST" duration-ms="1493" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToLoginPage -->
-        <test-method signature="TC_ECOM_Login_006(java.lang.String,java.lang.String)[pri:6, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:59:02 IST" name="TC_ECOM_Login_006" description="To verify login with invalid email and valid password - Should FAIL" data-provider="invalidEmailValidPasswordData" finished-at="2025-09-16T16:59:11 IST" duration-ms="9740" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[invalid@email.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Team@A8]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Login should succeed with valid credentials expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Login should succeed with valid credentials expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at Func_LoginPage.LoginTestCases.TC_ECOM_Login_006(LoginTestCases.java:380)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_ECOM_Login_006 -->
-        <test-method is-config="true" signature="handleTestResult(org.testng.ITestResult)[pri:0, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:59:11 IST" name="handleTestResult" finished-at="2025-09-16T16:59:12 IST" duration-ms="283" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_ECOM_Login_006 status=FAILURE method=LoginTestCases.TC_ECOM_Login_006(java.lang.String,java.lang.String)[pri:6, instance:Func_LoginPage.LoginTestCases@524d6d96] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- handleTestResult -->
-        <test-method is-config="true" signature="navigateToLoginPage()[pri:0, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:59:12 IST" name="navigateToLoginPage" finished-at="2025-09-16T16:59:15 IST" duration-ms="2953" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToLoginPage -->
-        <test-method signature="TC_ECOM_Login_007(java.lang.String,java.lang.String)[pri:7, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:59:15 IST" name="TC_ECOM_Login_007" description="To verify login with valid email and invalid password - Should FAIL" data-provider="validEmailInvalidPasswordData" finished-at="2025-09-16T16:59:26 IST" duration-ms="10802" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[jaikrishnaa@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[wrongpass]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Login should succeed with valid credentials expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Login should succeed with valid credentials expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at Func_LoginPage.LoginTestCases.TC_ECOM_Login_007(LoginTestCases.java:408)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_ECOM_Login_007 -->
-        <test-method is-config="true" signature="handleTestResult(org.testng.ITestResult)[pri:0, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:59:26 IST" name="handleTestResult" finished-at="2025-09-16T16:59:26 IST" duration-ms="241" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_ECOM_Login_007 status=FAILURE method=LoginTestCases.TC_ECOM_Login_007(java.lang.String,java.lang.String)[pri:7, instance:Func_LoginPage.LoginTestCases@524d6d96] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- handleTestResult -->
-        <test-method is-config="true" signature="navigateToLoginPage()[pri:0, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:59:26 IST" name="navigateToLoginPage" finished-at="2025-09-16T16:59:27 IST" duration-ms="1421" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToLoginPage -->
-        <test-method signature="TC_ECOM_Login_008(java.lang.String,java.lang.String)[pri:8, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:59:27 IST" name="TC_ECOM_Login_008" description="To verify login with empty credentials - Should FAIL" data-provider="emptyEmailEmptyPasswordData" finished-at="2025-09-16T16:59:36 IST" duration-ms="8396" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Login should succeed with valid credentials expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Login should succeed with valid credentials expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at Func_LoginPage.LoginTestCases.TC_ECOM_Login_008(LoginTestCases.java:436)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_ECOM_Login_008 -->
-        <test-method is-config="true" signature="handleTestResult(org.testng.ITestResult)[pri:0, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:59:36 IST" name="handleTestResult" finished-at="2025-09-16T16:59:36 IST" duration-ms="497" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_ECOM_Login_008 status=FAILURE method=LoginTestCases.TC_ECOM_Login_008(java.lang.String,java.lang.String)[pri:8, instance:Func_LoginPage.LoginTestCases@524d6d96] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- handleTestResult -->
-        <test-method is-config="true" signature="navigateToLoginPage()[pri:0, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:59:36 IST" name="navigateToLoginPage" finished-at="2025-09-16T16:59:38 IST" duration-ms="1965" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToLoginPage -->
-        <test-method signature="TC_ECOM_Login_009(java.lang.String,java.lang.String)[pri:9, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:59:38 IST" name="TC_ECOM_Login_009" description="To verify login with valid email and empty password - Should FAIL" data-provider="validEmailEmptyPasswordData" finished-at="2025-09-16T16:59:47 IST" duration-ms="8538" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[jaikrishnaa@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Login should succeed with valid credentials expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Login should succeed with valid credentials expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at Func_LoginPage.LoginTestCases.TC_ECOM_Login_009(LoginTestCases.java:464)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_ECOM_Login_009 -->
-        <test-method is-config="true" signature="handleTestResult(org.testng.ITestResult)[pri:0, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:59:47 IST" name="handleTestResult" finished-at="2025-09-16T16:59:48 IST" duration-ms="580" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_ECOM_Login_009 status=FAILURE method=LoginTestCases.TC_ECOM_Login_009(java.lang.String,java.lang.String)[pri:9, instance:Func_LoginPage.LoginTestCases@524d6d96] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- handleTestResult -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:59:48 IST" name="tearDownClass" finished-at="2025-09-16T16:59:48 IST" duration-ms="696" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Func_LoginPage.LoginTestCases@524d6d96]" started-at="2025-09-16T16:59:48 IST" name="tearDown" finished-at="2025-09-16T16:59:48 IST" duration-ms="19" status="PASS">
+        </test-method> <!-- verifyViewProductButton -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_09@7748410a]" started-at="2025-09-16T17:21:29 IST" name="tearDown" finished-at="2025-09-16T17:21:29 IST" duration-ms="17" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Func_LoginPage.LoginTestCases -->
+      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_09 -->
+      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_07">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_07@4470f8a6]" started-at="2025-09-16T17:21:02 IST" name="setUp" finished-at="2025-09-16T17:21:02 IST" duration-ms="658" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyLoginButton(java.lang.String,java.lang.String)[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_07@4470f8a6]" started-at="2025-09-16T17:21:03 IST" name="verifyLoginButton" data-provider="loginData" finished-at="2025-09-16T17:21:03 IST" duration-ms="0" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFSheet.getPhysicalNumberOfRows()" because "worksheet" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFSheet.getPhysicalNumberOfRows()" because "worksheet" is null
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:58)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:809)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:949)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFSheet.getPhysicalNumberOfRows()" because "worksheet" is null
+at com.Ecomm.utilities.ExcelUtilities.getdata(ExcelUtilities.java:18)
+at Impact_Regression_TestSuite.TC_Regres_Impact_07.getLoginData(TC_Regres_Impact_07.java:19)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54)
+... 25 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginButton -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_07@4470f8a6]" started-at="2025-09-16T17:21:03 IST" name="tearDown" finished-at="2025-09-16T17:21:03 IST" duration-ms="176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_07 -->
+      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_08">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_08@7c83dc97]" started-at="2025-09-16T17:21:03 IST" name="setUp" finished-at="2025-09-16T17:21:04 IST" duration-ms="642" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyAddToCartButton()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_08@7c83dc97]" started-at="2025-09-16T17:21:04 IST" name="verifyAddToCartButton" finished-at="2025-09-16T17:21:18 IST" duration-ms="14196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddToCartButton -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_08@7c83dc97]" started-at="2025-09-16T17:21:18 IST" name="tearDown" finished-at="2025-09-16T17:21:18 IST" duration-ms="18" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_08 -->
+      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_05">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_05@3e96bacf]" started-at="2025-09-16T17:20:09 IST" name="setUp" finished-at="2025-09-16T17:20:10 IST" duration-ms="654" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyValidEmailForLogin()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_05@3e96bacf]" started-at="2025-09-16T17:20:10 IST" name="verifyValidEmailForLogin" finished-at="2025-09-16T17:20:20 IST" duration-ms="10306" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyValidEmailForLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_05@3e96bacf]" started-at="2025-09-16T17:20:20 IST" name="tearDown" finished-at="2025-09-16T17:20:20 IST" duration-ms="277" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_05 -->
+      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_06">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_06@484970b0]" started-at="2025-09-16T17:20:20 IST" name="setUp" finished-at="2025-09-16T17:20:21 IST" duration-ms="639" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyValidPasswordForLogin()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_06@484970b0]" started-at="2025-09-16T17:20:21 IST" name="verifyValidPasswordForLogin" finished-at="2025-09-16T17:21:01 IST" duration-ms="40524" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyValidPasswordForLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_06@484970b0]" started-at="2025-09-16T17:21:01 IST" name="tearDown" finished-at="2025-09-16T17:21:02 IST" duration-ms="262" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_06 -->
+      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_03">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_03@fd07cbb]" started-at="2025-09-16T17:19:58 IST" name="setUp" finished-at="2025-09-16T17:19:59 IST" duration-ms="684" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyEmailTextBox()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_03@fd07cbb]" started-at="2025-09-16T17:19:59 IST" name="verifyEmailTextBox" finished-at="2025-09-16T17:20:02 IST" duration-ms="3786" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmailTextBox -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_03@fd07cbb]" started-at="2025-09-16T17:20:02 IST" name="tearDown" finished-at="2025-09-16T17:20:03 IST" duration-ms="217" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_03 -->
+      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_04">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_04@3571b748]" started-at="2025-09-16T17:20:03 IST" name="setUp" finished-at="2025-09-16T17:20:03 IST" duration-ms="664" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifySignupFunctionality()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_04@3571b748]" started-at="2025-09-16T17:20:03 IST" name="verifySignupFunctionality" finished-at="2025-09-16T17:20:09 IST" duration-ms="5444" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignupFunctionality -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_04@3571b748]" started-at="2025-09-16T17:20:09 IST" name="tearDown" finished-at="2025-09-16T17:20:09 IST" duration-ms="265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_04 -->
+      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_01">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_01@6236eb5f]" started-at="2025-09-16T17:19:52 IST" name="setUp" finished-at="2025-09-16T17:19:54 IST" duration-ms="2035" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifySignupLoginPageLoads()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_01@6236eb5f]" started-at="2025-09-16T17:19:54 IST" name="verifySignupLoginPageLoads" finished-at="2025-09-16T17:19:56 IST" duration-ms="2647" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignupLoginPageLoads -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_01@6236eb5f]" started-at="2025-09-16T17:19:56 IST" name="tearDown" finished-at="2025-09-16T17:19:57 IST" duration-ms="514" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_01 -->
+      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_02">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_02@2b4bac49]" started-at="2025-09-16T17:19:57 IST" name="setUp" finished-at="2025-09-16T17:19:58 IST" duration-ms="739" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyNameTextBox(java.lang.String,java.lang.String)[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_02@2b4bac49]" started-at="2025-09-16T17:19:58 IST" name="verifyNameTextBox" data-provider="NameData" finished-at="2025-09-16T17:19:58 IST" duration-ms="0" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.io.FileNotFoundException: C:\Java_Training\E-comm-Web-Application\src\test\resources\Testdata\data.xlsx (The system cannot find the path specified)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.io.FileNotFoundException: C:\Java_Training\E-comm-Web-Application\src\test\resources\Testdata\data.xlsx (The system cannot find the path specified)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:58)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:809)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:949)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.io.FileNotFoundException: C:\Java_Training\E-comm-Web-Application\src\test\resources\Testdata\data.xlsx (The system cannot find the path specified)
+at java.base/java.io.FileInputStream.open0(Native Method)
+at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+at com.Ecomm.utilities.ExcelUtilities.getdata(ExcelUtilities.java:15)
+at Impact_Regression_TestSuite.TC_Regres_Impact_02.getNameData(TC_Regres_Impact_02.java:48)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54)
+... 25 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNameTextBox -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_02@2b4bac49]" started-at="2025-09-16T17:19:58 IST" name="tearDown" finished-at="2025-09-16T17:19:58 IST" duration-ms="185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_02 -->
     </test> <!-- Chrome Test -->
   </suite> <!-- CrossBrowser Suite -->
 </testng-results>
