@@ -28,7 +28,7 @@ public class TC_ECOM_Reg_004 extends BaseTest
 	        test.info("Navigated to automationexercise.com");
 
 	        try {
-	            if (signup.submitIsdisplayed()) {
+	            if (signup.submitIsDisplayed()) {
 	                test.pass("The  Submit button is displayed");
 	            } else {
 	                test.fail("The Submit button is not displayed").addScreenCaptureFromPath(ScreenshotUtilities.capturescreen(driver, "TC_ECOM_Reg_004"));

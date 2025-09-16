@@ -10,13 +10,14 @@ public class SignupPage {
 
     private final WebDriver driver;
     private final WebDriverWait wait;
+
     private final By signupLoginLink = By.linkText("Signup / Login");
     private final By newUserName  = By.xpath("//input[@data-qa='signup-name']");
     private final By newUserEmail = By.xpath("//input[@data-qa='signup-email']");
     private final By signupBtn    = By.xpath("//button[@data-qa='signup-button']");
 
-    private final By titleMr   = By.id("id_gender1");  // Mr radio
-    private final By titleMrs  = By.id("id_gender2");  // Mrs radio
+    private final By titleMr   = By.id("id_gender1");
+    private final By titleMrs  = By.id("id_gender2");
     private final By firstName = By.id("first_name");
     private final By lastName  = By.id("last_name");
     private final By password  = By.id("password");
@@ -38,34 +39,33 @@ public class SignupPage {
     private final By mobile   = By.id("mobile_number");
 
     private final By createAccountBtn = By.xpath("//button[@data-qa='create-account']");
-
-    // Success message after account creation
     private final By accountCreatedMsg = By.xpath("//h2[@data-qa='account-created']");
+
+    private final By addressError = By.id("address1-error"); // update this locator as per actual DOM
 
     public SignupPage(WebDriver driver) {
         this.driver = driver;
         this.wait   = new WebDriverWait(driver, Duration.ofSeconds(20));
-    } 
-    public boolean nameIsdisplayed()
-	{
-		return driver.findElement(newUserName).isDisplayed();
-	}
-    public boolean emailIsdisplayed()
-	{
-		return driver.findElement(newUserEmail).isDisplayed();
-	}
-    public boolean submitIsdisplayed()
-	{
-		return driver.findElement(signupBtn).isDisplayed();
-	}
-    
+    }
+
+    public boolean nameIsDisplayed() {
+        return driver.findElement(newUserName).isDisplayed();
+    }
+
+    public boolean emailIsDisplayed() {
+        return driver.findElement(newUserEmail).isDisplayed();
+    }
+
+    public boolean submitIsDisplayed() {
+        return driver.findElement(signupBtn).isDisplayed();
+    }
+
     public void clickSignupLoginLink() {
         driver.findElement(signupLoginLink).click();
     }
 
     public void openHome() {
         driver.get("https://www.automationexercise.com/");
-
     }
 
     public void goToSignupLogin() {
@@ -91,20 +91,17 @@ public class SignupPage {
                                     String countryText, String stateVal, String cityVal,
                                     String zip, String mobileVal) {
 
-
         if (title.equalsIgnoreCase("Mr")) {
             driver.findElement(titleMr).click();
         } else {
             driver.findElement(titleMrs).click();
         }
 
-
         driver.findElement(firstName).clear();
         driver.findElement(firstName).sendKeys(fName);
 
         driver.findElement(lastName).clear();
         driver.findElement(lastName).sendKeys(lName);
-
 
         driver.findElement(password).sendKeys(pwd);
 
@@ -115,7 +112,6 @@ public class SignupPage {
         if (newsletter) driver.findElement(newsletterChk).click();
         if (offers) driver.findElement(offersChk).click();
 
-        // Address details
         driver.findElement(company).sendKeys(companyVal);
         driver.findElement(address1).sendKeys(addr1);
         driver.findElement(address2).sendKeys(addr2Val);
@@ -138,11 +134,13 @@ public class SignupPage {
             System.out.println("⚠️ No ads found to remove");
         }
     }
+
     public void submitCreateAccount() {
-        removeAds(); // clean ads first
+        removeAds();
         WebElement button = wait.until(ExpectedConditions.elementToBeClickable(createAccountBtn));
         button.click();
     }
+
     public boolean isAccountCreated() {
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(accountCreatedMsg));
@@ -151,21 +149,40 @@ public class SignupPage {
             return false;
         }
     }
+
     public String getCityValidationMessage() {
         WebElement cityElement = driver.findElement(city);
         return cityElement.getAttribute("validationMessage");
     }
-    
+
     public String getZipcodeValidationMessage() {
         WebElement zipcodeElement = driver.findElement(zipcode);
         return zipcodeElement.getAttribute("validationMessage");
     }
+
     public By getMobileLocator() {
         return mobile;
     }
+
     public void enterSignupDetails(String name, String email) {
         driver.findElement(newUserName).sendKeys(name);
         driver.findElement(newUserEmail).sendKeys(email);
         driver.findElement(signupBtn).click();
+    }
+
+    public String getAddressErrorMessage() {
+        try {
+            return driver.findElement(addressError).getText();
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    public boolean isAddressValidationErrorVisible() {
+        try {
+            return driver.findElement(addressError).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
     }
 }

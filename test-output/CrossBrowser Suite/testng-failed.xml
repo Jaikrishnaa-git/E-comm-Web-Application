@@ -4,48 +4,24 @@
   <test thread-count="5" name="Chrome Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="Corebusiness.TC_regr_core_011">
+      <class name="Func_LoginPage.LoginTestCases">
         <methods>
-          <include name="setUp"/>
+          <include name="TC_ECOM_Login_007" invocation-numbers="0"/>
+          <include name="TC_ECOM_Login_008" invocation-numbers="0"/>
+          <include name="TC_ECOM_Login_005" invocation-numbers="0"/>
+          <include name="TC_ECOM_Login_006" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+          <include name="TC_ECOM_Login_004" invocation-numbers="0"/>
+          <include name="TC_ECOM_Login_001" invocation-numbers="0"/>
+          <include name="handleTestResult"/>
           <include name="tearDown"/>
-          <include name="verifyCartItemsQuantityAndPrice"/>
-        </methods>
-      </class> <!-- Corebusiness.TC_regr_core_011 -->
-      <class name="Corebusiness.TC_regr_core_007">
-        <methods>
-          <include name="verifyProduct"/>
+          <include name="setUpClass"/>
+          <include name="TC_ECOM_Login_002" invocation-numbers="0"/>
           <include name="setUp"/>
-          <include name="tearDown"/>
+          <include name="navigateToLoginPage"/>
+          <include name="TC_ECOM_Login_009" invocation-numbers="0"/>
         </methods>
-      </class> <!-- Corebusiness.TC_regr_core_007 -->
-      <class name="Corebusiness.TC_regr_core_006">
-        <methods>
-          <include name="verifyProduct"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- Corebusiness.TC_regr_core_006 -->
-      <class name="Corebusiness.TC_regr_core_002">
-        <methods>
-          <include name="f" invocation-numbers="0"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- Corebusiness.TC_regr_core_002 -->
-      <class name="Corebusiness.TC_regr_core_005">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="verifyBrands"/>
-        </methods>
-      </class> <!-- Corebusiness.TC_regr_core_005 -->
-      <class name="Corebusiness.TC_regr_core_008">
-        <methods>
-          <include name="verifyProduct"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- Corebusiness.TC_regr_core_008 -->
+      </class> <!-- Func_LoginPage.LoginTestCases -->
     </classes>
   </test> <!-- Chrome Test(failed) -->
 </suite> <!-- Failed suite [CrossBrowser Suite] -->

@@ -28,7 +28,7 @@ public class TC_ECOM_Reg_003 extends BaseTest
 	        test.info("Navigated to automationexercise.com");
 
 	        try {
-	            if (signup.emailIsdisplayed()) {
+	            if (signup.emailIsDisplayed()) {
 	                test.pass("The email field is displayed");
 	            } else {
 	                test.fail("The email field is not displayed").addScreenCaptureFromPath(ScreenshotUtilities.capturescreen(driver, "TC_ECOM_Reg_003"));

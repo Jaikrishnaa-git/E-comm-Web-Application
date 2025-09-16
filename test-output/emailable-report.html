@@ -8,59 +8,43 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">213,667</td><td></td><td></td></tr>
+<tr><th colspan="8">CrossBrowser Suite</th></tr>
+<tr><td><a href="#t0">Chrome Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">8</td><td class="num">100,128</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">CartPage.TC_ECOM_Cart_14</td><td><a href="#m0">verifyProceedToCheckoutButtonInCartPage</a></td><td rowspan="1">1757932144840</td><td rowspan="1">180030</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">CrossBrowser Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Chrome Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="8">Func_LoginPage.LoginTestCases</td><td><a href="#m0">TC_ECOM_Login_001</a></td><td rowspan="1">1758022096936</td><td rowspan="1">242</td></tr><tr class="failedeven"><td><a href="#m1">TC_ECOM_Login_002</a></td><td rowspan="1">1758022101496</td><td rowspan="1">1054</td></tr><tr class="failedeven"><td><a href="#m2">TC_ECOM_Login_004</a></td><td rowspan="1">1758022109194</td><td rowspan="1">20166</td></tr><tr class="failedeven"><td><a href="#m3">TC_ECOM_Login_005</a></td><td rowspan="1">1758022131518</td><td rowspan="1">8413</td></tr><tr class="failedeven"><td><a href="#m4">TC_ECOM_Login_006</a></td><td rowspan="1">1758022142239</td><td rowspan="1">9740</td></tr><tr class="failedeven"><td><a href="#m5">TC_ECOM_Login_007</a></td><td rowspan="1">1758022155266</td><td rowspan="1">10802</td></tr><tr class="failedeven"><td><a href="#m6">TC_ECOM_Login_008</a></td><td rowspan="1">1758022167799</td><td rowspan="1">8396</td></tr><tr class="failedeven"><td><a href="#m7">TC_ECOM_Login_009</a></td><td rowspan="1">1758022178908</td><td rowspan="1">8538</td></tr><tr><th colspan="4">Chrome Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Func_LoginPage.LoginTestCases</td><td><a href="#m8">TC_ECOM_Login_003</a></td><td rowspan="1">1758022107579</td><td rowspan="1">201</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">CartPage.TC_ECOM_Cart_14#verifyProceedToCheckoutButtonInCartPage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
-Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2fcf111ba6c160de1e7c335e84c729a4, get {url=https://automationexercise.com/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55838}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55838/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2fcf111ba6c160de1e7c335e84c729a4
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:427)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
-	at CartPage.TC_ECOM_Cart_14.verifyProceedToCheckoutButtonInCartPage(TC_ECOM_Cart_14.java:16)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+<h2>Chrome Test</h2><h3 id="m0">Func_LoginPage.LoginTestCases#TC_ECOM_Login_001</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>invalid@test.com</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Email should be valid: invalid@test.com expected [true] but found [false]
+	at Func_LoginPage.LoginTestCases.TC_ECOM_Login_001(LoginTestCases.java:247)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.CompletableFuture$Timeout.run(CompletableFuture.java:2920)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">Func_LoginPage.LoginTestCases#TC_ECOM_Login_002</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>wrongpassword</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Password should be valid: wrongpassword expected [true] but found [false]
+	at Func_LoginPage.LoginTestCases.TC_ECOM_Login_002(LoginTestCases.java:278)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">Func_LoginPage.LoginTestCases#TC_ECOM_Login_004</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>jaikrishnaa@gmail.com</td><td>Team@A8</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Login with valid credentials should succeed: Expected condition failed: waiting for presence of element located by: By.xpath: //a[contains(text(),&apos;Logged in as&apos;)] (tried for 15 second(s) with 500 milliseconds interval)
+	at Func_LoginPage.LoginTestCases.TC_ECOM_Login_004(LoginTestCases.java:336)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">Func_LoginPage.LoginTestCases#TC_ECOM_Login_005</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td></td><td>Team@A8</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Login should succeed with valid credentials expected [true] but found [false]
+	at Func_LoginPage.LoginTestCases.TC_ECOM_Login_005(LoginTestCases.java:352)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">Func_LoginPage.LoginTestCases#TC_ECOM_Login_006</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>invalid@email.com</td><td>Team@A8</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Login should succeed with valid credentials expected [true] but found [false]
+	at Func_LoginPage.LoginTestCases.TC_ECOM_Login_006(LoginTestCases.java:380)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">Func_LoginPage.LoginTestCases#TC_ECOM_Login_007</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>jaikrishnaa@gmail.com</td><td>wrongpass</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Login should succeed with valid credentials expected [true] but found [false]
+	at Func_LoginPage.LoginTestCases.TC_ECOM_Login_007(LoginTestCases.java:408)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">Func_LoginPage.LoginTestCases#TC_ECOM_Login_008</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td></td><td></td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Login should succeed with valid credentials expected [true] but found [false]
+	at Func_LoginPage.LoginTestCases.TC_ECOM_Login_008(LoginTestCases.java:436)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">Func_LoginPage.LoginTestCases#TC_ECOM_Login_009</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>jaikrishnaa@gmail.com</td><td></td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Login should succeed with valid credentials expected [true] but found [false]
+	at Func_LoginPage.LoginTestCases.TC_ECOM_Login_009(LoginTestCases.java:464)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">Func_LoginPage.LoginTestCases#TC_ECOM_Login_003</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

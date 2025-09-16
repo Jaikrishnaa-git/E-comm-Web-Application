@@ -26,7 +26,7 @@ public class TC_ECOM_Reg_002 extends BaseTest
 	        test.info("Navigated to automationexercise.com");
 
 	        try {
-	            if (signup.nameIsdisplayed()) {
+	            if (signup.nameIsDisplayed()) {
 	                test.pass("The name field is displayed");
 	            } else {
 	                test.fail("The name field is not displayed").addScreenCaptureFromPath(ScreenshotUtilities.capturescreen(driver, "TC_ECOM_Reg_002"));

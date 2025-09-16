@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="CartPage.TC_ECOM_Cart_14">
+      <class name="RegistrationPageAutomation.TC_ECOM_Reg_040">
         <methods>
-          <include name="verifyProceedToCheckoutButtonInCartPage"/>
+          <include name="verifyInvalidAddressField"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- CartPage.TC_ECOM_Cart_14 -->
+      </class> <!-- RegistrationPageAutomation.TC_ECOM_Reg_040 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
