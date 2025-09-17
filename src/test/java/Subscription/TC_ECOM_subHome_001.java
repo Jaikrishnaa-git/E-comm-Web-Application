@@ -20,7 +20,7 @@ public class TC_ECOM_subHome_001 extends BaseTest {
         HomePage home = new HomePage(driver);
 
         System.out.println(email);
-        Thread.sleep(3000);
+        
         home.enterSubsciptionMail(email);
 
         if (home.isSubSubmittedDisplayed()) {

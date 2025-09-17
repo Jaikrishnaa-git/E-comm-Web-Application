@@ -5,7 +5,7 @@
         <parameter name="browser" value="chrome"/>
         <packages>
           
-             <package name="Subscription"/>
+             <package name="Impact_Regression_TestSuite"/>
         </packages>
     </test>
 
