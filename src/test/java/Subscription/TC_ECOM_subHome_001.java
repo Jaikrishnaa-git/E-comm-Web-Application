@@ -3,7 +3,7 @@ package Subscription;
 import java.io.IOException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 import com.Ecomm.base.BaseTest;
 import com.Ecomm.pages.HomePage;
 import com.Ecomm.utilities.ExcelUtilities;
@@ -11,32 +11,47 @@ import com.Ecomm.utilities.ScreenshotUtilities;
 import com.aventstack.extentreports.ExtentTest;
 
 public class TC_ECOM_subHome_001 extends BaseTest {
-    static String projectpath = System.getProperty("user.dir");
+    static String projectPath = System.getProperty("user.dir");
 
-    @Test(dataProvider = "homePageData")
-    public void verifySubsscription(String email, String dummy) throws IOException, InterruptedException {
+    @Test(dataProvider = "subscriptionData")
+    public void verifySubscription(String email, String type) throws IOException, InterruptedException {
+        SoftAssert softAssert = new SoftAssert();
         driver.get("https://automationexercise.com/");
-        ExtentTest test = extent.createTest("Verify Subscription email box");
+        ExtentTest test = extent.createTest("Verify Subscription for: " + email + " (" + type + ")");
         HomePage home = new HomePage(driver);
 
-        System.out.println(email);
-        
         home.enterSubsciptionMail(email);
 
-        if (home.isSubSubmittedDisplayed()) {
-            test.pass("Subscribed using valid email");
+        if ("valid".equalsIgnoreCase(type)) {
+            if (home.isSubSubmittedDisplayed()) {
+                test.pass("Subscribed successfully with valid email: " + email);
+            } else {
+                String screenshot = ScreenshotUtilities.capturescreen(driver, "Subscription_Fail_" + email);
+                test.fail("Unable to subscribe with valid email: " + email)
+                    .addScreenCaptureFromPath(screenshot);
+                softAssert.fail("Subscription failed for valid email: " + email);
+            }
+        } else if ("invalid".equalsIgnoreCase(type)) {
+            if (!home.isSubSubmittedDisplayed()) {
+                test.pass("Subscription correctly blocked for invalid email: " + email);
+            } else {
+                String screenshot = ScreenshotUtilities.capturescreen(driver, "Subscription_Invalid_Fail_" + email);
+                test.fail("Subscribed with invalid email: " + email)
+                    .addScreenCaptureFromPath(screenshot);
+                softAssert.fail("Subscription succeeded with invalid email: " + email);
+            }
         } else {
-            String screenshotPath = ScreenshotUtilities.capturescreen(driver, "TC_ECOM_subHome_001");
-            test.fail("Unable to subscribe with valid mail").addScreenCaptureFromPath(screenshotPath);
-            Assert.fail("Unable to subscribe with valid mail");
+            softAssert.fail("Unknown email type provided in Excel: " + type);
         }
+
+        softAssert.assertAll(); 
     }
 
     @DataProvider
-    public Object[][] homePageData() {
+    public Object[][] subscriptionData() {
         try {
             Object[][] data = ExcelUtilities.getdata(
-                    projectpath + "\\src\\test\\resources\\Testdata\\Subscription data.xlsx", "valid email");
+                projectPath + "\\src\\test\\resources\\Testdata\\Subscription data.xlsx", "Sheet1");
             return data;
         } catch (Exception e) {
             e.printStackTrace();

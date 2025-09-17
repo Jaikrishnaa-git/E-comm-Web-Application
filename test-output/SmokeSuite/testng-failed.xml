@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SmokeSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="SmokeTests(failed)">
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="SmokeTesting.TC_Ecom_Sanity_002">
+        <methods>
+          <include name="verifyNavigationLinks"/>
+        </methods>
+      </class> <!-- SmokeTesting.TC_Ecom_Sanity_002 -->
+      <class name="SmokeTesting.TC_Ecom_Sanity_005">
+        <methods>
+          <include name="verifySignupAndLoginForms"/>
+        </methods>
+      </class> <!-- SmokeTesting.TC_Ecom_Sanity_005 -->
+      <class name="SmokeTesting.TC_Ecom_Sanity_004">
+        <methods>
+          <include name="verifyCartFunctionality"/>
+        </methods>
+      </class> <!-- SmokeTesting.TC_Ecom_Sanity_004 -->
+      <class name="SmokeTesting.TC_Ecom_Sanity_003">
+        <methods>
+          <include name="verifyProductDisplay"/>
+        </methods>
+      </class> <!-- SmokeTesting.TC_Ecom_Sanity_003 -->
+      <class name="SmokeTesting.TC_Ecom_Sanity_001">
+        <methods>
+          <include name="verifyOpenUrlInDifferentBrowsers"/>
+        </methods>
+      </class> <!-- SmokeTesting.TC_Ecom_Sanity_001 -->
+    </classes>
+  </test> <!-- SmokeTests(failed) -->
+</suite> <!-- Failed suite [SmokeSuite] -->

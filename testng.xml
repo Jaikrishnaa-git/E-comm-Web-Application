@@ -4,8 +4,7 @@
     <test name="Chrome Test">
         <parameter name="browser" value="chrome"/>
         <packages>
-          
-             <package name="Corebusiness"/>
+             <package name="ContactUsPage"/>
         </packages>
     </test>
 

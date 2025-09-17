@@ -13,7 +13,7 @@ import java.time.Duration;
 
 public class TC_Ecommerce_Web_Application_API_Testing_23 extends BaseTest {
 
-    @Test
+	@Test(groups = { "UI_Testing" })
     public void verifyAPI10Dropdown() throws InterruptedException {
         // Create Extent Test
         test = extent.createTest("TC_Ecommerce_Web_Application_API_Testing_23", "Verify and click on API 10 dropdown");

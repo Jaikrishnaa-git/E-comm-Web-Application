@@ -11,7 +11,7 @@ import com.Ecomm.utilities.ScreenshotUtilities;
 
 public class TC_Regres_Core_04 extends BaseTest {
 
-    @Test
+	@Test(groups = { "regression" })
     public void verifyNavigationLinks() throws IOException {
         test = extent.createTest("TC_Regres_Core_04 - Verify Navigation Links");
 

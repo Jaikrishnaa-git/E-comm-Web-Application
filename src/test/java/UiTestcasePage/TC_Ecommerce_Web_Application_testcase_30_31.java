@@ -16,7 +16,7 @@ public class TC_Ecommerce_Web_Application_testcase_30_31 extends BaseTest {
         testCasesPage = new TestCasesPage(driver);
     }
 
-    @Test
+    @Test(groups = { "UI_Testing" })
     public void verifyTestCase13VerifyProductQuantity() {
         test = extent.createTest("TC_ECOM_TestCase_13 - Verify Product Quantity");
 

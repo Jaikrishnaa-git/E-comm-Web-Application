@@ -16,7 +16,7 @@ public class TC_Ecommerce_Web_Application_testcase_22_23 extends BaseTest {
         testCasesPage = new TestCasesPage(driver);
     }
 
-    @Test
+    @Test(groups = { "UI_Testing" })
     public void verifyTestCase3LoginUserIncorrectFlow() {
         test = extent.createTest("TC_ECOM_TestCase_3 - Verify Login User with Incorrect Email & Password");
 

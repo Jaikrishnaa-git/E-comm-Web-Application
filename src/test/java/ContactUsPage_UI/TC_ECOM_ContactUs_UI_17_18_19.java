@@ -13,7 +13,7 @@ import org.openqa.selenium.By;
 
 public class TC_ECOM_ContactUs_UI_17_18_19 extends BaseTest {
 
-    @Test
+	@Test(groups = { "UI_Testing" })
     public void verifyValidNameInContactUsPage() throws IOException {
         driver.get("https://www.automationexercise.com/contact_us");
         test = extent.createTest("TC_ECOM_ContactUs_UI_17_18_19 - Verify Valid Name,email,subject in Name,email,subject Text box in Contact Us Page");

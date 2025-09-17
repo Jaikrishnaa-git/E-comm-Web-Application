@@ -14,7 +14,7 @@ import java.time.Duration;
 public class TC_Ecommerce_Web_Application_testcase_18 extends BaseTest {
 
     /** ✅ TC18: Enter email and click subscription arrow button */
-    @Test
+	@Test(groups = { "UI_Testing" })
     public void verifySubscriptionWithEmail() {
         test = extent.createTest("TC18 - Verify subscription textbox and arrow button on Test Cases page");
 

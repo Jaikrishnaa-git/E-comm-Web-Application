@@ -8,7 +8,7 @@ import com.aventstack.extentreports.Status;
 
 public class TC_ECOM_Busi_needs_07 extends BaseTest {
 
-    @Test
+	@Test(groups = { "Business_Specific_needs" })
     public void verifyVideoTutorialsRedirectsToYouTube() {
         test = extent.createTest("TC_Ecom_businessSpec_007 - Verify Video Tutorials redirects to YouTube");
 

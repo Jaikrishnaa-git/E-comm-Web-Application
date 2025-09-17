@@ -10,7 +10,7 @@ public class TC_Ecommerce_Web_Application_testcase_09 extends BaseTest {
 
     private final String testCasesUrl = "https://automationexercise.com/test_cases";
 
-    @Test
+    @Test(groups = { "UI_Testing" })
     public void verifyScrollBar() {
         test = extent.createTest("TC_09 - Verify Scroll Bar");
 

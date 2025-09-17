@@ -1,28 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-17T13:41:02 IST" name="CrossBrowser Suite" finished-at="2025-09-17T13:43:30 IST" duration-ms="147929">
+  <suite started-at="2025-09-17T17:45:44 IST" name="Default suite" finished-at="2025-09-17T17:45:58 IST" duration-ms="14049">
     <groups>
-      <group name="regression">
-        <method signature="TC_regr_core_001.f(java.lang.String,java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_001@2118cddf]" name="f" class="Corebusiness.TC_regr_core_001"/>
-        <method signature="TC_regr_core_002.f(java.lang.String,java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_002@6236eb5f]" name="f" class="Corebusiness.TC_regr_core_002"/>
-        <method signature="TC_regr_core_003.logout(java.lang.String,java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_003@7c1e2a9e]" name="logout" class="Corebusiness.TC_regr_core_003"/>
-        <method signature="TC_regr_core_004.verifyDropDown()[pri:0, instance:Corebusiness.TC_regr_core_004@fa36558]" name="verifyDropDown" class="Corebusiness.TC_regr_core_004"/>
-        <method signature="TC_regr_core_005.verifyBrands()[pri:0, instance:Corebusiness.TC_regr_core_005@672872e1]" name="verifyBrands" class="Corebusiness.TC_regr_core_005"/>
-        <method signature="TC_regr_core_006.verifyProduct()[pri:0, instance:Corebusiness.TC_regr_core_006@32910148]" name="verifyProduct" class="Corebusiness.TC_regr_core_006"/>
-        <method signature="TC_regr_core_007.verifyProduct()[pri:0, instance:Corebusiness.TC_regr_core_007@3f56875e]" name="verifyProduct" class="Corebusiness.TC_regr_core_007"/>
-        <method signature="TC_regr_core_008.verifyProduct()[pri:0, instance:Corebusiness.TC_regr_core_008@2b4bac49]" name="verifyProduct" class="Corebusiness.TC_regr_core_008"/>
-      </group> <!-- regression -->
-      <group name="login">
-        <method signature="TC_regr_core_001.f(java.lang.String,java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_001@2118cddf]" name="f" class="Corebusiness.TC_regr_core_001"/>
-        <method signature="TC_regr_core_002.f(java.lang.String,java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_002@6236eb5f]" name="f" class="Corebusiness.TC_regr_core_002"/>
-        <method signature="TC_regr_core_003.logout(java.lang.String,java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_003@7c1e2a9e]" name="logout" class="Corebusiness.TC_regr_core_003"/>
-      </group> <!-- login -->
+      <group name="smoke">
+        <method signature="TC_Ecom_Sanity_005.verifySignupAndLoginForms()[pri:0, instance:SmokeTesting.TC_Ecom_Sanity_005@5b94b04d]" name="verifySignupAndLoginForms" class="SmokeTesting.TC_Ecom_Sanity_005"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-09-17T13:41:02 IST" name="Chrome Test" finished-at="2025-09-17T13:43:30 IST" duration-ms="147929">
-      <class name="Corebusiness.TC_regr_core_002">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_002@6236eb5f]" started-at="2025-09-17T13:41:21 IST" name="setUp" finished-at="2025-09-17T13:41:22 IST" duration-ms="777" status="PASS">
+    <test started-at="2025-09-17T17:45:44 IST" name="Default test" finished-at="2025-09-17T17:45:58 IST" duration-ms="14049">
+      <class name="SmokeTesting.TC_Ecom_Sanity_005">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:SmokeTesting.TC_Ecom_Sanity_005@5b94b04d]" started-at="2025-09-17T17:45:44 IST" name="setUp" finished-at="2025-09-17T17:45:46 IST" duration-ms="1748" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -33,265 +21,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="f(java.lang.String,java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_002@6236eb5f]" started-at="2025-09-17T13:41:22 IST" name="f" data-provider="logindata" finished-at="2025-09-17T13:41:36 IST" duration-ms="13871" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[jaikrishnagit@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Team@A23]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"link text","selector":"Logout"}
-  (Session info: chrome=139.0.7258.157)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9969537244e657131a7b1b91ea92d135, findElement {value=Logout, using=link text}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53789}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53789/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9969537244e657131a7b1b91ea92d135]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Logout"}
-  (Session info: chrome=139.0.7258.157)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9969537244e657131a7b1b91ea92d135, findElement {value=Logout, using=link text}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53789}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53789/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9969537244e657131a7b1b91ea92d135
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-at com.Ecomm.pages.LoginPage.logoutDisplayed(LoginPage.java:112)
-at Corebusiness.TC_regr_core_002.f(TC_regr_core_002.java:26)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="verifySignupAndLoginForms()[pri:0, instance:SmokeTesting.TC_Ecom_Sanity_005@5b94b04d]" started-at="2025-09-17T17:45:46 IST" name="verifySignupAndLoginForms" finished-at="2025-09-17T17:45:58 IST" duration-ms="11912" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Corebusiness.TC_regr_core_002@6236eb5f]" started-at="2025-09-17T13:41:36 IST" name="tearDown" finished-at="2025-09-17T13:41:38 IST" duration-ms="1760" status="PASS">
+        </test-method> <!-- verifySignupAndLoginForms -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SmokeTesting.TC_Ecom_Sanity_005@5b94b04d]" started-at="2025-09-17T17:45:58 IST" name="tearDown" finished-at="2025-09-17T17:45:58 IST" duration-ms="347" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Corebusiness.TC_regr_core_002 -->
-      <class name="Corebusiness.TC_regr_core_003">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_003@7c1e2a9e]" started-at="2025-09-17T13:41:38 IST" name="setUp" finished-at="2025-09-17T13:41:39 IST" duration-ms="636" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="logout(java.lang.String,java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_003@7c1e2a9e]" started-at="2025-09-17T13:41:39 IST" name="logout" data-provider="logindata" finished-at="2025-09-17T13:41:58 IST" duration-ms="18970" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[jaikrishnagit@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Team@A8]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Corebusiness.TC_regr_core_003@7c1e2a9e]" started-at="2025-09-17T13:41:58 IST" name="tearDown" finished-at="2025-09-17T13:41:58 IST" duration-ms="221" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Corebusiness.TC_regr_core_003 -->
-      <class name="Corebusiness.TC_regr_core_001">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_001@2118cddf]" started-at="2025-09-17T13:41:02 IST" name="setUp" finished-at="2025-09-17T13:41:04 IST" duration-ms="1854" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="f(java.lang.String,java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_001@2118cddf]" started-at="2025-09-17T13:41:04 IST" name="f" data-provider="logindata" finished-at="2025-09-17T13:41:21 IST" duration-ms="16576" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[jaikrishnagit@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Team@A8]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- f -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Corebusiness.TC_regr_core_001@2118cddf]" started-at="2025-09-17T13:41:21 IST" name="tearDown" finished-at="2025-09-17T13:41:21 IST" duration-ms="471" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Corebusiness.TC_regr_core_001 -->
-      <class name="Corebusiness.TC_regr_core_006">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_006@32910148]" started-at="2025-09-17T13:42:14 IST" name="setUp" finished-at="2025-09-17T13:42:14 IST" duration-ms="622" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyProduct()[pri:0, instance:Corebusiness.TC_regr_core_006@32910148]" started-at="2025-09-17T13:42:14 IST" name="verifyProduct" finished-at="2025-09-17T13:42:36 IST" duration-ms="21821" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Corebusiness.TC_regr_core_006@32910148]" started-at="2025-09-17T13:42:36 IST" name="tearDown" finished-at="2025-09-17T13:42:36 IST" duration-ms="235" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Corebusiness.TC_regr_core_006 -->
-      <class name="Corebusiness.TC_regr_core_007">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_007@3f56875e]" started-at="2025-09-17T13:42:36 IST" name="setUp" finished-at="2025-09-17T13:42:37 IST" duration-ms="628" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyProduct()[pri:0, instance:Corebusiness.TC_regr_core_007@3f56875e]" started-at="2025-09-17T13:42:37 IST" name="verifyProduct" finished-at="2025-09-17T13:42:56 IST" duration-ms="18934" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Corebusiness.TC_regr_core_007@3f56875e]" started-at="2025-09-17T13:42:56 IST" name="tearDown" finished-at="2025-09-17T13:42:56 IST" duration-ms="241" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Corebusiness.TC_regr_core_007 -->
-      <class name="Corebusiness.TC_regr_core_004">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_004@fa36558]" started-at="2025-09-17T13:41:58 IST" name="setUp" finished-at="2025-09-17T13:41:58 IST" duration-ms="675" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyDropDown()[pri:0, instance:Corebusiness.TC_regr_core_004@fa36558]" started-at="2025-09-17T13:41:58 IST" name="verifyDropDown" finished-at="2025-09-17T13:42:01 IST" duration-ms="2458" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDropDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Corebusiness.TC_regr_core_004@fa36558]" started-at="2025-09-17T13:42:01 IST" name="tearDown" finished-at="2025-09-17T13:42:01 IST" duration-ms="174" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Corebusiness.TC_regr_core_004 -->
-      <class name="Corebusiness.TC_regr_core_005">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_005@672872e1]" started-at="2025-09-17T13:42:01 IST" name="setUp" finished-at="2025-09-17T13:42:02 IST" duration-ms="619" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyBrands()[pri:0, instance:Corebusiness.TC_regr_core_005@672872e1]" started-at="2025-09-17T13:42:02 IST" name="verifyBrands" finished-at="2025-09-17T13:42:13 IST" duration-ms="11759" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyBrands -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Corebusiness.TC_regr_core_005@672872e1]" started-at="2025-09-17T13:42:13 IST" name="tearDown" finished-at="2025-09-17T13:42:14 IST" duration-ms="252" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Corebusiness.TC_regr_core_005 -->
-      <class name="Corebusiness.TC_regr_core_008">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Corebusiness.TC_regr_core_008@2b4bac49]" started-at="2025-09-17T13:42:56 IST" name="setUp" finished-at="2025-09-17T13:42:57 IST" duration-ms="662" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyProduct()[pri:0, instance:Corebusiness.TC_regr_core_008@2b4bac49]" started-at="2025-09-17T13:42:57 IST" name="verifyProduct" finished-at="2025-09-17T13:43:29 IST" duration-ms="32570" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Corebusiness.TC_regr_core_008@2b4bac49]" started-at="2025-09-17T13:43:29 IST" name="tearDown" finished-at="2025-09-17T13:43:30 IST" duration-ms="289" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Corebusiness.TC_regr_core_008 -->
-    </test> <!-- Chrome Test -->
-  </suite> <!-- CrossBrowser Suite -->
+      </class> <!-- SmokeTesting.TC_Ecom_Sanity_005 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

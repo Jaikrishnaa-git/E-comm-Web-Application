@@ -16,7 +16,7 @@ public class TC_Ecommerce_Web_Application_testcase_34_35 extends BaseTest {
         testCasesPage = new TestCasesPage(driver);
     }
 
-    @Test
+    @Test(groups = { "UI_Testing" })
     public void verifyTestCase17RemoveProductFromCart() {
         test = extent.createTest("TC_ECOM_TestCase_17 - Remove Product from Cart");
 

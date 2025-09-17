@@ -9,7 +9,7 @@ import com.Ecomm.base.BaseTest;
 
 public class TC_Ecommerce_Web_Application_API_Testing_14 extends BaseTest {
 
-    @Test
+	@Test(groups = { "UI_Testing" })
     public void verifyAPI1Dropdown() throws InterruptedException {
         // Start logging in Extent Report
         test = extent.createTest("TC_Ecommerce_Web_Application_API_Testing_14", "Verify and click on API 1 dropdown");

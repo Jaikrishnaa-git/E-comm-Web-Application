@@ -8,7 +8,7 @@ import com.Ecomm.pages.CartPage;
 
 public class TC_Ecom_Sanity_004 extends BaseTest {
 
-    @Test
+	@Test(groups = {"smoke"})
     public void verifyCartFunctionality() {
         test = extent.createTest("TC_Ecom_Sanity_004 - Verify Cart Functionality");
 

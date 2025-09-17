@@ -7,7 +7,7 @@ import com.Ecomm.pages.LoginPage;
 
 public class TC_Ecom_Sanity_005 extends BaseTest {
 
-    @Test
+	@Test(groups = {"smoke"})
     public void verifySignupAndLoginForms() {
         test = extent.createTest("TC_Ecom_Sanity_005 - Verify Signup & Login Forms");
 

@@ -8,7 +8,7 @@ import com.aventstack.extentreports.Status;
 
 public class TC_ECOM_Busi_needs_06 extends BaseTest {
 
-    @Test
+	@Test(groups = { "Business_Specific_needs" })
     public void verifyAPIListForPracticeIsVisible() {
         test = extent.createTest("TC_ECOM_Busi_needs_06 - Verify API List for practice text");
 

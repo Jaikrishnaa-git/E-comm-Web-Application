@@ -14,7 +14,7 @@ import java.time.Duration;
 
 public class TC_Ecommerce_Web_Application_API_Testing_30 extends BaseTest {
 
-    @Test
+	@Test(groups = { "UI_Testing" })
     public void verifyValidEmailSubmission() {
         ExtentTest test = extent.createTest("TC_Ecommerce_Web_Application_API_Testing_30 - Verify Valid Email Submission");
 

@@ -14,7 +14,7 @@ import org.openqa.selenium.By;
 public class TC_ECOM_Busi_needs_02_03 extends BaseTest {
 
     // Invalid Name Test
-    @Test
+	@Test(groups = { "Business_Specific_needs" })
     public void verifyInvalidNameInContactUsPage() throws IOException {
         driver.get("https://www.automationexercise.com/contact_us");
         test = extent.createTest("TC_ECOM_Contact_us_InvalidName - Verify Invalid Name in Contact Us Page");

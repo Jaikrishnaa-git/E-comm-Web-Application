@@ -15,7 +15,7 @@ public class TC_Ecommerce_Web_Application_testcase_20_21 extends BaseTest {
         testCasesPage = new TestCasesPage(driver);
     }
 
-    @Test
+    @Test(groups = { "UI_Testing" })
     public void verifyTestCase1RegisterUserFlow() {
         test = extent.createTest("TC_ECOM_TestCase_1 - Verify Register User Flow");
 

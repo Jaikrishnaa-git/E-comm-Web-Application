@@ -16,7 +16,7 @@ public class TC_Ecommerce_Web_Application_testcase_10 extends BaseTest {
     private final String testCasesUrl = "https://automationexercise.com/test_cases";
     private final By logo = By.cssSelector("div.logo.pull-left img");
 
-    @Test
+    @Test(groups = { "UI_Testing" })
     public void verifyLogoClick() {
         test = extent.createTest("TC_10 - Verify Logo Click");
 

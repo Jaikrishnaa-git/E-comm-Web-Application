@@ -13,7 +13,7 @@ import com.Ecomm.utilities.ScreenshotUtilities;
 
 public class TC_Regres_Core_08 extends BaseTest {
 
-    @Test
+	@Test(groups = { "regression" })
     public void verifyProductButton() throws IOException {
         test = extent.createTest("TC_Regres_Core_08 - Verify Product Button on Products Page");
 

@@ -11,7 +11,7 @@ import com.Ecomm.utilities.ScreenshotUtilities;
 
 public class TC_Ecom_Sanity_002 extends BaseTest {
 
-    @Test
+	@Test(groups={"smoke"})
     public void verifyNavigationLinks() throws IOException {
         test = extent.createTest("TC_Ecom_Sanity_002 - Verify Navigation Links");
 

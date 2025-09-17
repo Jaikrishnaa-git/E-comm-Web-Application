@@ -16,7 +16,7 @@ public class TC_Ecommerce_Web_Application_API_Testing_10 extends BaseTest {
     private final String apiPageUrl = "https://automationexercise.com/api_list";
     private final By logoLocator = By.xpath("//img[@alt='Website for practice automation']");
 
-    @Test
+    @Test(groups = { "UI_Testing" })
     public void verifyLogoOnApiPage() {
         test = extent.createTest("TC_API_10 - Verify Logo Click on API Page");
 

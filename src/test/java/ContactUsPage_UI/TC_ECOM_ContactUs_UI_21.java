@@ -14,7 +14,7 @@ import org.openqa.selenium.By;
 
 public class TC_ECOM_ContactUs_UI_21 extends BaseTest {
 
-    @Test
+	@Test(groups = { "UI_Testing" })
     public void verifyChooseFileButtonInContactUsPage() throws IOException {
         driver.get("https://www.automationexercise.com/contact_us");
         test = extent.createTest("TC_ECOM_Contact_us_14 - Verify Choose File button in Contact Us Page");

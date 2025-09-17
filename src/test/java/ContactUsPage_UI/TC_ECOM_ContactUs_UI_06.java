@@ -11,7 +11,7 @@ import com.Ecomm.utilities.ScreenshotUtilities;
 
 public class TC_ECOM_ContactUs_UI_06 extends BaseTest {
 
-    @Test
+	@Test(groups = { "UI_Testing" })
     public void verifyApiTestingButtonInContactUsPage() throws IOException {
         driver.get("https://automationexercise.com/contact_us");
         test = extent.createTest("TC_ECOM_ContactUs_UI_06 - Verify API Testing button in Contact Us Page");

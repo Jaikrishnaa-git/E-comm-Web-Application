@@ -12,7 +12,7 @@ import com.aventstack.extentreports.Status;
 
 public class TC_ECOM_Busi_needs_08 extends BaseTest {
 
-    @Test
+	@Test(groups = { "Business_Specific_needs" })
     public void verifySiteBehaviour() throws IOException {
         test = extent.createTest("TC_ECOM_Busi_needs_08 - Verify Site Behaviour");
 

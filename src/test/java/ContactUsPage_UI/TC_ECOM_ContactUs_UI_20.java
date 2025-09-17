@@ -11,7 +11,7 @@ import com.Ecomm.utilities.ScreenshotUtilities;
 
 public class TC_ECOM_ContactUs_UI_20 extends BaseTest {
 
-    @Test
+	@Test(groups = { "UI_Testing" })
     public void verifyValidMessageInContactUsPage() throws IOException {
         driver.get("https://www.automationexercise.com/contact_us");
         test = extent.createTest("TC_ECOM_Contact_us_12 - Verify Valid Input in Your Message Text box in Contact Us Page");

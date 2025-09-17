@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+import com.Ecomm.base.BaseTest;
 import com.Ecomm.utilities.ExcelUtilities;
 import com.Ecomm.utilities.ExtentManager;
 
@@ -18,30 +19,12 @@ import com.aventstack.extentreports.ExtentTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TC_Regres_Impact_02 {
+public class TC_Regres_Impact_02 extends BaseTest{
 
-    WebDriver driver;
-    ExtentReports extent;
-    ExtentTest test;
-
-    // Excel file path
-    String excelPath = "C:\\Users\\Dell\\Desktop\\Git repo\\Ecomm\\E-comm-Web-Application\\src\\test\\resources\\Testdata";
-
-    @BeforeClass
-    public void setUp() {
-        // Initialize Extent Reports for this test class
-        extent = ExtentManager.createInstance(this.getClass().getSimpleName());
-        test = extent.createTest("TC_Regres_Impact_02 - Verify Name TextBox");
-
-        // Set up Chrome browser using WebDriverManager
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-        test.info(" Browser launched successfully and maximized.");
-    }
+   
+    static String projectPath = System.getProperty("user.dir");
+  
+    String excelPath =  projectPath + "\\src\\test\\resources\\Testdata\\data.xlsx";
 
     @DataProvider(name = "NameData")
     public Object[][] getNameData() throws IOException {
@@ -75,15 +58,4 @@ public class TC_Regres_Impact_02 {
         }
     }
 
-    @AfterClass
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-            test.info("Browser closed successfully.");
-        }
-
-        // Flush Extent Reports at the end
-        extent.flush();
-        System.out.println(" Extent Report generated successfully!");
-    }
 }

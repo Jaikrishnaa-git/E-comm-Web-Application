@@ -16,7 +16,7 @@ public class TC_Regres_Core_1_2_3 extends BaseTest {
     String validEmail = "kbharadwaj@gmail.com";    
     String validPassword = "123456";       
 
-    @Test(priority = 1)
+    @Test(priority = 1, groups = { "regression" })
     public void TC1_verifyValidEmailField() throws IOException {
         test = extent.createTest("TC1 - Verify valid Email Address in Login Page");
 
@@ -40,7 +40,7 @@ public class TC_Regres_Core_1_2_3 extends BaseTest {
         }
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, groups = { "regression" })
     public void TC2_verifyValidPasswordField() throws IOException {
         test = extent.createTest("TC2 - Verify valid Password in Login Page");
 
@@ -60,7 +60,7 @@ public class TC_Regres_Core_1_2_3 extends BaseTest {
         }
     }
 
-    @Test(priority = 3)
+    @Test(priority = 3, groups = { "regression" })
     public void TC3_verifyLoginButton() throws IOException {
         test = extent.createTest("TC3 - Verify Login Button with Valid Credentials");
 

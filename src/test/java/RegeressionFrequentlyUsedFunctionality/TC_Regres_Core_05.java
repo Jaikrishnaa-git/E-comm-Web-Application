@@ -14,7 +14,7 @@ import org.openqa.selenium.By;
 
 public class TC_Regres_Core_05 extends BaseTest {
 
-    @Test
+	@Test(groups = { "regression" })
     public void verifyLogoOnProductPage() throws IOException {
         test = extent.createTest("TC_Regres_Core_05 - Verify Logo on Product Page");
         SoftAssert softAssert = new SoftAssert();

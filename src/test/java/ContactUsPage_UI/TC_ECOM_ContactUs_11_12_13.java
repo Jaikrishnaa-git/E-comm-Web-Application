@@ -21,7 +21,7 @@ public class TC_ECOM_ContactUs_11_12_13 {
         extent = ExtentManager.createInstance("TC_ECOM_ContactUs_11_12_13");
     }
 
-    @Test
+    @Test(groups = { "UI_Testing" })
     public void verifyTestcasePageOnChrome() {
         test = extent.createTest("Testcase 11 - Chrome");
         try {

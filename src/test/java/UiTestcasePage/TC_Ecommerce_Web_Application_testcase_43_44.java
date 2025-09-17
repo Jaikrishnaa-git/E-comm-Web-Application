@@ -16,7 +16,7 @@ public class TC_Ecommerce_Web_Application_testcase_43_44 extends BaseTest {
         testCasesPage = new TestCasesPage(driver);
     }
 
-    @Test
+    @Test(groups = { "UI_Testing" })
     public void verifyTestCase25ScrollUpWithArrowButton() {
         test = extent.createTest("TC_ECOM_TestCase_25 - Verify Scroll Up using Arrow button and Scroll Down functionality");
 

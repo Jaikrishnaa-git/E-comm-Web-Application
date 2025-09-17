@@ -10,7 +10,7 @@ import com.Ecomm.utilities.ScreenshotUtilities;
 
 public class TC_ECOM_Busi_needs_04 extends BaseTest {
 
-    @Test
+	@Test(groups = { "Business_Specific_needs" })
     public void verifyTestCasesPageNavigation() throws IOException {
         // Step 1: Open the Application
         driver.get("https://www.automationexercise.com/");

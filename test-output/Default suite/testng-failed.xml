@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_02">
+      <class name="RegeressionFrequentlyUsedFunctionality.TC_Regres_Core_1_2_3">
         <methods>
-          <include name="tearDown"/>
-          <include name="verifyNameTextBox"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="TC1_verifyValidEmailField"/>
         </methods>
-      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_02 -->
+      </class> <!-- RegeressionFrequentlyUsedFunctionality.TC_Regres_Core_1_2_3 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

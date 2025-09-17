@@ -13,7 +13,7 @@ import org.openqa.selenium.By;
 
 public class TC_Ecom_Sanity_003 extends BaseTest {
 
-    @Test
+	@Test(groups = {"smoke"})
     public void verifyProductDisplay() throws IOException {
         test = extent.createTest("TC_Ecom_Sanity_003 - Verify Product Display");
 

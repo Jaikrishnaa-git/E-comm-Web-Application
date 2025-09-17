@@ -21,7 +21,7 @@ public class TC_Ecommerce_Web_Application_Testcase_11_12_13 {
         extent = ExtentManager.createInstance("TC_Ecommerce_Web_Application_Testcase_11_12_13");
     }
 
-    @Test
+    @Test(groups = { "UI_Testing" })
     public void verifyTestcasePageOnChrome() {
         test = extent.createTest("Testcase 11 - Chrome");
         try {

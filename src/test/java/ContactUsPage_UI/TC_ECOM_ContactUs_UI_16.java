@@ -10,7 +10,7 @@ import com.Ecomm.utilities.ScreenshotUtilities;
 
 public class TC_ECOM_ContactUs_UI_16 extends BaseTest {
 
-    @Test
+	@Test(groups = { "UI_Testing" })
     public void verifySubscriptionArrowButtonInContactUsPage() throws IOException {
         driver.get("https://automationexercise.com/contact_us");
         test = extent.createTest("TC_ECOM_ContactUs_UI_16 - Verify Subscription Arrow Button in Contact Us Page");

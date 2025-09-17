@@ -11,7 +11,7 @@ import com.Ecomm.utilities.ScreenshotUtilities;
 
 public class TC_Ecommerce_Web_Application_testcase_01_2_3_4_5_6_7_8	 extends BaseTest {
 
-    @Test
+	@Test(groups = { "UI_Testing" })
     public void TC_Ecommerce_Web_Application_testcase_01() throws IOException {
         test = extent.createTest("TC_Ecommerce_Web_Application_testcase_01 - Verify Home Page");
         HomePage home = new HomePage(driver);

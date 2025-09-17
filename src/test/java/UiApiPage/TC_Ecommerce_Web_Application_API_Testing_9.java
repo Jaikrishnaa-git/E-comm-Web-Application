@@ -10,7 +10,7 @@ public class TC_Ecommerce_Web_Application_API_Testing_9 extends BaseTest {
 
     private final String apiPageUrl = "https://automationexercise.com/api_list";
 
-    @Test
+    @Test(groups = { "UI_Testing" })
     public void verifyScrollBar() {
         test = extent.createTest("TC_API_09 - Verify Scroll Bar on API Page");
 

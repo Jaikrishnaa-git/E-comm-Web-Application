@@ -16,7 +16,7 @@ public class TC_Ecommerce_Web_Application_testcase_41_42 extends BaseTest {
         testCasesPage = new TestCasesPage(driver);
     }
 
-    @Test
+    @Test(groups = { "UI_Testing" })
     public void verifyTestCase23VerifyAddressDetailsInCheckoutPage() {
         test = extent.createTest("TC_ECOM_TestCase_23 - Verify Address Details in Checkout Page");
 

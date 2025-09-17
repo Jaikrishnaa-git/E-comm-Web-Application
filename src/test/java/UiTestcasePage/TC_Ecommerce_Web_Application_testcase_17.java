@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class TC_Ecommerce_Web_Application_testcase_17 extends BaseTest {
 
-    @Test
+	@Test(groups = { "UI_Testing" })
     public void verifySubscriptionTextbox() {
         test = extent.createTest("TC17 - Verify and validate the subscription textbox in Test Cases page");
 

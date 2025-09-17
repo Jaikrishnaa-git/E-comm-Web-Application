@@ -16,7 +16,7 @@ import java.util.Set;
 
 public class TC_Ecommerce_Web_Application_API_Testing_28 extends BaseTest {
 
-    @Test
+	@Test(groups = { "UI_Testing" })
     public void verifyFeedbackLink() {
         ExtentTest test = extent.createTest("TC_Ecommerce_Web_Application_API_Testing_28 - Verify Feedback Email Link");
 

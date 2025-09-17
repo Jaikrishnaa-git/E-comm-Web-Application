@@ -13,7 +13,7 @@ import org.openqa.selenium.WebElement;
 
 public class TC_ECOM_ContactUs_UI_22 extends BaseTest {
 
-    @Test
+	@Test(groups = { "UI_Testing" })
     public void verifyFeedbackLinkInContactUsPage() throws IOException {
         driver.get("https://www.automationexercise.com/contact_us");
         test = extent.createTest("TC_ECOM_ContactUs_UI_22 - Verify Feedback link in Contact Us Page");

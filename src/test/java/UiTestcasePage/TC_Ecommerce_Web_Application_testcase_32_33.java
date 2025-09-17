@@ -17,7 +17,7 @@ public class TC_Ecommerce_Web_Application_testcase_32_33 extends BaseTest {
         testCasesPage = new TestCasesPage(driver);
     }
 
-    @Test
+    @Test(groups = { "UI_Testing" })
     public void verifyTestCase15PlaceOrderRegisterBeforeCheckout() {
         test = extent.createTest("TC_ECOM_TestCase_15 - Place Order: Register before Checkout");
 

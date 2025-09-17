@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 public class TC_Ecommerce_Web_Application_Testcase_16 extends BaseTest {
 
-    @Test
+	@Test(groups = { "UI_Testing" })
     public void verifyTopButtonInTestcasePage() {
         test = extent.createTest("TC16 - Verify and validate the #top button in the Test Cases page");
 

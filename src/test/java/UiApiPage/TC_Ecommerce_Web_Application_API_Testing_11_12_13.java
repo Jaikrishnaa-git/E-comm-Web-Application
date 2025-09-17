@@ -16,7 +16,7 @@ public class TC_Ecommerce_Web_Application_API_Testing_11_12_13 extends BaseTest 
     private final By subscriptionTextBox = By.xpath("//input[@id='susbscribe_email']");
     private final By subscriptionArrowButton = By.xpath("//button[@id='subscribe']");
 
-    @Test
+    @Test(groups = { "UI_Testing" })
     public void verifySubscription() {
         test = extent.createTest("TC_API_Subscription - Verify Subscription in API Page");
 
