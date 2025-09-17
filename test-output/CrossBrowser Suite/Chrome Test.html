@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Chrome Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>7/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>7/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Sep 17 13:12:28 IST 2025</td>
+<td>Started on:</td><td>Wed Sep 17 13:41:02 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>87 seconds (87016 ms)</td>
+<tr><td>Total time:</td><td>147 seconds (147929 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,22 +76,63 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Impact_Regression_TestSuite.TC_Regres_Impact_07.verifyLoginButton()'><b>verifyLoginButton</b><br>Test class: Impact_Regression_TestSuite.TC_Regres_Impact_07</td>
-<td><div><pre>java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getPhysicalNumberOfRows()&quot; because &quot;worksheet&quot; is null
+<td title='Corebusiness.TC_regr_core_002.f()'><b>f</b><br>Test class: Corebusiness.TC_regr_core_002<br>Parameters: jaikrishnagit@gmail.com, Team@A23</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Logout&quot;}
+  (Session info: chrome=139.0.7258.157)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9969537244e657131a7b1b91ea92d135, findElement {value=Logout, using=link text}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53789}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53789/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9969537244e657131a7b1b91ea92d135
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at com.Ecomm.pages.LoginPage.logoutDisplayed(LoginPage.java:112)
+	at Corebusiness.TC_regr_core_002.f(TC_regr_core_002.java:26)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getPhysicalNumberOfRows()&quot; because &quot;worksheet&quot; is null
-	at com.Ecomm.utilities.ExcelUtilities.getdata(ExcelUtilities.java:18)
-	at Impact_Regression_TestSuite.TC_Regres_Impact_07.getLoginData(TC_Regres_Impact_07.java:19)
-	... 25 more
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace676060909", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace676060909'><pre>java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getPhysicalNumberOfRows()&quot; because &quot;worksheet&quot; is null
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:58)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:809)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
-	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
-	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:949)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1302459274", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1302459274'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Logout&quot;}
+  (Session info: chrome=139.0.7258.157)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9969537244e657131a7b1b91ea92d135, findElement {value=Logout, using=link text}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53789}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53789/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9969537244e657131a7b1b91ea92d135
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at com.Ecomm.pages.LoginPage.logoutDisplayed(LoginPage.java:112)
+	at Corebusiness.TC_regr_core_002.f(TC_regr_core_002.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -111,72 +152,9 @@ Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xs
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getPhysicalNumberOfRows()&quot; because &quot;worksheet&quot; is null
-	at com.Ecomm.utilities.ExcelUtilities.getdata(ExcelUtilities.java:18)
-	at Impact_Regression_TestSuite.TC_Regres_Impact_07.getLoginData(TC_Regres_Impact_07.java:19)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54)
-	... 25 more
 </pre></div></td>
-<td>0</td>
-<td>Impact_Regression_TestSuite.TC_Regres_Impact_07@4470f8a6</td></tr>
-<tr>
-<td title='Impact_Regression_TestSuite.TC_Regres_Impact_02.verifyNameTextBox()'><b>verifyNameTextBox</b><br>Test class: Impact_Regression_TestSuite.TC_Regres_Impact_02</td>
-<td><div><pre>java.lang.RuntimeException: java.io.FileNotFoundException: C:\Java_Training\E-comm-Web-Application\src\test\resources\Testdata\data.xlsx (The system cannot find the path specified)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: java.io.FileNotFoundException: C:\Java_Training\E-comm-Web-Application\src\test\resources\Testdata\data.xlsx (The system cannot find the path specified)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:152)
-	at com.Ecomm.utilities.ExcelUtilities.getdata(ExcelUtilities.java:15)
-	at Impact_Regression_TestSuite.TC_Regres_Impact_02.getNameData(TC_Regres_Impact_02.java:48)
-	... 25 more
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1594981181", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1594981181'><pre>java.lang.RuntimeException: java.io.FileNotFoundException: C:\Java_Training\E-comm-Web-Application\src\test\resources\Testdata\data.xlsx (The system cannot find the path specified)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:58)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:809)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
-	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
-	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:949)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.io.FileNotFoundException: C:\Java_Training\E-comm-Web-Application\src\test\resources\Testdata\data.xlsx (The system cannot find the path specified)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:152)
-	at com.Ecomm.utilities.ExcelUtilities.getdata(ExcelUtilities.java:15)
-	at Impact_Regression_TestSuite.TC_Regres_Impact_02.getNameData(TC_Regres_Impact_02.java:48)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54)
-	... 25 more
-</pre></div></td>
-<td>0</td>
-<td>Impact_Regression_TestSuite.TC_Regres_Impact_02@2b4bac49</td></tr>
+<td>13</td>
+<td>Corebusiness.TC_regr_core_002@6236eb5f</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -187,40 +165,40 @@ Caused by: java.io.FileNotFoundException: C:\Java_Training\E-comm-Web-Applicatio
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Impact_Regression_TestSuite.TC_Regres_Impact_08.verifyAddToCartButton()'><b>verifyAddToCartButton</b><br>Test class: Impact_Regression_TestSuite.TC_Regres_Impact_08</td>
-<td></td>
-<td>4</td>
-<td>Impact_Regression_TestSuite.TC_Regres_Impact_08@7c83dc97</td></tr>
-<tr>
-<td title='Impact_Regression_TestSuite.TC_Regres_Impact_01.verifySignupLoginPageLoads()'><b>verifySignupLoginPageLoads</b><br>Test class: Impact_Regression_TestSuite.TC_Regres_Impact_01</td>
-<td></td>
-<td>17</td>
-<td>Impact_Regression_TestSuite.TC_Regres_Impact_01@6236eb5f</td></tr>
-<tr>
-<td title='Impact_Regression_TestSuite.TC_Regres_Impact_06.verifyValidPasswordForLogin()'><b>verifyValidPasswordForLogin</b><br>Test class: Impact_Regression_TestSuite.TC_Regres_Impact_06</td>
-<td></td>
-<td>12</td>
-<td>Impact_Regression_TestSuite.TC_Regres_Impact_06@484970b0</td></tr>
-<tr>
-<td title='Impact_Regression_TestSuite.TC_Regres_Impact_03.verifyEmailTextBox()'><b>verifyEmailTextBox</b><br>Test class: Impact_Regression_TestSuite.TC_Regres_Impact_03</td>
+<td title='Corebusiness.TC_regr_core_004.verifyDropDown()'><b>verifyDropDown</b><br>Test class: Corebusiness.TC_regr_core_004</td>
 <td></td>
 <td>2</td>
-<td>Impact_Regression_TestSuite.TC_Regres_Impact_03@fd07cbb</td></tr>
+<td>Corebusiness.TC_regr_core_004@fa36558</td></tr>
 <tr>
-<td title='Impact_Regression_TestSuite.TC_Regres_Impact_05.verifyValidEmailForLogin()'><b>verifyValidEmailForLogin</b><br>Test class: Impact_Regression_TestSuite.TC_Regres_Impact_05</td>
-<td></td>
-<td>9</td>
-<td>Impact_Regression_TestSuite.TC_Regres_Impact_05@3e96bacf</td></tr>
-<tr>
-<td title='Impact_Regression_TestSuite.TC_Regres_Impact_04.verifySignupFunctionality()'><b>verifySignupFunctionality</b><br>Test class: Impact_Regression_TestSuite.TC_Regres_Impact_04</td>
-<td></td>
-<td>18</td>
-<td>Impact_Regression_TestSuite.TC_Regres_Impact_04@3571b748</td></tr>
-<tr>
-<td title='Impact_Regression_TestSuite.TC_Regres_Impact_09.verifyViewProductButton()'><b>verifyViewProductButton</b><br>Test class: Impact_Regression_TestSuite.TC_Regres_Impact_09</td>
+<td title='Corebusiness.TC_regr_core_005.verifyBrands()'><b>verifyBrands</b><br>Test class: Corebusiness.TC_regr_core_005</td>
 <td></td>
 <td>11</td>
-<td>Impact_Regression_TestSuite.TC_Regres_Impact_09@7748410a</td></tr>
+<td>Corebusiness.TC_regr_core_005@672872e1</td></tr>
+<tr>
+<td title='Corebusiness.TC_regr_core_008.verifyProduct()'><b>verifyProduct</b><br>Test class: Corebusiness.TC_regr_core_008</td>
+<td></td>
+<td>32</td>
+<td>Corebusiness.TC_regr_core_008@2b4bac49</td></tr>
+<tr>
+<td title='Corebusiness.TC_regr_core_006.verifyProduct()'><b>verifyProduct</b><br>Test class: Corebusiness.TC_regr_core_006</td>
+<td></td>
+<td>21</td>
+<td>Corebusiness.TC_regr_core_006@32910148</td></tr>
+<tr>
+<td title='Corebusiness.TC_regr_core_001.f()'><b>f</b><br>Test class: Corebusiness.TC_regr_core_001<br>Parameters: jaikrishnagit@gmail.com, Team@A8</td>
+<td></td>
+<td>16</td>
+<td>Corebusiness.TC_regr_core_001@2118cddf</td></tr>
+<tr>
+<td title='Corebusiness.TC_regr_core_003.logout()'><b>logout</b><br>Test class: Corebusiness.TC_regr_core_003<br>Parameters: jaikrishnagit@gmail.com, Team@A8</td>
+<td></td>
+<td>18</td>
+<td>Corebusiness.TC_regr_core_003@7c1e2a9e</td></tr>
+<tr>
+<td title='Corebusiness.TC_regr_core_007.verifyProduct()'><b>verifyProduct</b><br>Test class: Corebusiness.TC_regr_core_007</td>
+<td></td>
+<td>18</td>
+<td>Corebusiness.TC_regr_core_007@3f56875e</td></tr>
 </table><p>
 </body>
 </html>
