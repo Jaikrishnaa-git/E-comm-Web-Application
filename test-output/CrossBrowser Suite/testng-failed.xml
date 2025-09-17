@@ -4,20 +4,20 @@
   <test thread-count="5" name="Chrome Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_07">
+      <class name="Subscription.TC_ECOM_subHome_002">
         <methods>
-          <include name="verifyLoginButton"/>
+          <include name="verifySubsscription" invocation-numbers="0"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_07 -->
-      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_02">
+      </class> <!-- Subscription.TC_ECOM_subHome_002 -->
+      <class name="Subscription.TC_ECOM_subHome_003">
         <methods>
-          <include name="tearDown"/>
-          <include name="verifyNameTextBox"/>
+          <include name="verifySubsscription" invocation-numbers="0"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_02 -->
+      </class> <!-- Subscription.TC_ECOM_subHome_003 -->
     </classes>
   </test> <!-- Chrome Test(failed) -->
 </suite> <!-- Failed suite [CrossBrowser Suite] -->

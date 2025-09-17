@@ -2,6 +2,7 @@ package Subscription;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -29,6 +30,7 @@ public class TC_ECOM_subHome_002 extends BaseTest{
 	  else
 	  {
 		  test.fail("Subscribed with invalid email").addScreenCaptureFromPath(ScreenshotUtilities.capturescreen(driver,"TC_ECOM_subHome_001"));
+		  Assert.fail("Subscribed with invalid Email");
 	  }
 	  
   }

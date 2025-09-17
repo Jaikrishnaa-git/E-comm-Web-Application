@@ -2,6 +2,7 @@ package Subscription;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.Ecomm.base.BaseTest;
@@ -22,6 +23,7 @@ public class TC_ECOM_subHome_004 extends BaseTest{
 	  else
 	  {
 		  test.fail("Subscription feild not visible in home page").addScreenCaptureFromPath(ScreenshotUtilities.capturescreen(driver,"TC_ECOM_subHome_001 "));
+		  Assert.fail("Subscribed feild not Visible");
 	  }
   }
 }

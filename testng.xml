@@ -5,7 +5,7 @@
         <parameter name="browser" value="chrome"/>
         <packages>
           
-             <package name="RegeressionFrequentlyUsedFunctionality"/>
+             <package name="Subscription"/>
         </packages>
     </test>
 

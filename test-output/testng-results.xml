@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="7" failed="2" skipped="0">
+<testng-results ignored="0" total="5" passed="3" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-16T17:19:52 IST" name="CrossBrowser Suite" finished-at="2025-09-16T17:21:29 IST" duration-ms="97152">
+  <suite started-at="2025-09-17T12:16:27 IST" name="CrossBrowser Suite" finished-at="2025-09-17T12:17:26 IST" duration-ms="59531">
     <groups>
     </groups>
-    <test started-at="2025-09-16T17:19:52 IST" name="Chrome Test" finished-at="2025-09-16T17:21:29 IST" duration-ms="97152">
-      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_09">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_09@7748410a]" started-at="2025-09-16T17:21:18 IST" name="setUp" finished-at="2025-09-16T17:21:19 IST" duration-ms="633" status="PASS">
+    <test started-at="2025-09-17T12:16:27 IST" name="Chrome Test" finished-at="2025-09-17T12:17:26 IST" duration-ms="59531">
+      <class name="Subscription.TC_ECOM_subHome_005">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Subscription.TC_ECOM_subHome_005@68567e20]" started-at="2025-09-17T12:17:22 IST" name="setUp" finished-at="2025-09-17T12:17:23 IST" duration-ms="860" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,17 +18,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyViewProductButton()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_09@7748410a]" started-at="2025-09-16T17:21:19 IST" name="verifyViewProductButton" finished-at="2025-09-16T17:21:29 IST" duration-ms="10203" status="PASS">
+        <test-method signature="verifySubsscription()[pri:0, instance:Subscription.TC_ECOM_subHome_005@68567e20]" started-at="2025-09-17T12:17:23 IST" name="verifySubsscription" finished-at="2025-09-17T12:17:26 IST" duration-ms="3486" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyViewProductButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_09@7748410a]" started-at="2025-09-16T17:21:29 IST" name="tearDown" finished-at="2025-09-16T17:21:29 IST" duration-ms="17" status="PASS">
+        </test-method> <!-- verifySubsscription -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Subscription.TC_ECOM_subHome_005@68567e20]" started-at="2025-09-17T12:17:26 IST" name="tearDown" finished-at="2025-09-17T12:17:26 IST" duration-ms="192" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_09 -->
-      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_07">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_07@4470f8a6]" started-at="2025-09-16T17:21:02 IST" name="setUp" finished-at="2025-09-16T17:21:02 IST" duration-ms="658" status="PASS">
+      </class> <!-- Subscription.TC_ECOM_subHome_005 -->
+      <class name="Subscription.TC_ECOM_subHome_004">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Subscription.TC_ECOM_subHome_004@17a7f733]" started-at="2025-09-17T12:17:04 IST" name="setUp" finished-at="2025-09-17T12:17:05 IST" duration-ms="717" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -39,20 +39,83 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyLoginButton(java.lang.String,java.lang.String)[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_07@4470f8a6]" started-at="2025-09-16T17:21:03 IST" name="verifyLoginButton" data-provider="loginData" finished-at="2025-09-16T17:21:03 IST" duration-ms="0" status="FAIL">
-          <exception class="java.lang.RuntimeException">
+        <test-method signature="verifySubsscription()[pri:0, instance:Subscription.TC_ECOM_subHome_004@17a7f733]" started-at="2025-09-17T12:17:05 IST" name="verifySubsscription" finished-at="2025-09-17T12:17:22 IST" duration-ms="16686" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySubsscription -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Subscription.TC_ECOM_subHome_004@17a7f733]" started-at="2025-09-17T12:17:22 IST" name="tearDown" finished-at="2025-09-17T12:17:22 IST" duration-ms="158" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Subscription.TC_ECOM_subHome_004 -->
+      <class name="Subscription.TC_ECOM_subHome_003">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Subscription.TC_ECOM_subHome_003@2118cddf]" started-at="2025-09-17T12:16:54 IST" name="setUp" finished-at="2025-09-17T12:16:54 IST" duration-ms="711" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifySubsscription(java.lang.String,java.lang.String)[pri:0, instance:Subscription.TC_ECOM_subHome_003@2118cddf]" started-at="2025-09-17T12:16:54 IST" name="verifySubsscription" data-provider="homePageData" finished-at="2025-09-17T12:17:04 IST" duration-ms="9612" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dummy value]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dummy]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFSheet.getPhysicalNumberOfRows()" because "worksheet" is null]]>
+              <![CDATA[element click intercepted: Element <button type="submit" id="subscribe" class="btn btn-default">...</button> is not clickable at point (524, 673). Other element would receive the click: <div class="productinfo text-center">...</div>
+  (Session info: chrome=139.0.7258.157)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ec477434d0380f3c020b5c1eb148514f, clickElement {id=f.26ED763E54913DC38F8EF66AD6A44A33.d.0CFC0866A2604292BC830EFEC1594710.e.37}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56555}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56555/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (ec477434d0380f3c020b5c1eb148514f)] -> xpath: //button[@id='subscribe']]
+Session ID: ec477434d0380f3c020b5c1eb148514f]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFSheet.getPhysicalNumberOfRows()" because "worksheet" is null
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:58)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:809)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
-at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
-at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:949)
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="submit" id="subscribe" class="btn btn-default">...</button> is not clickable at point (524, 673). Other element would receive the click: <div class="productinfo text-center">...</div>
+  (Session info: chrome=139.0.7258.157)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ec477434d0380f3c020b5c1eb148514f, clickElement {id=f.26ED763E54913DC38F8EF66AD6A44A33.d.0CFC0866A2604292BC830EFEC1594710.e.37}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56555}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56555/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (ec477434d0380f3c020b5c1eb148514f)] -> xpath: //button[@id='subscribe']]
+Session ID: ec477434d0380f3c020b5c1eb148514f
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at com.Ecomm.pages.HomePage.enterSubsciptionMail(HomePage.java:90)
+at Subscription.TC_ECOM_subHome_003.verifySubsscription(TC_ECOM_subHome_003.java:26)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -72,171 +135,57 @@ at org.testng.TestNG.run(TestNG.java:1079)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFSheet.getPhysicalNumberOfRows()" because "worksheet" is null
-at com.Ecomm.utilities.ExcelUtilities.getdata(ExcelUtilities.java:18)
-at Impact_Regression_TestSuite.TC_Regres_Impact_07.getLoginData(TC_Regres_Impact_07.java:19)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySubsscription -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Subscription.TC_ECOM_subHome_003@2118cddf]" started-at="2025-09-17T12:17:04 IST" name="tearDown" finished-at="2025-09-17T12:17:04 IST" duration-ms="221" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Subscription.TC_ECOM_subHome_003 -->
+      <class name="Subscription.TC_ECOM_subHome_002">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Subscription.TC_ECOM_subHome_002@5609159b]" started-at="2025-09-17T12:16:44 IST" name="setUp" finished-at="2025-09-17T12:16:45 IST" duration-ms="746" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifySubsscription(java.lang.String,java.lang.String)[pri:0, instance:Subscription.TC_ECOM_subHome_002@5609159b]" started-at="2025-09-17T12:16:45 IST" name="verifySubsscription" data-provider="homePageData" finished-at="2025-09-17T12:16:53 IST" duration-ms="8347" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[jai@pa]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dummy]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Subscribed with invalid Email]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Subscribed with invalid Email
+at org.testng.Assert.fail(Assert.java:111)
+at Subscription.TC_ECOM_subHome_002.verifySubsscription(TC_ECOM_subHome_002.java:33)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54)
-... 25 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_07@4470f8a6]" started-at="2025-09-16T17:21:03 IST" name="tearDown" finished-at="2025-09-16T17:21:03 IST" duration-ms="176" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_07 -->
-      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_08">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_08@7c83dc97]" started-at="2025-09-16T17:21:03 IST" name="setUp" finished-at="2025-09-16T17:21:04 IST" duration-ms="642" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyAddToCartButton()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_08@7c83dc97]" started-at="2025-09-16T17:21:04 IST" name="verifyAddToCartButton" finished-at="2025-09-16T17:21:18 IST" duration-ms="14196" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAddToCartButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_08@7c83dc97]" started-at="2025-09-16T17:21:18 IST" name="tearDown" finished-at="2025-09-16T17:21:18 IST" duration-ms="18" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_08 -->
-      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_05">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_05@3e96bacf]" started-at="2025-09-16T17:20:09 IST" name="setUp" finished-at="2025-09-16T17:20:10 IST" duration-ms="654" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyValidEmailForLogin()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_05@3e96bacf]" started-at="2025-09-16T17:20:10 IST" name="verifyValidEmailForLogin" finished-at="2025-09-16T17:20:20 IST" duration-ms="10306" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyValidEmailForLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_05@3e96bacf]" started-at="2025-09-16T17:20:20 IST" name="tearDown" finished-at="2025-09-16T17:20:20 IST" duration-ms="277" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_05 -->
-      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_06">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_06@484970b0]" started-at="2025-09-16T17:20:20 IST" name="setUp" finished-at="2025-09-16T17:20:21 IST" duration-ms="639" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyValidPasswordForLogin()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_06@484970b0]" started-at="2025-09-16T17:20:21 IST" name="verifyValidPasswordForLogin" finished-at="2025-09-16T17:21:01 IST" duration-ms="40524" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyValidPasswordForLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_06@484970b0]" started-at="2025-09-16T17:21:01 IST" name="tearDown" finished-at="2025-09-16T17:21:02 IST" duration-ms="262" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_06 -->
-      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_03">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_03@fd07cbb]" started-at="2025-09-16T17:19:58 IST" name="setUp" finished-at="2025-09-16T17:19:59 IST" duration-ms="684" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyEmailTextBox()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_03@fd07cbb]" started-at="2025-09-16T17:19:59 IST" name="verifyEmailTextBox" finished-at="2025-09-16T17:20:02 IST" duration-ms="3786" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyEmailTextBox -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_03@fd07cbb]" started-at="2025-09-16T17:20:02 IST" name="tearDown" finished-at="2025-09-16T17:20:03 IST" duration-ms="217" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_03 -->
-      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_04">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_04@3571b748]" started-at="2025-09-16T17:20:03 IST" name="setUp" finished-at="2025-09-16T17:20:03 IST" duration-ms="664" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifySignupFunctionality()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_04@3571b748]" started-at="2025-09-16T17:20:03 IST" name="verifySignupFunctionality" finished-at="2025-09-16T17:20:09 IST" duration-ms="5444" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySignupFunctionality -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_04@3571b748]" started-at="2025-09-16T17:20:09 IST" name="tearDown" finished-at="2025-09-16T17:20:09 IST" duration-ms="265" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_04 -->
-      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_01">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_01@6236eb5f]" started-at="2025-09-16T17:19:52 IST" name="setUp" finished-at="2025-09-16T17:19:54 IST" duration-ms="2035" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifySignupLoginPageLoads()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_01@6236eb5f]" started-at="2025-09-16T17:19:54 IST" name="verifySignupLoginPageLoads" finished-at="2025-09-16T17:19:56 IST" duration-ms="2647" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySignupLoginPageLoads -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_01@6236eb5f]" started-at="2025-09-16T17:19:56 IST" name="tearDown" finished-at="2025-09-16T17:19:57 IST" duration-ms="514" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_01 -->
-      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_02">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_02@2b4bac49]" started-at="2025-09-16T17:19:57 IST" name="setUp" finished-at="2025-09-16T17:19:58 IST" duration-ms="739" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyNameTextBox(java.lang.String,java.lang.String)[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_02@2b4bac49]" started-at="2025-09-16T17:19:58 IST" name="verifyNameTextBox" data-provider="NameData" finished-at="2025-09-16T17:19:58 IST" duration-ms="0" status="FAIL">
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[java.io.FileNotFoundException: C:\Java_Training\E-comm-Web-Application\src\test\resources\Testdata\data.xlsx (The system cannot find the path specified)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: java.io.FileNotFoundException: C:\Java_Training\E-comm-Web-Application\src\test\resources\Testdata\data.xlsx (The system cannot find the path specified)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:58)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:809)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
-at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
-at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:949)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -256,29 +205,50 @@ at org.testng.TestNG.run(TestNG.java:1079)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.io.FileNotFoundException: C:\Java_Training\E-comm-Web-Application\src\test\resources\Testdata\data.xlsx (The system cannot find the path specified)
-at java.base/java.io.FileInputStream.open0(Native Method)
-at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
-at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
-at com.Ecomm.utilities.ExcelUtilities.getdata(ExcelUtilities.java:15)
-at Impact_Regression_TestSuite.TC_Regres_Impact_02.getNameData(TC_Regres_Impact_02.java:48)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54)
-... 25 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyNameTextBox -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Impact_Regression_TestSuite.TC_Regres_Impact_02@2b4bac49]" started-at="2025-09-16T17:19:58 IST" name="tearDown" finished-at="2025-09-16T17:19:58 IST" duration-ms="185" status="PASS">
+        </test-method> <!-- verifySubsscription -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Subscription.TC_ECOM_subHome_002@5609159b]" started-at="2025-09-17T12:16:53 IST" name="tearDown" finished-at="2025-09-17T12:16:54 IST" duration-ms="237" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_02 -->
+      </class> <!-- Subscription.TC_ECOM_subHome_002 -->
+      <class name="Subscription.TC_ECOM_subHome_001">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Subscription.TC_ECOM_subHome_001@175b9425]" started-at="2025-09-17T12:16:27 IST" name="setUp" finished-at="2025-09-17T12:16:30 IST" duration-ms="2754" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifySubsscription(java.lang.String,java.lang.String)[pri:0, instance:Subscription.TC_ECOM_subHome_001@175b9425]" started-at="2025-09-17T12:16:30 IST" name="verifySubsscription" data-provider="homePageData" finished-at="2025-09-17T12:16:44 IST" duration-ms="13360" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[jaikrishnaa@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dummy]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySubsscription -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Subscription.TC_ECOM_subHome_001@175b9425]" started-at="2025-09-17T12:16:44 IST" name="tearDown" finished-at="2025-09-17T12:16:44 IST" duration-ms="423" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Subscription.TC_ECOM_subHome_001 -->
     </test> <!-- Chrome Test -->
   </suite> <!-- CrossBrowser Suite -->
 </testng-results>
