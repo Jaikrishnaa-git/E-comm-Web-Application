@@ -5,7 +5,7 @@
         <parameter name="browser" value="chrome"/>
         <packages>
           
-             <package name="Impact_Regression_TestSuite"/>
+             <package name="Corebusiness"/>
         </packages>
     </test>
 

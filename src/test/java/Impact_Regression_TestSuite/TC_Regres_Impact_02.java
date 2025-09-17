@@ -25,7 +25,7 @@ public class TC_Regres_Impact_02 {
     ExtentTest test;
 
     // Excel file path
-    String excelPath = "C:\\Java_Training\\E-comm-Web-Application\\src\\test\\resources\\Testdata\\data.xlsx";
+    String excelPath = "C:\\Users\\Dell\\Desktop\\Git repo\\Ecomm\\E-comm-Web-Application\\src\\test\\resources\\Testdata";
 
     @BeforeClass
     public void setUp() {

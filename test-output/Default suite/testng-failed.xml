@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Subscription.TC_ECOM_subHome_002">
+      <class name="Impact_Regression_TestSuite.TC_Regres_Impact_02">
         <methods>
-          <include name="verifySubsscription" invocation-numbers="0"/>
-          <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="verifyNameTextBox"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- Subscription.TC_ECOM_subHome_002 -->
+      </class> <!-- Impact_Regression_TestSuite.TC_Regres_Impact_02 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

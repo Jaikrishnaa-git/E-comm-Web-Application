@@ -2,7 +2,7 @@ package Corebusiness;
 
 import java.io.IOException;
 import org.testng.annotations.Test;
-import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 import com.Ecomm.base.BaseTest;
 import com.Ecomm.pages.ProductsPage;
 import com.Ecomm.utilities.ScreenshotUtilities;
@@ -11,6 +11,7 @@ import com.aventstack.extentreports.ExtentTest;
 public class TC_regr_core_005 extends BaseTest {
     @Test(groups = {"regression"})
     public void verifyBrands() throws IOException {
+        SoftAssert softAssert = new SoftAssert();
         driver.get("https://automationexercise.com/");
         ExtentTest test = extent.createTest("Brand verification");
         ProductsPage productpage = new ProductsPage(driver);
@@ -20,8 +21,11 @@ public class TC_regr_core_005 extends BaseTest {
             test.pass("All brand links are visible");
         } else {
             String screenshotPath = ScreenshotUtilities.capturescreen(driver, "TC_regr_core_005");
-            test.fail("Brand links are not visible").addScreenCaptureFromPath(screenshotPath);
-            Assert.fail("Brand links are not visible");
+            test.fail("Brand links are not visible")
+                .addScreenCaptureFromPath(screenshotPath);
+            softAssert.fail("Brand links are not visible");
         }
+
+        softAssert.assertAll();
     }
 }

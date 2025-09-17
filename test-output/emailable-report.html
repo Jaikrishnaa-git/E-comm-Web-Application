@@ -8,34 +8,50 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">CrossBrowser Suite</th></tr>
-<tr><td><a href="#t0">Chrome Test</a></td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">87,016</td><td></td><td></td></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">2,310</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">CrossBrowser Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Chrome Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Impact_Regression_TestSuite.TC_Regres_Impact_02</td><td><a href="#m0">verifyNameTextBox</a></td><td rowspan="1">1758094969493</td><td rowspan="1">0</td></tr><tr class="failedodd"><td rowspan="1">Impact_Regression_TestSuite.TC_Regres_Impact_07</td><td><a href="#m1">verifyLoginButton</a></td><td rowspan="1">1758095017965</td><td rowspan="1">0</td></tr><tr><th colspan="4">Chrome Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Impact_Regression_TestSuite.TC_Regres_Impact_01</td><td><a href="#m2">verifySignupLoginPageLoads</a></td><td rowspan="1">1758094950942</td><td rowspan="1">17188</td></tr><tr class="passedodd"><td rowspan="1">Impact_Regression_TestSuite.TC_Regres_Impact_03</td><td><a href="#m3">verifyEmailTextBox</a></td><td rowspan="1">1758094970435</td><td rowspan="1">2559</td></tr><tr class="passedeven"><td rowspan="1">Impact_Regression_TestSuite.TC_Regres_Impact_04</td><td><a href="#m4">verifySignupFunctionality</a></td><td rowspan="1">1758094973868</td><td rowspan="1">18854</td></tr><tr class="passedodd"><td rowspan="1">Impact_Regression_TestSuite.TC_Regres_Impact_05</td><td><a href="#m5">verifyValidEmailForLogin</a></td><td rowspan="1">1758094993764</td><td rowspan="1">9611</td></tr><tr class="passedeven"><td rowspan="1">Impact_Regression_TestSuite.TC_Regres_Impact_06</td><td><a href="#m6">verifyValidPasswordForLogin</a></td><td rowspan="1">1758095004131</td><td rowspan="1">12374</td></tr><tr class="passedodd"><td rowspan="1">Impact_Regression_TestSuite.TC_Regres_Impact_08</td><td><a href="#m7">verifyAddToCartButton</a></td><td rowspan="1">1758095018813</td><td rowspan="1">4634</td></tr><tr class="passedeven"><td rowspan="1">Impact_Regression_TestSuite.TC_Regres_Impact_09</td><td><a href="#m8">verifyViewProductButton</a></td><td rowspan="1">1758095024082</td><td rowspan="1">11570</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Impact_Regression_TestSuite.TC_Regres_Impact_02</td><td><a href="#m0">verifyNameTextBox</a></td><td rowspan="1">1758095489044</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Chrome Test</h2><h3 id="m0">Impact_Regression_TestSuite.TC_Regres_Impact_02#verifyNameTextBox</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.io.FileNotFoundException: C:\Java_Training\E-comm-Web-Application\src\test\resources\Testdata\data.xlsx (The system cannot find the path specified)
+<h2>Default test</h2><h3 id="m0">Impact_Regression_TestSuite.TC_Regres_Impact_02#verifyNameTextBox</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.io.FileNotFoundException: C:\Java_Training\E-comm-Web-Application\src\test\resources\Testdata\data.xlsx (The system cannot find the path specified)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:58)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:809)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
+	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:949)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 Caused by: java.io.FileNotFoundException: C:\Java_Training\E-comm-Web-Application\src\test\resources\Testdata\data.xlsx (The system cannot find the path specified)
 	at java.base/java.io.FileInputStream.open0(Native Method)
 	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
 	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:152)
 	at com.Ecomm.utilities.ExcelUtilities.getdata(ExcelUtilities.java:15)
 	at Impact_Regression_TestSuite.TC_Regres_Impact_02.getNameData(TC_Regres_Impact_02.java:48)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54)
 	... 25 more
-... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">Impact_Regression_TestSuite.TC_Regres_Impact_07#verifyLoginButton</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getPhysicalNumberOfRows()&quot; because &quot;worksheet&quot; is null
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getPhysicalNumberOfRows()&quot; because &quot;worksheet&quot; is null
-	at com.Ecomm.utilities.ExcelUtilities.getdata(ExcelUtilities.java:18)
-	at Impact_Regression_TestSuite.TC_Regres_Impact_07.getLoginData(TC_Regres_Impact_07.java:19)
-	... 25 more
-... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">Impact_Regression_TestSuite.TC_Regres_Impact_01#verifySignupLoginPageLoads</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">Impact_Regression_TestSuite.TC_Regres_Impact_03#verifyEmailTextBox</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">Impact_Regression_TestSuite.TC_Regres_Impact_04#verifySignupFunctionality</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">Impact_Regression_TestSuite.TC_Regres_Impact_05#verifyValidEmailForLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">Impact_Regression_TestSuite.TC_Regres_Impact_06#verifyValidPasswordForLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">Impact_Regression_TestSuite.TC_Regres_Impact_08#verifyAddToCartButton</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">Impact_Regression_TestSuite.TC_Regres_Impact_09#verifyViewProductButton</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

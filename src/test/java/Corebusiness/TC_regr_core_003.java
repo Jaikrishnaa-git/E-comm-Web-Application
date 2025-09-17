@@ -3,7 +3,7 @@ package Corebusiness;
 import java.io.IOException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 import com.Ecomm.base.BaseTest;
 import com.Ecomm.pages.LoginPage;
 import com.Ecomm.utilities.ExcelUtilities;
@@ -15,8 +15,10 @@ public class TC_regr_core_003 extends BaseTest {
 
     @Test(dataProvider = "logindata", groups = {"regression", "login"})
     public void logout(String email, String password) throws InterruptedException, IOException {
+        SoftAssert softAssert = new SoftAssert();
         driver.get("https://automationexercise.com/");
-        ExtentTest test = extent.createTest("Login Test with Name: " + email + " and Email: " + password);
+        ExtentTest test = extent.createTest("Logout Test with Email: " + email);
+
         LoginPage login = new LoginPage(driver);
         login.openLoginPage();
         login.loginCredentials(email, password);
@@ -25,10 +27,14 @@ public class TC_regr_core_003 extends BaseTest {
         if (login.isSignupVisible()) {
             test.pass("Logout successful");
         } else {
-            String screenshotPath = ScreenshotUtilities.capturescreen(driver, "TC_regr_core_003");
-            test.fail("Unable to logout").addScreenCaptureFromPath(screenshotPath);
-            Assert.fail("Unable to logout");
+            String screenshotPath = ScreenshotUtilities.capturescreen(
+                    driver, "TC_regr_core_003_" + email.replaceAll("[^a-zA-Z0-9]", "_"));
+            test.fail("Unable to logout")
+                .addScreenCaptureFromPath(screenshotPath);
+            softAssert.fail("Logout failed for email: " + email);
         }
+
+        softAssert.assertAll();
     }
 
     @DataProvider
